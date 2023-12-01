@@ -1,0 +1,147 @@
+<HTML>
+<HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<TITLE>Функции Ферми-Дирака и Максвелла-Больцмана (концентрация носителей и уровень Ферми)</TITLE>
+<style>
+td{
+    font-family: verdana, arial;
+    font-size: 10pt
+}
+.title{
+    font-size: 26px;
+    color: #0E9700
+}
+.title1{
+    font-size: 17px;
+    font-weight: bolder;
+    color: #0E9700
+}
+.title2{
+    font-size: 15px;
+    font-weight: bolder;
+    font-style: italic;
+    color: #0E9700
+}
+a{
+    text-decoration: none;
+	font-weight: bold
+}
+.formula{
+	font-family:'Times New Roman';
+	font-size: 13pt
+}
+</style>
+</HEAD>
+<BODY text=#000000 vLink=#66ae36 aLink=#298f01 link=#298f01 bgColor=#ffffff topmargin=5 leftmargin=5 marginwidth="0" marginheight="0">
+<table border=0 cellpadding=2 cellspacing=4 width="100%" ID="Table1">
+  <tr bgcolor=#fef2de>
+        <td>
+        <center class=title>Функции Ферми-Дирака и Максвелла-Больцмана<BR><FONT SIZE=2>(концентрация носителей и уровень Ферми)</font></center>
+        </td>
+  </tr>
+  <tr bgcolor=#fef9f0>
+        <td>
+        <br>
+        <center>
+        <hr width="98%" style="COLOR: #0e9700; HEIGHT: 1px">
+        <br>
+        <table border=0 cellpadding=2 cellspacing=4 width="95%" ID="Table2">
+          <tr>
+            <td>
+                <center class=title1>
+                  Введение
+                </CENTER><font size=-1>
+
+<p align=justify style="MARGIN-BOTTOM: 0px">
+Как функция уровня Ферми E<SUB>F</SUB>, концентрации электронов и дырок выражаются:<br><br>
+<FONT class=title2>Ферми-Дирак</FONT></p>
+<CENTER class=formula>
+  <i>n = N<SUB>c</SUB> F<SUB>1/2</SUB>(<FONT FACE="symbol">h</FONT><SUB>c</SUB>), где <FONT FACE="symbol">h</FONT><SUB>c </SUB>= (E<SUB>F</SUB> - E<SUB>c</SUB>)/kT,<br> 
+  и
+<br>
+p = N<SUB>v</SUB> F<SUB>1/2</SUB>(<FONT FACE="symbol">h</FONT><SUB>v</SUB>),где <FONT FACE="symbol">h</FONT><SUB>v </SUB>= (E<SUB>v</SUB> - E<SUB>F</SUB>)/kT.</i>
+</CENTER>
+<p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+Это точные формулы для концентраций электронов и дырок согласно статистике Ферми-Дирака. Функцию<I> F</I><I><SUB>1/2</SUB></I>
+называют интегралом Ферми-Дирака порядка 1/2, где  </P>
+
+<CENTER class=formula><I>F<SUB>n</SUB>(<FONT FACE="symbol">h</FONT>)
+= [1 / <FONT FACE="symbol">G</FONT>(n+1)] <IMG SRC="images/zerodef_2.gif" HEIGHT=35 WIDTH=25 ALIGN=middle> x<SUP>n</SUP>
+/ [ 1 + e<SUP>(x - </SUP><SUP><FONT FACE="symbol">h</FONT>)</SUP>] dx</i></CENTER>
+
+<p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Простое приближение доступно, когда <FONT FACE="symbol">h</FONT><SUB>
+</SUB>&lt; -3. Это так называемое приближение Максвелла-Больцмана:</P>
+
+<CENTER class=formula>
+  <I>F<SUB>1/2</SUB>(<FONT FACE="symbol">h</FONT>)
+<FONT FACE="Symbol">&raquo;</FONT> exp(<FONT FACE="symbol">h</FONT>)&nbsp;&nbsp;&nbsp;для <FONT FACE="symbol">h</FONT><SUB> </SUB>&lt; -3.</i>
+</CENTER>
+<br>
+<font class=title2>Максвелл-Больцман</font>
+
+<CENTER class=formula><i>n <FONT FACE="Symbol">&raquo;</FONT>
+N<SUB>c</SUB> exp[ -(E<SUB>c</SUB> - E<SUB>F</SUB>)/kT ],<br><br>
+p <FONT FACE="Symbol">&raquo;</FONT>
+N<SUB>v</SUB> exp[ -(E<SUB>F</SUB> - E<SUB>v</SUB>)/kT ].</i></CENTER>
+
+<CENTER>
+  <P>Применяется, если &nbsp;E<SUB>v</SUB> + 3 kT &lt; E<SUB>F</SUB>
+&lt; E<SUB>c</SUB> - 3 kT.</FONT></P>
+</CENTER>
+<p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Следующий апплет демонстрирует применимость приближения МБ к положению уровня Ферми. </P>
+
+<HR WIDTH="100%" style="height: 1px; color: #0E9700"></P>
+
+<P>На практике  
+концентрация электронов в полосе пропускания определяется уровнем примеси донора и температурой материала.  Концентрация электронов <I>n</I> выражена через положение уровня Ферми <I>E<SUB>F</SUB></I> и температуру <I>T:</I></P>
+
+<CENTER>
+  <P><I>n зависит от E<SUB>c</SUB> - E<SUB>F</SUB> и kT.</I></P>
+</CENTER>
+
+<P>Математическая формула может приобрести приблизительную<I></I>, но простую форму <I>Максвелла-Больцмана,</I> если </P>
+
+<CENTER>
+  <P>E<SUB>c</SUB> - E<SUB>F</SUB> &gt; 3 kT (или, N<SUB>d</SUB> &lt;
+0.05N<SUB>c</SUB>) &nbsp;--- [n-тип]<BR>
+E<SUB>f </SUB>- E<SUB>v</SUB> &gt; 3 kT (или, N<SUB>a</SUB> &lt; 0.05N<SUB>v</SUB>)
+&nbsp;--- [p-тип]</P>
+</CENTER>
+
+<P>Более сложная, но точная формула <em>Ферми-Дирака</em><em> </em> должна использоваться, если </P>
+
+<CENTER>
+  <P><I>E<SUB>c</SUB> - E<SUB>F</SUB> &lt; 3 kT</I> &nbsp;&nbsp;---
+[сильно легировано n-типом]<BR>
+<I>E<SUB>f </SUB>- E<SUB>v</SUB> &lt; 3 kT</I> &nbsp;--- [сильно легировано
+p-типом]</P>
+</CENTER>
+
+<P>Простое приближение возможно для слегка или среднелегированных
+полупроводников (<em>невырожденные проводник</em>и). Иначе,
+должна использоваться полная формула  для легированного полупроводника (<em>выродившийся полупроводник</em>).</P>
+
+<P>Апплет демонстрирует несоответствие в концентрациях электронов (или дырок в p-типе) между формулами приближения <I>Максвелла-Больцмана</I> и точной формулой <em>Ферми-Дирака</em>, когда концентрация высока.</P>
+</td>
+			  </tr>
+			</TBODY>
+		  </table>
+		    <br>
+        <hr width=98% style="height: 1px; color: #0E9700"><br>
+        </center>
+        <p>
+		<UL>
+			<LI>Назад, <a href="../index.html"> к списку апплетов к лабораторной работе "Уровень Ферми"</a>.</LI>
+			<LI>Назад, <a href="../../index.html"> к списку лабораторных работ</a>.</LI>
+		</UL>
+        <p>
+        </td>
+  </tr>
+  <tr bgcolor=#FEF2DE>
+        <td>
+        <center>РФиЭ БГУ, кафедра Физической Электроники</center>
+        </td>
+  </tr>
+</table>
+</BODY>
+</HTML>

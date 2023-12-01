@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+   		<TITLE>AlGaAs. Зонная диаграмма и E-K диаграмма. Математический анализ.</TITLE>
+		<style>
+			a{
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<BODY style="font-family: tahoma, verdana, arial; font-size: 14 px;" text=#000000 vLink="#66AE36" aLink="#298F01" link="#298F01" bgColor="#ffffff" topmargin=5 leftmargin=5 marginwidth=0 marginheight=0>
+		<table width="100%" cellpadding="2" cellspacing="4" style="font-size: 14 px;">
+			<tr bgcolor="#FEF2DE">
+				<td align="center">
+					<a href="intro.html">Введение</a> | <a href="math.html">Математический анализ</a> | <a href="tutorial.html">Работа с
+					апплетом</a> | <a href="worksheet.html">Упражнения к апплету</a> | <a href="quiz.html">Тест</a>
+					| <a href="SPICE.html">SPICE/CAD</a> | <a href="ref.html">Ссылки</a>
+					| <a href="feedback.html">Обратная связь</a><b><i><font size=+2></font></i></b>
+				</td>
+			</tr>
+			<tr bgcolor="#FEF2DE">
+				<td align="center">
+					<font color="#298F01"><h3>Математический анализ</h3></font>
+				</td>
+			</tr>
+			<tr bgcolor="#FEF9F0">
+				<td>
+<p><u> Минимумы долин зоны проводимости в [эВ] при 300K</u>:&nbsp;&nbsp;&nbsp;
+Al<sub>x</sub>Ga<sub>1-x</sub>As&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[<a href="ref.html#1">1</a>]
+<p>&nbsp;&nbsp;&nbsp; E<sub><font face="Symbol">g</font></sub>(x) =&nbsp;&nbsp;&nbsp;&nbsp;
+1.424 + 1.247x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(0 &lt; x &lt; 0.45)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1.424 + 1.247 + 1.147(x-0.45)<sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp; (0.45
+&lt; x &lt; 1.0)
+<p>&nbsp;&nbsp;&nbsp; E<sub>L</sub>(x) = 1.708 + 0.642x
+<p>&nbsp;&nbsp;&nbsp; E<sub>X</sub>(x) = 1.900 + 0.125 + 0.143x<sup>2</sup>
+<br>&nbsp;
+<p>
+<hr WIDTH="100%">
+<p><u>E(<b>k</b>)&nbsp; Диаграмма:&nbsp;эффективные массы для</u>  &nbsp;Al<sub>x</sub>Ga<sub>1-x</sub>As&nbsp;&nbsp;
+[<a href="ref.html#1" tppabs="http://jas.eng.buffalo.edu/education/semicon/AlGaAs/ref.html#1">1</a>,&nbsp; <a href="ref.html#2" tppabs="http://jas.eng.buffalo.edu/education/semicon/AlGaAs/ref.html#2">2</a>]
+<p>&nbsp;&nbsp;&nbsp; A) Долины зоны проводимости
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+E<sub><font face="Symbol">g</font></sub>(<b>k</b>) = <strike>h</strike><sup>2</sup>k<sup>2</sup>/2m<sub><font face="Symbol">g</font></sub>*&nbsp;&nbsp;
+где,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+m<sub><font face="Symbol">g</font></sub>*/m<sub>0</sub> = 0.067 + 0.083x
+(для плотности состояний); 0.067 + 0.083x (для проводимости)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+k<sub><font face="Symbol">g</font></sub> = 2<font face="Symbol">p</font>/a
+(0, 0, 0)
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+E<sub>L</sub>(<b>k</b>) = <strike>h</strike><sup>2</sup>(k-k<sub>L</sub>)<sup>2</sup>/2m<sub>L</sub>*&nbsp;&nbsp;
+где,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+m<sub>L</sub>*/m<sub>0</sub> = 0.56 + 0.1x (для DOS); 0.11 + 0.03x 
+(для поводимости)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+k<sub>L</sub> = 2<font face="Symbol">p</font>/a (1/2, 1/2, 1/2)
+<br>&nbsp;
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+E<sub>X</sub>(<b>k</b>) = <strike>h</strike><sup>2</sup>(k-k<sub>X</sub>)<sup>2</sup>/2m<sub>X</sub>*&nbsp;&nbsp;
+где,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+m<sub>X</sub>*/m<sub>0</sub> = 0.85 - 0.14x (для DOS); 0.32 - 0.06x 
+(для проводимости)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+k<sub>X</sub> = 2<font face="Symbol">p</font>/a (0, 0, 1-<font face="Symbol">D</font>)
+<br>&nbsp;
+<p>&nbsp;&nbsp;&nbsp; B) Долинны валентной зоны
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+E<sub>hh</sub>(<b>k</b>) = <strike>h</strike><sup>2</sup>k<sup>2</sup>/2m<sub>hh</sub>*&nbsp;&nbsp;
+где,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+m<sub>hh</sub>*/m<sub>0</sub> = 0.62 + 0.14x
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+E<sub>lh</sub>(<b>k</b>) = <strike>h</strike><sup>2</sup>k<sup>2</sup>/2m<sub>lh</sub>*&nbsp;&nbsp;
+где,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+m<sub>lh</sub>*/m<sub>0</sub> = 0.087 + 0.063x
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+E<sub>so</sub>(<b>k</b>) = <strike>h</strike><sup>2</sup>k<sup>2</sup>/2m<sub>so</sub>*&nbsp;
+- <font face="Symbol">D</font><sub>o</sub>&nbsp;&nbsp;&nbsp; где,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+m<sub>so</sub>*/m<sub>0</sub> = 0.15 + 0.09x
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<font face="Symbol">D</font><sub>o</sub> = 0.34 - 0.04x
+<p>&nbsp;&nbsp;&nbsp; Плотность состояний еффективной массы для валентной зоны, m<sub>vb</sub>, находится из
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+m<sub>vb</sub> = (m<sub>lh</sub>*<sup>3/2</sup> + m<sub>hh</sub>*<sup>3/2</sup>)<sup>2/3</sup>
+<br>&nbsp;&nbsp;&nbsp; E<sub>so</sub>(k)&nbsp; является обособленной зоной и не вносит вклад в DOS.
+<br>&nbsp;
+				</td>
+			</tr>
+			<tr bgcolor="#FEF2DE">
+				<td align="center">
+					РФиЭ БГУ, кафедра Физической Электроники
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

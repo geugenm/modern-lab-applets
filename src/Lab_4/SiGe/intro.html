@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+   		<TITLE>SiGe. Зонная диаграмма и E-K диаграмма. Введение.</TITLE>
+		<style>
+			a{
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body style="font-family: tahoma, verdana, arial; font-size: 14 px;" text=#000000 vLink="#66AE36" aLink="#298F01" link="#298F01" bgColor="#ffffff" topmargin=5 leftmargin=5 marginwidth=0 marginheight=0>
+		<table width="100%" cellpadding="2" cellspacing="4" style="font-size: 14 px;">
+			<tr bgcolor="#FEF2DE">
+				<td align="center">
+					<a href="QuickNote.html">Замечания</a> | <a href="intro.html">Введение</a> | <a href="math.html">Математический анализ</a> | <a href="tutorial.html">Работа с
+					апплетом</a> | <a href="worksheet.html">Упражнения к апплету</a> | <a href="quiz.html">Тест</a>
+					| <a href="SPICE.html">SPICE/CAD</a> | <a href="ref.html">Ссылки</a>
+					| <a href="feedback.html">Обратная связь</a><b><i><font size=+2></font></i></b>
+				</td>
+			</tr>
+			<tr bgcolor="#FEF2DE">
+				<td align="center">
+					<font color="#298F01"><h3>Введение</h3></font>
+				</td>
+			</tr>
+			<tr bgcolor="#FEF9F0">
+				<td>
+<p>Зонная структура Si<sub>x</sub>Ge<sub>1-x</sub> характеризуется переходом
+на нижнем краю зоны проводимости от Ge-подобной [111]-симметрии к  Si-подобной 
+симметрии при x ~ 0.15. Рисунок ниже показывает зависимость ширины запрещенной 
+зоны от состава  Si<sub>x</sub>Ge<sub>1-x</sub> (<a href="ref.html#3">[3]</a>)
+<center><img SRC="imgs/Whole_bands.jpg" NOSAVE height=302 width=357 align=TEXTTOP></center><br>
+
+В нашем апплете, мы получили зависимость энергетических долин зоны проводимости от 
+состава сплава в X-точке, L-точке, и <font face="symbol">G</font>-точке следуя процедуре, 
+описаной ниже:
+
+<center>
+<br><img SRC="imgs/X_band.jpg" height=270 width=291><img SRC="imgs/L_band.jpg" height=274 width=324><img SRC="imgs/G_band.jpg" height=265 width=310>
+</center>
+
+<br><center>[X значения энергии]</center>
+Как показано на рис. 1 выше, белые точки - значения экспериментальных данных 
+из <a href="ref.html#3">[3]</a>, а красные точка - энергия X-точки чистого 
+кремния (<a href="ref.html#5">[5]</a> и <a href="ref.html#6">[6]</a>), мы 
+интерполировали эти данные полиномом второй степени и получили зависимость для энергии 
+X-точки:
+<br>E<sub>X</sub> = a<sub>1</sub> + b<sub>1</sub>*x + c<sub>1</sub>*x*x&nbsp;
+,&nbsp;&nbsp; где a<sub>1</sub> = 0.861, b<sub>1</sub> = - 0.0658 и
+c<sub>1</sub> = 0.3185.</center>
+
+<p><center>[L значения энергии]</center>
+Точно так же, мы получили энергию L-точки для SiGe, интерполируя данные из 
+<a href="ref.html#3">[3]</a> (белые точки на рис. 2), вместе с энергией L-точки 
+чистого кремния (<a href="ref.html#5">[5]</a> и <a href="ref.html#6">[6]</a>) отмеченной
+красной точкой на рис. 2. Энергия L-точки Si<sub>x</sub>Ge<sub>1-x</sub> определилась 
+следующей формулой:
+<br>E<sub>L</sub> = a<sub>2</sub> + b<sub>2</sub> * x + c<sub>2</sub> *x
+*x,&nbsp;&nbsp;&nbsp;&nbsp; где a<sub>2</sub> =0.635, b<sub>2</sub>=1.505,
+c<sub>2</sub> = 0.1205.
+
+<p><center>[<font face="symbol">G</font> значения энергии]</center>
+Диаграмма <font face="symbol">G-</font>точки для SiGe была получена 
+простой линейной экстраполяцией энергетической зоны <font face="Symbol">G</font> 
+чистого кремния (<a href="ref.html#5">[5]</a> и <a href="ref.html#6">[6]</a>) и 
+чистого германия (<a href="ref.html#1">[1]</a>), которые отмечены на рис. 3 
+красной и синей точкой соответственно. Поэтому <font face="symbol">G</font> зона
+Si<sub>x</sub>Ge<sub>1-x</sub>, описана в этом апплете как:
+<br>E<sub><font face="symbol">G</font></sub> = a<sub>3</sub> + b<sub>3</sub>
+* x,&nbsp;&nbsp; где a<sub>3</sub> = 0.805 и b<sub>3</sub> = 2.615
+.
+				</td>
+			</tr>
+			<tr bgcolor="#FEF2DE">
+				<td align="center">
+					РФиЭ БГУ, кафедра Физической Электроники
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
