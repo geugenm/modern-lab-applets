@@ -202,3 +202,7 @@ R
 "src/Lab_3/Fermi_1/worksheet-1.html,2\6\2640fec32ee36232dc12807530bf864ad25a9239
 R
 "scripts/convert_win1251_to_utf8.py,a\5\a57fa41d015d86f6320fa5433d72b7634236748b
+Y
+)scripts/replace_html_win1252_with_utf8.py,f\a\fa0d28eedc461dca6e443c88f066bcb1c5929537
+J
+scripts/start_server_ui.py,e\e\ee38eaafb1c3aa63e34cd1f044a2f54a0c181d15

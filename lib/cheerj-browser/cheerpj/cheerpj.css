@@ -1,0 +1,331 @@
+#cheerpjDisplay
+{
+font-family: sans-serif;
+position: relative;
+text-align: center;
+color: black;
+user-select: none;
+z-index: 0;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+
+.cheerpjLoaded:before {
+position: absolute;
+content: '';
+background: url("cheerpj.png") no-repeat center;
+width: 100%;
+height: 100%;
+max-height: 266px;
+max-width: 170px;
+background-size: contain;
+margin: auto;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+}
+
+div#cheerpjDisplay.loading {
+outline: 1px solid black;
+}
+
+@keyframes fade-out {
+0% { opacity: 1; }
+100% { opacity: 0; }
+}
+
+div#cheerpjDisplay.statusflash:after {
+animation: fade-out 3s linear forwards;
+}
+
+div#cheerpjDisplay.status:after {
+content: attr(data-status);
+display: inline-block;
+padding: 0px 20px;
+background: #fff;
+line-height: 40px;
+outline: 1px solid black;
+position: relative;
+}
+
+.cheerpjLocked > div.window:after {
+content: '';
+background: #000;
+width: 100%;
+height: 100%;
+position: absolute;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+opacity: 0.7;
+}
+
+.cheerpjLoaded {
+background-color: white;
+}
+
+.cheerpjLoading {
+background-color: white;
+pointer-events: none;
+}
+
+.cheerpjLoading:before {
+position: absolute;
+content: '';
+background: url("cheerpj.gif") no-repeat center;
+width: 100%;
+height: 100%;
+max-height: 266px;
+max-width: 170px;
+background-size: contain;
+margin: auto;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+}
+
+.cheerpjLoading-nc:after {
+position: absolute;
+content: 'FOR NON-COMMERCIAL\A PUBLIC NETWORK USE ONLY\A Any other use: info@leaningtech.com';
+right: 0;
+bottom: 0;
+font-weight: 700;
+background: white;
+padding: 2px 2px 1px 2px;
+border: 1px solid black;
+white-space: pre;
+text-align: right;
+pointer-events: auto;
+cursor: pointer;
+}
+
+div.bordered {
+box-shadow: 0px 0px 0px 1px #000;
+}
+
+div.cheerpjOverlay
+{
+height:100%;
+width:100%;
+position:fixed;
+left:0;
+top:0;
+z-index:7;
+background: none;
+pointer-events: none;
+}
+
+.menuBar *
+{
+cursor: default;
+}
+
+.menuBar > .menu > .subMenuItem > span.arrow
+{
+display: none;
+}
+
+.subMenuItem:hover > .subMenu
+{
+display: block;
+}
+
+.menuBarClosing .subMenuItem:hover > .subMenu
+{
+display: none;
+}
+
+.popupMenu > .menuItem > .subMenu
+{
+display: block;
+}
+
+.menu
+{
+padding: 0 0px;
+position: relative;
+display: inline-block;
+white-space: nowrap;
+}
+
+.subMenu, .menu
+{
+list-style: none;
+margin: 0;
+}
+
+.subMenu
+{
+display: none;
+min-width: 10em;
+border: 1px solid #ccc;
+background: #EDEDED;
+padding: 0;
+top: 100%;
+}
+
+.menuBar .subMenu
+{
+position: absolute;
+}
+
+
+.menuItem
+{
+float: left;
+}
+
+.subMenu > .menuItem
+{
+float: none;
+position: relative;
+}
+.subMenu > .menuItem > a
+{
+padding: 4px 7px 2px 2px;
+}
+
+.menuItem > a {
+display: inline-block;
+padding: 5px 5px;
+color: black;
+text-decoration: none;
+}
+
+.menuItem:hover {
+background-color: #0099ff;
+}
+
+.menuItem:hover > a {
+color: white;
+}
+
+.subMenuItem > span.arrow
+{
+position: absolute;
+right: 0px;
+padding-right: 7px;
+padding-top: 7px;
+font-size: 10px;
+}
+
+.subMenu .subMenu {
+position: absolute; left: 100%; top:0;
+}
+
+div.menuBar
+{
+position:absolute;
+top:0px;
+margin: 0;
+width: 100%;
+background-color: #EDEDED;
+font-size: 13px;
+}
+
+.popupMenu
+{
+position:absolute;
+background-color: #EDEDED;
+font-size: 13px;
+margin: 0;
+padding: 0 0px;
+display: block;
+list-style: none;
+margin: 0;
+white-space: nowrap;
+}
+
+
+div.window {
+text-align: initial;
+pointer-events: auto;
+}
+
+div.window > .resizerBorder {
+margin: 0;
+padding: 0;
+position: absolute;
+top: -2px;
+left: -2px;
+border-style: solid;
+border-width: 2px;
+pointer-events: none;
+}
+
+div.window > .resizer {
+position: absolute;
+bottom: -10px;
+right: -10px;
+width: 20px;
+height: 20px;
+cursor: nwse-resize;
+}
+
+.cjGlobalResizeCursor {
+cursor: nwse-resize !important;
+}
+
+div.window > div.titleBar {
+background-color: hsla(210, 60%, 60%, 1);
+color: white;
+height: 20px;
+top: 0px;
+position: absolute;
+width: 100%;
+padding-left: 2px;
+padding-top: 1px;
+box-sizing: border-box;
+}
+
+div.titleBar > .title {
+
+padding-left: 3px;
+padding-top: 2px;
+display: inline-block;
+float:left;
+}
+
+div.titleBar > .controls {
+float:right;
+margin-left: auto;
+margin-right: 0;
+padding-right: 3px;
+}
+
+.cheerpjApplet
+{
+display: inline-block;
+position: relative;
+user-select: none;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+
+.cjScrollBar
+{
+display: inline-block;
+position: relative;
+background: rgb(217, 217, 217);
+}
+
+.cjScrollBar > div
+{
+border-radius: 5px;
+display: inline-block;
+position: relative;
+background: rgb(174, 174, 174);
+}
+
+.cjScrollbarButton
+{
+display: inline-block;
+background: rgb(174, 174, 174);
+vertical-align: bottom;
+text-align: center;
+}

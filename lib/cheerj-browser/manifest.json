@@ -1,0 +1,28 @@
+{
+   "action": {
+      "default_icon": "cheerpj.png",
+      "default_popup": "popup.html",
+      "default_title": "Click to run applets"
+   },
+   "background": {
+      "service_worker": "bg.js"
+   },
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+   },
+   "description": "Run Java applets without installing Java",
+   "icons": {
+      "128": "cheerpj.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzYuphNllh8jU+xPTr3VZss4UUgWXWSoeqyTFuijhH+fVRI79z+cm5X4HsJ3qswIoRbqqeUqTUWPUyDpspZ/tAJj/MnLagCUWlxKBXn0Pj/SdihWIOnIStZ1wIRf8XqlvbUMMuWsFJmH4DPrFtjlO39US+8N0QxtYT9/07Vvgfoo307Y9JRKkS5pFYtPbx4JAyd4xOfadtvCBuYN0nVNkcKTK/rK2fMYl3qEvDWrkoHXPwg5QBoJ1Fu25kBxt39tMUR/2WyDg3b6SIDuz68WiPxQUNWfFKy6Dg4zm1G7HTkhO5zRh1XO8GtLwYgDdbpFwSmWx1WWwxGPnT4d8fR6EfQIDAQAB",
+   "manifest_version": 3,
+   "name": "CheerpJ Applet Runner",
+   "permissions": [ "scripting", "activeTab" ],
+   "update_URL": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "10.6",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "cheerpj/*", "spoof.js", "settings.html", "attach_simple.js" ]
+   } ]
+}
