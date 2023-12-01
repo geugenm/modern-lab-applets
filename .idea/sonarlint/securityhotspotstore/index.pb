@@ -200,3 +200,5 @@ Q
 !src/Lab_3/Fermi_1/tutorial-1.html,4\9\4929c2ee06cf44038c5de1e4b4fe18362b0c7f15
 R
 "src/Lab_3/Fermi_1/worksheet-1.html,2\6\2640fec32ee36232dc12807530bf864ad25a9239
+R
+"scripts/convert_win1251_to_utf8.py,a\5\a57fa41d015d86f6320fa5433d72b7634236748b
