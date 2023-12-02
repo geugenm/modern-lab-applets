@@ -1,4 +1,4 @@
-## Python Server with UI
+## Modernized computer applets for semiconductors course
 
 <div align="center">
   <a href="https://github.com/project-gecko-legacy">
