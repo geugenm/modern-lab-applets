@@ -63,11 +63,6 @@ class ServerUI:
 
         self.logger.info(f"Server started at {timestamp}")
 
-    @staticmethod
-    def is_port_in_use(port):
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            return s.connect_ex(('localhost', port)) == 0
-
     def start_server(self):
         self.start_button.config(state=tk.DISABLED)
         self.directory_entry.config(state=tk.DISABLED)
@@ -83,10 +78,6 @@ class ServerUI:
             return
 
         port = int(self.port.get())
-
-        if self.is_port_in_use(port):
-            messagebox.showinfo("Port in Use", f"Port {port} is already in use. Please choose another port.")
-            return
 
         self.server = socketserver.TCPServer(("localhost", port), http.server.SimpleHTTPRequestHandler)
         self.server_thread = threading.Thread(target=self.server.serve_forever)
