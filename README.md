@@ -28,7 +28,7 @@ Before using this script, install the CheerpJ plugin by visiting the [CheerpJ Ap
 To run this script, use the following command in your terminal:
 
 ```bash
-python3 scripts/start_server_ui.py
+python3 scripts/start_server_ui.py -dir=src/
 ```
 
 
@@ -51,3 +51,4 @@ python3 scripts/start_server_ui.py
 1. Clone this repository.
 2. Install the CheerpJ plugin.
 3. Run the script using the command mentioned above.
+4. Every time you go to a page with applet just click on the icon of *CheerJ* plugin to run it.
