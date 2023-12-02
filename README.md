@@ -1,7 +1,7 @@
 ## Modernized computer applets for semiconductors course
 
 <div align="center">
-  <a href="https://github.com/project-gecko-legacy">
+  <a href="https://github.com/geugenm/modern-lab-comp-applets">
     <img src=".github/img/logo.png" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">Applets REMASTERED</h3>
