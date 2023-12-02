@@ -9,7 +9,7 @@
   <p align="center">
     This repository was created in order to improve applets experience in 2023. So everyone will be able to run them without problems
     <br />
-    <a href="https://github.com/geugenm/modern-lab-comp-applets/tree/master/Docs"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/geugenm/modern-lab-comp-applets/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://www.acsu.buffalo.edu/~wie/applet/diffusion/diffusion.html">View Demo</a>
