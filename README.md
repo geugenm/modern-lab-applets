@@ -22,7 +22,7 @@
 
 
 ### Prerequisites
-Before using this script, install the CheerpJ plugin by visiting the [CheerpJ Applet Runner](https://chromewebstore.google.com/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein) link in your browser.
+Before using this script, install the CheerpJ plugin by visiting the [CheerpJ Applet Runner](https://chromewebstore.google.com/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein) link in your browser(Must support Chrome Extensions).
 
 ### Usage
 To run this script, use the following command in your terminal:
