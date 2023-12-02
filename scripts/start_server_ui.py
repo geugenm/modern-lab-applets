@@ -121,7 +121,7 @@ def run_server(directory, port, log_file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Java WebAssembly Translation Server with UI")
-    parser.add_argument("-dir", "--directory", type=str, default="", help="Directory to open")
+    parser.add_argument("-dir", "--directory", type=str, default="./", help="Directory to open")
     parser.add_argument("-p", "--port", type=int, default=8080, help="Port to run the server on")
     parser.add_argument("-log", "--logfile", type=str, default="log.txt", help="Log file name")
     args = parser.parse_args()
