@@ -1,596 +1,643 @@
-<html>
+<html lang="ru">
 <HEAD>
-   <META http-equiv=Content-Type content="text/html; charset=utf-8">
-   <TITLE>Строение кристалла</TITLE>
-   <META NAME="Author" CONTENT="Dr.C.R.Wie">
-   <META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
-   <META NAME="Classification" CONTENT="Education">
-   <META NAME="KeyWords" CONTENT="Semiconductor Applets">
-<SCRIPT language="JavaScript">
-<!-- hide me  
-var ua="UA";ua=navigator.userAgent;
-function whichBrowser(){var br="BR";
-if(ua.indexOf("NAV")!=-1){br="Navio"} if(ua.indexOf("Opera")!=-1){br="Opera"} if(ua.indexOf("MSIE")!=-1){br="IE"}
-if((ua.indexOf('Mozilla')!= -1)&&((ua.indexOf('Spoofer')==-1)&&(ua.indexOf('compatible')==-1))){br="NS"}
-return br}
-b=whichBrowser();
+    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+    <TITLE>Строение кристалла</TITLE>
+    <META CONTENT="Dr.C.R.Wie" NAME="Author">
+    <META CONTENT="Microsoft FrontPage 4.0" NAME="GENERATOR">
+    <META CONTENT="Education" NAME="Classification">
+    <META CONTENT="Semiconductor Applets" NAME="KeyWords">
+    <SCRIPT language="JavaScript">
+        let ua = "UA";
+        ua = navigator.userAgent;
 
-function whichVersion(br){var bv=0;bv=navigator.appVersion.substring(0,1);
-if(br=="IE"){(parseInt(bv));}if(br=="NS"){(parseInt(bv));}return bv;}
-v=whichVersion(b);
+        function whichBrowser() {
+            let br = "BR";
+            if (ua.indexOf("NAV") !== -1) {
+                br = "Navio"
+            }
+            if (ua.indexOf("Opera") !== -1) {
+                br = "Opera"
+            }
+            if (ua.indexOf("MSIE") !== -1) {
+                br = "IE"
+            }
+            if ((ua.indexOf('Mozilla') !== -1) && ((ua.indexOf('Spoofed') === -1) && (ua.indexOf('compatible') === -1))) {
+                br = "NS"
+            }
+            return br
+        }
 
-function whichPlatform()
-{var os="OS";if((ua.indexOf("Win98")!=-1)||(ua.indexOf("Windows 98")!=-1)){os='win32_98'}
+        b = whichBrowser();
 
-if((ua.indexOf("Win95")!=-1)||(ua.indexOf("Windows 95")!=-1)){os='win32_95'}
-else if((ua.indexOf("WinNT")!=-1)||(ua.indexOf("Windows NT")!=-1)){os='win32_NT'}
-else if((ua.indexOf("Win16")!=-1)||(ua.indexOf("Windows 3.1")!=-1)){os='win16'}
-else if((ua.indexOf("Macintosh")!=-1)||(ua.indexOf("Mac")!=-1)){os='Mac';}else if(ua.indexOf("SunOS")!=-1){os='unix sun'}
-else if(ua.indexOf("IRIX")!=-1){os='unix sgi'}else if(ua.indexOf("HP-UX")!=-1){os='unix hp'}
-else if(ua.indexOf("AIX")!=-1){os='unix ibm'}else if(ua.indexOf("OS/2")!=-1){os='os/2'}else if(ua.indexOf("Linux")!=-1){ os='linux';}
-return os;}
+        function whichVersion(br) {
+            let bv ;
+            bv = navigator.appVersion.substring(0, 1);
+            if (br === "IE") {
+                (parseInt(bv));
+            }
+            if (br === "NS") {
+                (parseInt(bv));
+            }
+            return bv;
+        }
 
-o=whichPlatform();
+        v = whichVersion(b);
 
-function miniwinpopup(w, h, myurl, targetstring, l, t)
-{var popup=new Object();
-popup.w=w;popup.h=h;popup.l=l;popup.t=t;
-popup.url=myurl;popup.trgt=targetstring;
+        function whichPlatform() {
+            let os = "OS";
+            if ((ua.indexOf("Win98") !== -1) || (ua.indexOf("Windows 98") !== -1)) {
+                os = 'win32_98'
+            }
 
-if((b=="IE")||(v==2))
-	{window.open(popup.url,popup.trgt,
-"width="+popup.w+",height="+popup.h+",resizable=1,status=0,left="+popup.l+",top="+popup.t+",menubar=0,scrollbars=1,toolbar=0,location=0,directories=0")}
+            if ((ua.indexOf("Win95") !== -1) || (ua.indexOf("Windows 95") !== -1)) {
+                os = 'win32_95'
+            } else if ((ua.indexOf("WinNT") !== -1) || (ua.indexOf("Windows NT") !== -1)) {
+                os = 'win32_NT'
+            } else if ((ua.indexOf("Win16") !== -1) || (ua.indexOf("Windows 3.1") !== -1)) {
+                os = 'win16'
+            } else if ((ua.indexOf("Macintosh") !== -1) || (ua.indexOf("Mac") !== -1)) {
+                os = 'Mac';
+            } else if (ua.indexOf("SunOS") !== -1) {
+                os = 'unix sun'
+            } else if (ua.indexOf("IRIX") !== -1) {
+                os = 'unix sgi'
+            } else if (ua.indexOf("HP-UX") !== -1) {
+                os = 'unix hp'
+            } else if (ua.indexOf("AIX") !== -1) {
+                os = 'unix ibm'
+            } else if (ua.indexOf("OS/2") !== -1) {
+                os = 'os/2'
+            } else if (ua.indexOf("Linux") !== -1) {
+                os = 'linux';
+            }
+            return os;
+        }
 
-else {window1=window.open(popup.url, popup.trgt,         "width="+popup.w+",height="+popup.h+",resizable=1,status=0,left="+popup.l+",top="+popup.t+",menubar=0,scrollbars=1,toolbar=0,location=0,directories=0");
-window1.focus();}}
+        o = whichPlatform();
 
-function menuWindow()
-{
-	window.open("menu.html","menuWindow","resizable,width=170,height=230,left=0,top=0");
-}
-function textWindow(page)
-{
-	miniwinpopup(470,500, page, "AppWindow",295,10); 
-}
-function appletWindow(page, w, h)
-{
-	miniwinpopup(w, h, page, "AppWindow",20,10); 
-}
+        function miniwinpopup(w, h, myurl, targetstring, l, t) {
+            const popup = {};
+            popup.w = w;
+            popup.h = h;
+            popup.l = l;
+            popup.t = t;
+            popup.url = myurl;
+            popup.trgt = targetstring;
 
-// end hide -->
-</SCRIPT>
-<style>
-td{
-	font-family: verdana, arial;
-	font-size: 12px
-}
-.comm{
-	font-size: 10px;
-	color: #999999
-}
-.title{
-	font-size: 26px;
-	color: #0E9700
-}
-a{
-	text-decoration: none;
-	font-weight: bold
-}
-</style>
+            if ((b === "IE") || (v === 2)) {
+                window.open(popup.url, popup.trgt,
+                    "width=" + popup.w + ",height=" + popup.h + ",resizable=1,status=0,left=" + popup.l + ",top=" + popup.t + ",menubar=0,scrollbars=1,toolbar=0,location=0,directories=0")
+            } else {
+                window1 = window.open(popup.url, popup.trgt, "width=" + popup.w + ",height=" + popup.h + ",resizable=1,status=0,left=" + popup.l + ",top=" + popup.t + ",menubar=0,scrollbars=1,toolbar=0,location=0,directories=0");
+                window1.focus();
+            }
+        }
+
+        function menuWindow() {
+            window.open("menu.html", "menuWindow", "resizable,width=170,height=230,left=0,top=0");
+        }
+
+        function textWindow(page) {
+            miniwinpopup(470, 500, page, "AppWindow", 295, 10);
+        }
+
+        function appletWindow(page, w, h) {
+            miniwinpopup(w, h, page, "AppWindow", 20, 10);
+        }
+
+        // end hide -->
+    </SCRIPT>
+    <style>
+        td {
+            font-family: verdana, arial,serif;
+            font-size: 12px
+        }
+
+        .title {
+            font-size: 26px;
+            color: #0E9700
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold
+        }
+    </style>
 </HEAD>
-<BODY text=#000000 vLink=#66AE36 aLink=#298F01 link=#298F01 bgColor=#ffffff topmargin=5 leftmargin=5 marginwidth=0 marginheight=0>
+<BODY aLink=#298F01 bgColor=#ffffff leftmargin=5 link=#298F01 marginheight=0 marginwidth=0 text=#000000 topmargin=5
+      vLink=#66AE36>
 <table border=0 cellpadding=2 cellspacing=4 width=100%>
-  <tr bgcolor=#FEF2DE>
-	<td>
-	<center class=title>
-	  Строение кристалла
-	</center>
-	</td>
-  </tr>
-  <tr bgcolor=#FEF9F0 align=center>
-	<td>
-<TABLE>
-<TR>
-<TD align=left>
+    <tr bgcolor=#FEF2DE>
+        <td>
+            <center class=title>
+                Строение кристалла
+            </center>
+        </td>
+    </tr>
+    <tr align=center bgcolor=#FEF9F0>
+        <td>
+            <TABLE>
+                <TR>
+                    <TD align=left>
 
-<!--"CONVERTED_APPLET"-->
-<!-- HTML CONVERTER -->
-<OBJECT 
-    classid = "clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
-    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4-windows-i586.cab#Version=1,4,0,0"
-    WIDTH = 700 HEIGHT = 400 >
-	<PARAM NAME="codebase" VALUE="crystal_structure_3d">
-    <PARAM NAME = CODE VALUE = "Demo1.class" >
-    <PARAM NAME = ARCHIVE VALUE = "unitcell21.jar" >
-    <PARAM NAME = "type" VALUE = "application/x-java-applet;version=1.4">
-    <PARAM NAME = "scriptable" VALUE = "false">
-    <PARAM NAME = "lattice1" VALUE="Si">
-    <PARAM NAME = "lattice1_lattice" VALUE="Face-Centered Cubic">
-    <PARAM NAME = "lattice1_a" VALUE="5.43">
-    <PARAM NAME = "lattice1_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FF00">
-    <PARAM NAME = "lattice1_atom2" VALUE="0.25, 0.25, 0.25, 5, 00FF00">
-    <PARAM NAME = "lattice2" VALUE="GaAs">
-    <PARAM NAME = "lattice2_lattice" VALUE="Face-Centered Cubic">
-    <PARAM NAME = "lattice2_a" VALUE="5.6533">
-    <PARAM NAME = "lattice2_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
-    <PARAM NAME = "lattice2_atom2" VALUE="0.25, 0.25, 0.25, 4, 00FFFF">
-    <PARAM NAME = "lattice3" VALUE="InP">
-    <PARAM NAME = "lattice3_lattice" VALUE="Face-Centered Cubic">
-    <PARAM NAME = "lattice3_a" VALUE="5.8686">
-    <PARAM NAME = "lattice3_atom1" VALUE="0.0, 0.0, 0.0, 7, FF0000">
-    <PARAM NAME = "lattice3_atom2" VALUE="0.25, 0.25, 0.25, 3, 0000FF">
-    <PARAM NAME = "lattice4" VALUE="GaN">
-    <PARAM NAME = "lattice4_lattice" VALUE="Hexagonal">
-    <PARAM NAME = "lattice4_a" VALUE="3.180">
-    <PARAM NAME = "lattice4_c" VALUE="5.166">
-    <PARAM NAME = "lattice4_atom1" VALUE="0.0, 0.0, 0.0, 7, 0000FF">
-    <PARAM NAME = "lattice4_atom2" VALUE="0.333, 0.667, 0.5, 7, 0000FF">
-    <PARAM NAME = "lattice4_atom3" VALUE="0.0, 0.0, 0.375, 3, 00FF00">
-    <PARAM NAME = "lattice4_atom4" VALUE="0.333, 0.667, 0.875, 3, 00FF00">
-    <PARAM NAME = "lattice5" VALUE="SiC">
-    <PARAM NAME = "lattice5_lattice" VALUE="Hexagonal">
-    <PARAM NAME = "lattice5_a" VALUE="3.076">
-    <PARAM NAME = "lattice5_c" VALUE="5.048">
-    <PARAM NAME = "lattice5_atom1" VALUE="0.0, 0.0, 0.0, 7, FFC800">
-    <PARAM NAME = "lattice5_atom2" VALUE="0.333, 0.667, 0.5, 7, FFC800">
-    <PARAM NAME = "lattice5_atom3" VALUE="0.0, 0.0, 0.375, 3, 00FFFF">
-    <PARAM NAME = "lattice5_atom4" VALUE="0.333, 0.667, 0.875, 3, 00FFFF">
-    <PARAM NAME = "lattice6" VALUE="CsCl">
-    <PARAM NAME = "lattice6_lattice" VALUE="Simple Cubic">
-    <PARAM NAME = "lattice6_a" VALUE="4.12">
-    <PARAM NAME = "lattice6_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
-    <PARAM NAME = "lattice6_atom2" VALUE="0.5, 0.5, 0.5, 3, 0000FF">
-    <PARAM NAME = "lattice7" VALUE="Fe">
-    <PARAM NAME = "lattice7_lattice" VALUE="Body-Centered Cubic">
-    <PARAM NAME = "lattice7_a" VALUE="2.87">
-    <PARAM NAME = "lattice7_atom1" VALUE="0.0, 0.0, 0.0, 4, FFC800">
-    <PARAM NAME = "lattice8" VALUE="Au">
-    <PARAM NAME = "lattice8_lattice" VALUE="Face-Centered Cubic">
-    <PARAM NAME = "lattice8_a" VALUE="4.08">
-    <PARAM NAME = "lattice8_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
-    <PARAM NAME = "lattice9" VALUE="CaF2">
-    <PARAM NAME = "lattice9_lattice" VALUE="Face-Centered Cubic">
-    <PARAM NAME = "lattice9_a" VALUE="5.464">
-    <PARAM NAME = "lattice9_atom1" VALUE="0.0, 0.0, 0.0, 7, FFC800">
-    <PARAM NAME = "lattice9_atom2" VALUE="0.25, -0.25, 0.25, 3, FF0000">
-    <PARAM NAME = "lattice9_atom3" VALUE="0.25, 0.24, 0.25, 3, FF0000">
-    <PARAM NAME = "lattice10" VALUE="Mg">
-    <PARAM NAME = "lattice10_lattice" VALUE="Hexagonal">
-    <PARAM NAME = "lattice10_a" VALUE="3.21">
-    <PARAM NAME = "lattice10_c" VALUE="5.21">
-    <PARAM NAME = "lattice10_atom1" VALUE="0.0, 0.0, 0.0, 6, 00FFFF">
-    <PARAM NAME = "lattice10_atom2" VALUE="0.667, 0.333, 0.5, 6, 00FFFF">
-    <PARAM NAME = "lattice11" VALUE="BaTiO3">
-    <PARAM NAME = "lattice11_lattice" VALUE="Simple Cubic">
-    <PARAM NAME = "lattice11_a" VALUE="4.01">
-    <PARAM NAME = "lattice11_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
-    <PARAM NAME = "lattice11_atom2" VALUE="0.5, 0.5, 0.5, 5, 00FF00">
-    <PARAM NAME = "lattice11_atom3" VALUE="0.0, 0.5, 0.5, 3, 0000FF">
-    <PARAM NAME = "lattice11_atom4" VALUE="0.5, 0.0, 0.5, 3, 0000FF">
-    <PARAM NAME = "lattice11_atom5" VALUE="0.5, 0.5, 0.0, 3, 0000FF">
-    <PARAM NAME = "lattice12" VALUE="Sn(white)">
-    <PARAM NAME = "lattice12_lattice" VALUE="Simple Tetragonal">
-    <PARAM NAME = "lattice12_a" VALUE="5.82">
-    <PARAM NAME = "lattice12_c" VALUE="3.17">
-    <PARAM NAME = "lattice12_atom1" VALUE="0.0, 0.0, 0.0, 4, 00FF00">
-    <PARAM NAME = "lattice12_atom2" VALUE="0.0, 0.5, 0.25, 4, 00FF00">
-    <PARAM NAME = "lattice12_atom3" VALUE="0.5, 0.0, 0.75, 4, 00FF00">
-    <PARAM NAME = "lattice12_atom4" VALUE="0.5, 0.5, 0.5, 4, 00FF00">
-    <PARAM NAME = "lattice13" VALUE="Hg">
-    <PARAM NAME = "lattice13_lattice" VALUE="Trigonal">
-    <PARAM NAME = "lattice13_a" VALUE="2.99">
-    <PARAM NAME = "lattice13_alpha" VALUE="70.75">
-    <PARAM NAME = "lattice13_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FFFF">
-    <PARAM NAME = "lattice14" VALUE="Sb">
-    <PARAM NAME = "lattice14_lattice" VALUE="Trigonal">
-    <PARAM NAME = "lattice14_a" VALUE="4.51">
-    <PARAM NAME = "lattice14_alpha" VALUE="57.1">
-    <PARAM NAME = "lattice14_atom1" VALUE="0.233, 0.233, 0.233, 4, 00FF00">
-    <PARAM NAME = "lattice14_atom2" VALUE="-0.233, -0.233, -0.233, 4, 00FF00">
-    <PARAM NAME = "lattice15" VALUE="CdI2">
-    <PARAM NAME = "lattice15_lattice" VALUE="Hexagonal">
-    <PARAM NAME = "lattice15_a" VALUE="4.24">
-    <PARAM NAME = "lattice15_c" VALUE="6.84">
-    <PARAM NAME = "lattice15_atom1" VALUE="0.0, 0.0, 0.0, 3, FF0000">
-    <PARAM NAME = "lattice15_atom2" VALUE="0.333, 0.667, 0.25, 6, 00FFFF">
-    <PARAM NAME = "lattice15_atom3" VALUE="0.667, 0.333, -0.25, 6, 00FFFF">
-    <PARAM NAME = "lattice16" VALUE="NaCl">
-    <PARAM NAME = "lattice16_lattice" VALUE="Face-Centered Cubic">
-    <PARAM NAME = "lattice16_a" VALUE="5.63">
-    <PARAM NAME = "lattice16_atom1" VALUE="0.0, 0.0, 0.0, 4, 00FF00">
-    <PARAM NAME = "lattice16_atom2" VALUE="0.5, 0.5, 0.5, 6, 0000FF">
-    <PARAM NAME = "lattice17" VALUE="Cubic-ZnS">
-    <PARAM NAME = "lattice17_lattice" VALUE="Face-Centered Cubic">
-    <PARAM NAME = "lattice17_a" VALUE="5.41">
-    <PARAM NAME = "lattice17_atom1" VALUE="0.0, 0.0, 0.0, 3, 0000FF">
-    <PARAM NAME = "lattice17_atom2" VALUE="0.25, 0.25, 0.25, 7, FFC800">
-    <PARAM NAME = "lattice18" VALUE="Hex-ZnS">
-    <PARAM NAME = "lattice18_lattice" VALUE="Hexagonal">
-    <PARAM NAME = "lattice18_a" VALUE="3.076">
-    <PARAM NAME = "lattice18_c" VALUE="5.048">
-    <PARAM NAME = "lattice18_atom1" VALUE="0.0, 0.0, 0.0, 3, 0000FF">
-    <PARAM NAME = "lattice18_atom2" VALUE="0.667, 0.333, 0.5, 3, 0000FF">
-    <PARAM NAME = "lattice18_atom3" VALUE="0.0, 0.0, 0.375, 7, FFC800">
-    <PARAM NAME = "lattice18_atom4" VALUE="0.667, 0.333, 0.875, 7, FFC800">
-    <PARAM NAME = "lattice19" VALUE="Cu">
-    <PARAM NAME = "lattice19_lattice" VALUE="Face-Centered Cubic">
-    <PARAM NAME = "lattice19_a" VALUE="3.61">
-    <PARAM NAME = "lattice19_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FFFF">
-    <PARAM NAME = "lattice20" VALUE="Ag">
-    <PARAM NAME = "lattice20_lattice" VALUE="Face-Centered Cubic">
-    <PARAM NAME = "lattice20_a" VALUE="4.09">
-    <PARAM NAME = "lattice20_atom1" VALUE="0.0, 0.0, 0.0, 6, 00FF00">
-    <PARAM NAME = "lattice21" VALUE="Mo">
-    <PARAM NAME = "lattice21_lattice" VALUE="Body-Centered Cubic">
-    <PARAM NAME = "lattice21_a" VALUE="3.15">
-    <PARAM NAME = "lattice21_atom1" VALUE="0.0, 0.0, 0.0, 7, FF0000">
-    <PARAM NAME = "lattice22" VALUE="W">
-    <PARAM NAME = "lattice22_lattice" VALUE="Body-Centered Cubic">
-    <PARAM NAME = "lattice22_a" VALUE="3.16">
-    <PARAM NAME = "lattice22_atom1" VALUE="0.0, 0.0, 0.0, 8, 0000FF">
-    <PARAM NAME = "lattice23" VALUE="Be">
-    <PARAM NAME = "lattice23_lattice" VALUE="Hexagonal">
-    <PARAM NAME = "lattice23_a" VALUE="2.29">
-    <PARAM NAME = "lattice23_c" VALUE="3.58">
-    <PARAM NAME = "lattice23_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
-    <PARAM NAME = "lattice23_atom2" VALUE="0.667, 0.333, 0.5, 5, FFC800">
-    <PARAM NAME = "lattice24" VALUE="Zn">
-    <PARAM NAME = "lattice24_lattice" VALUE="Hexagonal">
-    <PARAM NAME = "lattice24_a" VALUE="2.66">
-    <PARAM NAME = "lattice24_c" VALUE="4.95">
-    <PARAM NAME = "lattice24_atom1" VALUE="0.0, 0.0, 0.0, 6, 0000FF">
-    <PARAM NAME = "lattice24_atom2" VALUE="0.667, 0.333, 0.5, 6, 0000FF">
-    <PARAM NAME = "lattice25" VALUE="Ti">
-    <PARAM NAME = "lattice25_lattice" VALUE="Hexagonal">
-    <PARAM NAME = "lattice25_a" VALUE="2.95">
-    <PARAM NAME = "lattice25_c" VALUE="4.69">
-    <PARAM NAME = "lattice25_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
-    <PARAM NAME = "lattice25_atom2" VALUE="0.667, 0.333, 0.5, 7, 00FFFF">
-    <PARAM NAME = "lattice26" VALUE="Bi">
-    <PARAM NAME = "lattice26_lattice" VALUE="Trigonal">
-    <PARAM NAME = "lattice26_a" VALUE="4.75">
-    <PARAM NAME = "lattice26_alpha" VALUE="57.233">
-    <PARAM NAME = "lattice26_atom1" VALUE="0.237, 0.237, 0.237, 6, 00FF00">
-    <PARAM NAME = "lattice26_atom2" VALUE="-0.237, -0.237, -0.237, 6, 00FF00">
+                        <!--"CONVERTED_APPLET"-->
+                        <!-- HTML CONVERTER -->
+                        <OBJECT
+                                HEIGHT=400
+                                WIDTH=700
+                                classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" codebase="http://java.sun.com/products/plugin/autodl/jinstall-1_4-windows-i586.cab#Version=1,4,0,0">
+                            <PARAM NAME="codebase" VALUE="crystal_structure_3d">
+                            <PARAM NAME=CODE VALUE="Demo1.class">
+                            <PARAM NAME=ARCHIVE VALUE="unitcell21.jar">
+                            <PARAM NAME="type" VALUE="application/x-java-applet;version=1.4">
+                            <PARAM NAME="scriptable" VALUE="false">
+                            <PARAM NAME="lattice1" VALUE="Si">
+                            <PARAM NAME="lattice1_lattice" VALUE="Face-Centered Cubic">
+                            <PARAM NAME="lattice1_a" VALUE="5.43">
+                            <PARAM NAME="lattice1_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FF00">
+                            <PARAM NAME="lattice1_atom2" VALUE="0.25, 0.25, 0.25, 5, 00FF00">
+                            <PARAM NAME="lattice2" VALUE="GaAs">
+                            <PARAM NAME="lattice2_lattice" VALUE="Face-Centered Cubic">
+                            <PARAM NAME="lattice2_a" VALUE="5.6533">
+                            <PARAM NAME="lattice2_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
+                            <PARAM NAME="lattice2_atom2" VALUE="0.25, 0.25, 0.25, 4, 00FFFF">
+                            <PARAM NAME="lattice3" VALUE="InP">
+                            <PARAM NAME="lattice3_lattice" VALUE="Face-Centered Cubic">
+                            <PARAM NAME="lattice3_a" VALUE="5.8686">
+                            <PARAM NAME="lattice3_atom1" VALUE="0.0, 0.0, 0.0, 7, FF0000">
+                            <PARAM NAME="lattice3_atom2" VALUE="0.25, 0.25, 0.25, 3, 0000FF">
+                            <PARAM NAME="lattice4" VALUE="GaN">
+                            <PARAM NAME="lattice4_lattice" VALUE="Hexagonal">
+                            <PARAM NAME="lattice4_a" VALUE="3.180">
+                            <PARAM NAME="lattice4_c" VALUE="5.166">
+                            <PARAM NAME="lattice4_atom1" VALUE="0.0, 0.0, 0.0, 7, 0000FF">
+                            <PARAM NAME="lattice4_atom2" VALUE="0.333, 0.667, 0.5, 7, 0000FF">
+                            <PARAM NAME="lattice4_atom3" VALUE="0.0, 0.0, 0.375, 3, 00FF00">
+                            <PARAM NAME="lattice4_atom4" VALUE="0.333, 0.667, 0.875, 3, 00FF00">
+                            <PARAM NAME="lattice5" VALUE="SiC">
+                            <PARAM NAME="lattice5_lattice" VALUE="Hexagonal">
+                            <PARAM NAME="lattice5_a" VALUE="3.076">
+                            <PARAM NAME="lattice5_c" VALUE="5.048">
+                            <PARAM NAME="lattice5_atom1" VALUE="0.0, 0.0, 0.0, 7, FFC800">
+                            <PARAM NAME="lattice5_atom2" VALUE="0.333, 0.667, 0.5, 7, FFC800">
+                            <PARAM NAME="lattice5_atom3" VALUE="0.0, 0.0, 0.375, 3, 00FFFF">
+                            <PARAM NAME="lattice5_atom4" VALUE="0.333, 0.667, 0.875, 3, 00FFFF">
+                            <PARAM NAME="lattice6" VALUE="CsCl">
+                            <PARAM NAME="lattice6_lattice" VALUE="Simple Cubic">
+                            <PARAM NAME="lattice6_a" VALUE="4.12">
+                            <PARAM NAME="lattice6_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
+                            <PARAM NAME="lattice6_atom2" VALUE="0.5, 0.5, 0.5, 3, 0000FF">
+                            <PARAM NAME="lattice7" VALUE="Fe">
+                            <PARAM NAME="lattice7_lattice" VALUE="Body-Centered Cubic">
+                            <PARAM NAME="lattice7_a" VALUE="2.87">
+                            <PARAM NAME="lattice7_atom1" VALUE="0.0, 0.0, 0.0, 4, FFC800">
+                            <PARAM NAME="lattice8" VALUE="Au">
+                            <PARAM NAME="lattice8_lattice" VALUE="Face-Centered Cubic">
+                            <PARAM NAME="lattice8_a" VALUE="4.08">
+                            <PARAM NAME="lattice8_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
+                            <PARAM NAME="lattice9" VALUE="CaF2">
+                            <PARAM NAME="lattice9_lattice" VALUE="Face-Centered Cubic">
+                            <PARAM NAME="lattice9_a" VALUE="5.464">
+                            <PARAM NAME="lattice9_atom1" VALUE="0.0, 0.0, 0.0, 7, FFC800">
+                            <PARAM NAME="lattice9_atom2" VALUE="0.25, -0.25, 0.25, 3, FF0000">
+                            <PARAM NAME="lattice9_atom3" VALUE="0.25, 0.24, 0.25, 3, FF0000">
+                            <PARAM NAME="lattice10" VALUE="Mg">
+                            <PARAM NAME="lattice10_lattice" VALUE="Hexagonal">
+                            <PARAM NAME="lattice10_a" VALUE="3.21">
+                            <PARAM NAME="lattice10_c" VALUE="5.21">
+                            <PARAM NAME="lattice10_atom1" VALUE="0.0, 0.0, 0.0, 6, 00FFFF">
+                            <PARAM NAME="lattice10_atom2" VALUE="0.667, 0.333, 0.5, 6, 00FFFF">
+                            <PARAM NAME="lattice11" VALUE="BaTiO3">
+                            <PARAM NAME="lattice11_lattice" VALUE="Simple Cubic">
+                            <PARAM NAME="lattice11_a" VALUE="4.01">
+                            <PARAM NAME="lattice11_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
+                            <PARAM NAME="lattice11_atom2" VALUE="0.5, 0.5, 0.5, 5, 00FF00">
+                            <PARAM NAME="lattice11_atom3" VALUE="0.0, 0.5, 0.5, 3, 0000FF">
+                            <PARAM NAME="lattice11_atom4" VALUE="0.5, 0.0, 0.5, 3, 0000FF">
+                            <PARAM NAME="lattice11_atom5" VALUE="0.5, 0.5, 0.0, 3, 0000FF">
+                            <PARAM NAME="lattice12" VALUE="Sn(white)">
+                            <PARAM NAME="lattice12_lattice" VALUE="Simple Tetragonal">
+                            <PARAM NAME="lattice12_a" VALUE="5.82">
+                            <PARAM NAME="lattice12_c" VALUE="3.17">
+                            <PARAM NAME="lattice12_atom1" VALUE="0.0, 0.0, 0.0, 4, 00FF00">
+                            <PARAM NAME="lattice12_atom2" VALUE="0.0, 0.5, 0.25, 4, 00FF00">
+                            <PARAM NAME="lattice12_atom3" VALUE="0.5, 0.0, 0.75, 4, 00FF00">
+                            <PARAM NAME="lattice12_atom4" VALUE="0.5, 0.5, 0.5, 4, 00FF00">
+                            <PARAM NAME="lattice13" VALUE="Hg">
+                            <PARAM NAME="lattice13_lattice" VALUE="Trigonal">
+                            <PARAM NAME="lattice13_a" VALUE="2.99">
+                            <PARAM NAME="lattice13_alpha" VALUE="70.75">
+                            <PARAM NAME="lattice13_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FFFF">
+                            <PARAM NAME="lattice14" VALUE="Sb">
+                            <PARAM NAME="lattice14_lattice" VALUE="Trigonal">
+                            <PARAM NAME="lattice14_a" VALUE="4.51">
+                            <PARAM NAME="lattice14_alpha" VALUE="57.1">
+                            <PARAM NAME="lattice14_atom1" VALUE="0.233, 0.233, 0.233, 4, 00FF00">
+                            <PARAM NAME="lattice14_atom2" VALUE="-0.233, -0.233, -0.233, 4, 00FF00">
+                            <PARAM NAME="lattice15" VALUE="CdI2">
+                            <PARAM NAME="lattice15_lattice" VALUE="Hexagonal">
+                            <PARAM NAME="lattice15_a" VALUE="4.24">
+                            <PARAM NAME="lattice15_c" VALUE="6.84">
+                            <PARAM NAME="lattice15_atom1" VALUE="0.0, 0.0, 0.0, 3, FF0000">
+                            <PARAM NAME="lattice15_atom2" VALUE="0.333, 0.667, 0.25, 6, 00FFFF">
+                            <PARAM NAME="lattice15_atom3" VALUE="0.667, 0.333, -0.25, 6, 00FFFF">
+                            <PARAM NAME="lattice16" VALUE="NaCl">
+                            <PARAM NAME="lattice16_lattice" VALUE="Face-Centered Cubic">
+                            <PARAM NAME="lattice16_a" VALUE="5.63">
+                            <PARAM NAME="lattice16_atom1" VALUE="0.0, 0.0, 0.0, 4, 00FF00">
+                            <PARAM NAME="lattice16_atom2" VALUE="0.5, 0.5, 0.5, 6, 0000FF">
+                            <PARAM NAME="lattice17" VALUE="Cubic-ZnS">
+                            <PARAM NAME="lattice17_lattice" VALUE="Face-Centered Cubic">
+                            <PARAM NAME="lattice17_a" VALUE="5.41">
+                            <PARAM NAME="lattice17_atom1" VALUE="0.0, 0.0, 0.0, 3, 0000FF">
+                            <PARAM NAME="lattice17_atom2" VALUE="0.25, 0.25, 0.25, 7, FFC800">
+                            <PARAM NAME="lattice18" VALUE="Hex-ZnS">
+                            <PARAM NAME="lattice18_lattice" VALUE="Hexagonal">
+                            <PARAM NAME="lattice18_a" VALUE="3.076">
+                            <PARAM NAME="lattice18_c" VALUE="5.048">
+                            <PARAM NAME="lattice18_atom1" VALUE="0.0, 0.0, 0.0, 3, 0000FF">
+                            <PARAM NAME="lattice18_atom2" VALUE="0.667, 0.333, 0.5, 3, 0000FF">
+                            <PARAM NAME="lattice18_atom3" VALUE="0.0, 0.0, 0.375, 7, FFC800">
+                            <PARAM NAME="lattice18_atom4" VALUE="0.667, 0.333, 0.875, 7, FFC800">
+                            <PARAM NAME="lattice19" VALUE="Cu">
+                            <PARAM NAME="lattice19_lattice" VALUE="Face-Centered Cubic">
+                            <PARAM NAME="lattice19_a" VALUE="3.61">
+                            <PARAM NAME="lattice19_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FFFF">
+                            <PARAM NAME="lattice20" VALUE="Ag">
+                            <PARAM NAME="lattice20_lattice" VALUE="Face-Centered Cubic">
+                            <PARAM NAME="lattice20_a" VALUE="4.09">
+                            <PARAM NAME="lattice20_atom1" VALUE="0.0, 0.0, 0.0, 6, 00FF00">
+                            <PARAM NAME="lattice21" VALUE="Mo">
+                            <PARAM NAME="lattice21_lattice" VALUE="Body-Centered Cubic">
+                            <PARAM NAME="lattice21_a" VALUE="3.15">
+                            <PARAM NAME="lattice21_atom1" VALUE="0.0, 0.0, 0.0, 7, FF0000">
+                            <PARAM NAME="lattice22" VALUE="W">
+                            <PARAM NAME="lattice22_lattice" VALUE="Body-Centered Cubic">
+                            <PARAM NAME="lattice22_a" VALUE="3.16">
+                            <PARAM NAME="lattice22_atom1" VALUE="0.0, 0.0, 0.0, 8, 0000FF">
+                            <PARAM NAME="lattice23" VALUE="Be">
+                            <PARAM NAME="lattice23_lattice" VALUE="Hexagonal">
+                            <PARAM NAME="lattice23_a" VALUE="2.29">
+                            <PARAM NAME="lattice23_c" VALUE="3.58">
+                            <PARAM NAME="lattice23_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
+                            <PARAM NAME="lattice23_atom2" VALUE="0.667, 0.333, 0.5, 5, FFC800">
+                            <PARAM NAME="lattice24" VALUE="Zn">
+                            <PARAM NAME="lattice24_lattice" VALUE="Hexagonal">
+                            <PARAM NAME="lattice24_a" VALUE="2.66">
+                            <PARAM NAME="lattice24_c" VALUE="4.95">
+                            <PARAM NAME="lattice24_atom1" VALUE="0.0, 0.0, 0.0, 6, 0000FF">
+                            <PARAM NAME="lattice24_atom2" VALUE="0.667, 0.333, 0.5, 6, 0000FF">
+                            <PARAM NAME="lattice25" VALUE="Ti">
+                            <PARAM NAME="lattice25_lattice" VALUE="Hexagonal">
+                            <PARAM NAME="lattice25_a" VALUE="2.95">
+                            <PARAM NAME="lattice25_c" VALUE="4.69">
+                            <PARAM NAME="lattice25_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
+                            <PARAM NAME="lattice25_atom2" VALUE="0.667, 0.333, 0.5, 7, 00FFFF">
+                            <PARAM NAME="lattice26" VALUE="Bi">
+                            <PARAM NAME="lattice26_lattice" VALUE="Trigonal">
+                            <PARAM NAME="lattice26_a" VALUE="4.75">
+                            <PARAM NAME="lattice26_alpha" VALUE="57.233">
+                            <PARAM NAME="lattice26_atom1" VALUE="0.237, 0.237, 0.237, 6, 00FF00">
+                            <PARAM NAME="lattice26_atom2" VALUE="-0.237, -0.237, -0.237, 6, 00FF00">
 
-    <COMMENT>
-	<EMBED 
-            type = "application/x-java-applet;version=1.4" 
-            CODE = "Demo1.class"
-            ARCHIVE = "unitcell21.jar"
-            WIDTH = 700
-            HEIGHT = 400 
-            lattice1 ="Si"
-            lattice1_lattice ="Face-Centered Cubic"
-            lattice1_a ="5.43"
-            lattice1_atom1 ="0.0, 0.0, 0.0, 5, 00FF00"
-            lattice1_atom2 ="0.25, 0.25, 0.25, 5, 00FF00"
-            lattice2 ="GaAs"
-            lattice2_lattice ="Face-Centered Cubic"
-            lattice2_a ="5.6533"
-            lattice2_atom1 ="0.0, 0.0, 0.0, 5, FFC800"
-            lattice2_atom2 ="0.25, 0.25, 0.25, 4, 00FFFF"
-            lattice3 ="InP"
-            lattice3_lattice ="Face-Centered Cubic"
-            lattice3_a ="5.8686"
-            lattice3_atom1 ="0.0, 0.0, 0.0, 7, FF0000"
-            lattice3_atom2 ="0.25, 0.25, 0.25, 3, 0000FF"
-            lattice4 ="GaN"
-            lattice4_lattice ="Hexagonal"
-            lattice4_a ="3.180"
-            lattice4_c ="5.166"
-            lattice4_atom1 ="0.0, 0.0, 0.0, 7, 0000FF"
-            lattice4_atom2 ="0.333, 0.667, 0.5, 7, 0000FF"
-            lattice4_atom3 ="0.0, 0.0, 0.375, 3, 00FF00"
-            lattice4_atom4 ="0.333, 0.667, 0.875, 3, 00FF00"
-            lattice5 ="SiC"
-            lattice5_lattice ="Hexagonal"
-            lattice5_a ="3.076"
-            lattice5_c ="5.048"
-            lattice5_atom1 ="0.0, 0.0, 0.0, 7, FFC800"
-            lattice5_atom2 ="0.333, 0.667, 0.5, 7, FFC800"
-            lattice5_atom3 ="0.0, 0.0, 0.375, 3, 00FFFF"
-            lattice5_atom4 ="0.333, 0.667, 0.875, 3, 00FFFF"
-            lattice6 ="CsCl"
-            lattice6_lattice ="Simple Cubic"
-            lattice6_a ="4.12"
-            lattice6_atom1 ="0.0, 0.0, 0.0, 7, 00FFFF"
-            lattice6_atom2 ="0.5, 0.5, 0.5, 3, 0000FF"
-            lattice7 ="Fe"
-            lattice7_lattice ="Body-Centered Cubic"
-            lattice7_a ="2.87"
-            lattice7_atom1 ="0.0, 0.0, 0.0, 4, FFC800"
-            lattice8 ="Au"
-            lattice8_lattice ="Face-Centered Cubic"
-            lattice8_a ="4.08"
-            lattice8_atom1 ="0.0, 0.0, 0.0, 5, FFC800"
-            lattice9 ="CaF2"
-            lattice9_lattice ="Face-Centered Cubic"
-            lattice9_a ="5.464"
-            lattice9_atom1 ="0.0, 0.0, 0.0, 7, FFC800"
-            lattice9_atom2 ="0.25, -0.25, 0.25, 3, FF0000"
-            lattice9_atom3 ="0.25, 0.24, 0.25, 3, FF0000"
-            lattice10 ="Mg"
-            lattice10_lattice ="Hexagonal"
-            lattice10_a ="3.21"
-            lattice10_c ="5.21"
-            lattice10_atom1 ="0.0, 0.0, 0.0, 6, 00FFFF"
-            lattice10_atom2 ="0.667, 0.333, 0.5, 6, 00FFFF"
-            lattice11 ="BaTiO3"
-            lattice11_lattice ="Simple Cubic"
-            lattice11_a ="4.01"
-            lattice11_atom1 ="0.0, 0.0, 0.0, 7, 00FFFF"
-            lattice11_atom2 ="0.5, 0.5, 0.5, 5, 00FF00"
-            lattice11_atom3 ="0.0, 0.5, 0.5, 3, 0000FF"
-            lattice11_atom4 ="0.5, 0.0, 0.5, 3, 0000FF"
-            lattice11_atom5 ="0.5, 0.5, 0.0, 3, 0000FF"
-            lattice12 ="Sn(white)"
-            lattice12_lattice ="Simple Tetragonal"
-            lattice12_a ="5.82"
-            lattice12_c ="3.17"
-            lattice12_atom1 ="0.0, 0.0, 0.0, 4, 00FF00"
-            lattice12_atom2 ="0.0, 0.5, 0.25, 4, 00FF00"
-            lattice12_atom3 ="0.5, 0.0, 0.75, 4, 00FF00"
-            lattice12_atom4 ="0.5, 0.5, 0.5, 4, 00FF00"
-            lattice13 ="Hg"
-            lattice13_lattice ="Trigonal"
-            lattice13_a ="2.99"
-            lattice13_alpha ="70.75"
-            lattice13_atom1 ="0.0, 0.0, 0.0, 5, 00FFFF"
-            lattice14 ="Sb"
-            lattice14_lattice ="Trigonal"
-            lattice14_a ="4.51"
-            lattice14_alpha ="57.1"
-            lattice14_atom1 ="0.233, 0.233, 0.233, 4, 00FF00"
-            lattice14_atom2 ="-0.233, -0.233, -0.233, 4, 00FF00"
-            lattice15 ="CdI2"
-            lattice15_lattice ="Hexagonal"
-            lattice15_a ="4.24"
-            lattice15_c ="6.84"
-            lattice15_atom1 ="0.0, 0.0, 0.0, 3, FF0000"
-            lattice15_atom2 ="0.333, 0.667, 0.25, 6, 00FFFF"
-            lattice15_atom3 ="0.667, 0.333, -0.25, 6, 00FFFF"
-            lattice16 ="NaCl"
-            lattice16_lattice ="Face-Centered Cubic"
-            lattice16_a ="5.63"
-            lattice16_atom1 ="0.0, 0.0, 0.0, 4, 00FF00"
-            lattice16_atom2 ="0.5, 0.5, 0.5, 6, 0000FF"
-            lattice17 ="Cubic-ZnS"
-            lattice17_lattice ="Face-Centered Cubic"
-            lattice17_a ="5.41"
-            lattice17_atom1 ="0.0, 0.0, 0.0, 3, 0000FF"
-            lattice17_atom2 ="0.25, 0.25, 0.25, 7, FFC800"
-            lattice18 ="Hex-ZnS"
-            lattice18_lattice ="Hexagonal"
-            lattice18_a ="3.076"
-            lattice18_c ="5.048"
-            lattice18_atom1 ="0.0, 0.0, 0.0, 3, 0000FF"
-            lattice18_atom2 ="0.667, 0.333, 0.5, 3, 0000FF"
-            lattice18_atom3 ="0.0, 0.0, 0.375, 7, FFC800"
-            lattice18_atom4 ="0.667, 0.333, 0.875, 7, FFC800"
-            lattice19 ="Cu"
-            lattice19_lattice ="Face-Centered Cubic"
-            lattice19_a ="3.61"
-            lattice19_atom1 ="0.0, 0.0, 0.0, 5, 00FFFF"
-            lattice20 ="Ag"
-            lattice20_lattice ="Face-Centered Cubic"
-            lattice20_a ="4.09"
-            lattice20_atom1 ="0.0, 0.0, 0.0, 6, 00FF00"
-            lattice21 ="Mo"
-            lattice21_lattice ="Body-Centered Cubic"
-            lattice21_a ="3.15"
-            lattice21_atom1 ="0.0, 0.0, 0.0, 7, FF0000"
-            lattice22 ="W"
-            lattice22_lattice ="Body-Centered Cubic"
-            lattice22_a ="3.16"
-            lattice22_atom1 ="0.0, 0.0, 0.0, 8, 0000FF"
-            lattice23 ="Be"
-            lattice23_lattice ="Hexagonal"
-            lattice23_a ="2.29"
-            lattice23_c ="3.58"
-            lattice23_atom1 ="0.0, 0.0, 0.0, 5, FFC800"
-            lattice23_atom2 ="0.667, 0.333, 0.5, 5, FFC800"
-            lattice24 ="Zn"
-            lattice24_lattice ="Hexagonal"
-            lattice24_a ="2.66"
-            lattice24_c ="4.95"
-            lattice24_atom1 ="0.0, 0.0, 0.0, 6, 0000FF"
-            lattice24_atom2 ="0.667, 0.333, 0.5, 6, 0000FF"
-            lattice25 ="Ti"
-            lattice25_lattice ="Hexagonal"
-            lattice25_a ="2.95"
-            lattice25_c ="4.69"
-            lattice25_atom1 ="0.0, 0.0, 0.0, 7, 00FFFF"
-            lattice25_atom2 ="0.667, 0.333, 0.5, 7, 00FFFF"
-            lattice26 ="Bi"
-            lattice26_lattice ="Trigonal"
-            lattice26_a ="4.75"
-            lattice26_alpha ="57.233"
-            lattice26_atom1 ="0.237, 0.237, 0.237, 6, 00FF00"
-            lattice26_atom2 ="-0.237, -0.237, -0.237, 6, 00FF00" 
-	    scriptable = false 
-	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
-	    <NOEMBED>
-            
-            </NOEMBED>
-	</EMBED>
-    </COMMENT>
-</OBJECT>
+                            <COMMENT>
+                                <EMBED
+                                        ARCHIVE="unitcell21.jar"
+                                        CODE="Demo1.class"
+                                        HEIGHT=400
+                                        WIDTH=700
+                                        lattice1="Si"
+                                        lattice10="Mg"
+                                        lattice10_a="3.21"
+                                        lattice10_atom1="0.0, 0.0, 0.0, 6, 00FFFF"
+                                        lattice10_atom2="0.667, 0.333, 0.5, 6, 00FFFF"
+                                        lattice10_c="5.21"
+                                        lattice10_lattice="Hexagonal"
+                                        lattice11="BaTiO3"
+                                        lattice11_a="4.01"
+                                        lattice11_atom1="0.0, 0.0, 0.0, 7, 00FFFF"
+                                        lattice11_atom2="0.5, 0.5, 0.5, 5, 00FF00"
+                                        lattice11_atom3="0.0, 0.5, 0.5, 3, 0000FF"
+                                        lattice11_atom4="0.5, 0.0, 0.5, 3, 0000FF"
+                                        lattice11_atom5="0.5, 0.5, 0.0, 3, 0000FF"
+                                        lattice11_lattice="Simple Cubic"
+                                        lattice12="Sn(white)"
+                                        lattice12_a="5.82"
+                                        lattice12_atom1="0.0, 0.0, 0.0, 4, 00FF00"
+                                        lattice12_atom2="0.0, 0.5, 0.25, 4, 00FF00"
+                                        lattice12_atom3="0.5, 0.0, 0.75, 4, 00FF00"
+                                        lattice12_atom4="0.5, 0.5, 0.5, 4, 00FF00"
+                                        lattice12_c="3.17"
+                                        lattice12_lattice="Simple Tetragonal"
+                                        lattice13="Hg"
+                                        lattice13_a="2.99"
+                                        lattice13_alpha="70.75"
+                                        lattice13_atom1="0.0, 0.0, 0.0, 5, 00FFFF"
+                                        lattice13_lattice="Trigonal"
+                                        lattice14="Sb"
+                                        lattice14_a="4.51"
+                                        lattice14_alpha="57.1"
+                                        lattice14_atom1="0.233, 0.233, 0.233, 4, 00FF00"
+                                        lattice14_atom2="-0.233, -0.233, -0.233, 4, 00FF00"
+                                        lattice14_lattice="Trigonal"
+                                        lattice15="CdI2"
+                                        lattice15_a="4.24"
+                                        lattice15_atom1="0.0, 0.0, 0.0, 3, FF0000"
+                                        lattice15_atom2="0.333, 0.667, 0.25, 6, 00FFFF"
+                                        lattice15_atom3="0.667, 0.333, -0.25, 6, 00FFFF"
+                                        lattice15_c="6.84"
+                                        lattice15_lattice="Hexagonal"
+                                        lattice16="NaCl"
+                                        lattice16_a="5.63"
+                                        lattice16_atom1="0.0, 0.0, 0.0, 4, 00FF00"
+                                        lattice16_atom2="0.5, 0.5, 0.5, 6, 0000FF"
+                                        lattice16_lattice="Face-Centered Cubic"
+                                        lattice17="Cubic-ZnS"
+                                        lattice17_a="5.41"
+                                        lattice17_atom1="0.0, 0.0, 0.0, 3, 0000FF"
+                                        lattice17_atom2="0.25, 0.25, 0.25, 7, FFC800"
+                                        lattice17_lattice="Face-Centered Cubic"
+                                        lattice18="Hex-ZnS"
+                                        lattice18_a="3.076"
+                                        lattice18_atom1="0.0, 0.0, 0.0, 3, 0000FF"
+                                        lattice18_atom2="0.667, 0.333, 0.5, 3, 0000FF"
+                                        lattice18_atom3="0.0, 0.0, 0.375, 7, FFC800"
+                                        lattice18_atom4="0.667, 0.333, 0.875, 7, FFC800"
+                                        lattice18_c="5.048"
+                                        lattice18_lattice="Hexagonal"
+                                        lattice19="Cu"
+                                        lattice19_a="3.61"
+                                        lattice19_atom1="0.0, 0.0, 0.0, 5, 00FFFF"
+                                        lattice19_lattice="Face-Centered Cubic"
+                                        lattice1_a="5.43"
+                                        lattice1_atom1="0.0, 0.0, 0.0, 5, 00FF00"
+                                        lattice1_atom2="0.25, 0.25, 0.25, 5, 00FF00"
+                                        lattice1_lattice="Face-Centered Cubic"
+                                        lattice2="GaAs"
+                                        lattice20="Ag"
+                                        lattice20_a="4.09"
+                                        lattice20_atom1="0.0, 0.0, 0.0, 6, 00FF00"
+                                        lattice20_lattice="Face-Centered Cubic"
+                                        lattice21="Mo"
+                                        lattice21_a="3.15"
+                                        lattice21_atom1="0.0, 0.0, 0.0, 7, FF0000"
+                                        lattice21_lattice="Body-Centered Cubic"
+                                        lattice22="W"
+                                        lattice22_a="3.16"
+                                        lattice22_atom1="0.0, 0.0, 0.0, 8, 0000FF"
+                                        lattice22_lattice="Body-Centered Cubic"
+                                        lattice23="Be"
+                                        lattice23_a="2.29"
+                                        lattice23_atom1="0.0, 0.0, 0.0, 5, FFC800"
+                                        lattice23_atom2="0.667, 0.333, 0.5, 5, FFC800"
+                                        lattice23_c="3.58"
+                                        lattice23_lattice="Hexagonal"
+                                        lattice24="Zn"
+                                        lattice24_a="2.66"
+                                        lattice24_atom1="0.0, 0.0, 0.0, 6, 0000FF"
+                                        lattice24_atom2="0.667, 0.333, 0.5, 6, 0000FF"
+                                        lattice24_c="4.95"
+                                        lattice24_lattice="Hexagonal"
+                                        lattice25="Ti"
+                                        lattice25_a="2.95"
+                                        lattice25_atom1="0.0, 0.0, 0.0, 7, 00FFFF"
+                                        lattice25_atom2="0.667, 0.333, 0.5, 7, 00FFFF"
+                                        lattice25_c="4.69"
+                                        lattice25_lattice="Hexagonal"
+                                        lattice26="Bi"
+                                        lattice26_a="4.75"
+                                        lattice26_alpha="57.233"
+                                        lattice26_atom1="0.237, 0.237, 0.237, 6, 00FF00"
+                                        lattice26_atom2="-0.237, -0.237, -0.237, 6, 00FF00"
+                                        lattice26_lattice="Trigonal"
+                                        lattice2_a="5.6533"
+                                        lattice2_atom1="0.0, 0.0, 0.0, 5, FFC800"
+                                        lattice2_atom2="0.25, 0.25, 0.25, 4, 00FFFF"
+                                        lattice2_lattice="Face-Centered Cubic"
+                                        lattice3="InP"
+                                        lattice3_a="5.8686"
+                                        lattice3_atom1="0.0, 0.0, 0.0, 7, FF0000"
+                                        lattice3_atom2="0.25, 0.25, 0.25, 3, 0000FF"
+                                        lattice3_lattice="Face-Centered Cubic"
+                                        lattice4="GaN"
+                                        lattice4_a="3.180"
+                                        lattice4_atom1="0.0, 0.0, 0.0, 7, 0000FF"
+                                        lattice4_atom2="0.333, 0.667, 0.5, 7, 0000FF"
+                                        lattice4_atom3="0.0, 0.0, 0.375, 3, 00FF00"
+                                        lattice4_atom4="0.333, 0.667, 0.875, 3, 00FF00"
+                                        lattice4_c="5.166"
+                                        lattice4_lattice="Hexagonal"
+                                        lattice5="SiC"
+                                        lattice5_a="3.076"
+                                        lattice5_atom1="0.0, 0.0, 0.0, 7, FFC800"
+                                        lattice5_atom2="0.333, 0.667, 0.5, 7, FFC800"
+                                        lattice5_atom3="0.0, 0.0, 0.375, 3, 00FFFF"
+                                        lattice5_atom4="0.333, 0.667, 0.875, 3, 00FFFF"
+                                        lattice5_c="5.048"
+                                        lattice5_lattice="Hexagonal"
+                                        lattice6="CsCl"
+                                        lattice6_a="4.12"
+                                        lattice6_atom1="0.0, 0.0, 0.0, 7, 00FFFF"
+                                        lattice6_atom2="0.5, 0.5, 0.5, 3, 0000FF"
+                                        lattice6_lattice="Simple Cubic"
+                                        lattice7="Fe"
+                                        lattice7_a="2.87"
+                                        lattice7_atom1="0.0, 0.0, 0.0, 4, FFC800"
+                                        lattice7_lattice="Body-Centered Cubic"
+                                        lattice8="Au"
+                                        lattice8_a="4.08"
+                                        lattice8_atom1="0.0, 0.0, 0.0, 5, FFC800"
+                                        lattice8_lattice="Face-Centered Cubic"
+                                        lattice9="CaF2"
+                                        lattice9_a="5.464"
+                                        lattice9_atom1="0.0, 0.0, 0.0, 7, FFC800"
+                                        lattice9_atom2="0.25, -0.25, 0.25, 3, FF0000"
+                                        lattice9_atom3="0.25, 0.24, 0.25, 3, FF0000"
+                                        lattice9_lattice="Face-Centered Cubic"
+                                        pluginspage="http://java.sun.com/products/plugin/index.html#download"
+                                        scriptable=false
+                                        type="application/x-java-applet;version=1.4">
+                                <NOEMBED>
 
-<!--
-<APPLET CODE = "Demo1.class" ARCHIVE = "unitcell21.jar" WIDTH = 700 HEIGHT = 400>
-<PARAM NAME = "lattice1" VALUE="Si">
-<PARAM NAME = "lattice1_lattice" VALUE="Face-Centered Cubic">
-<PARAM NAME = "lattice1_a" VALUE="5.43">
-<PARAM NAME = "lattice1_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FF00">
-<PARAM NAME = "lattice1_atom2" VALUE="0.25, 0.25, 0.25, 5, 00FF00">
-<PARAM NAME = "lattice2" VALUE="GaAs">
-<PARAM NAME = "lattice2_lattice" VALUE="Face-Centered Cubic">
-<PARAM NAME = "lattice2_a" VALUE="5.6533">
-<PARAM NAME = "lattice2_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
-<PARAM NAME = "lattice2_atom2" VALUE="0.25, 0.25, 0.25, 4, 00FFFF">
-<PARAM NAME = "lattice3" VALUE="InP">
-<PARAM NAME = "lattice3_lattice" VALUE="Face-Centered Cubic">
-<PARAM NAME = "lattice3_a" VALUE="5.8686">
-<PARAM NAME = "lattice3_atom1" VALUE="0.0, 0.0, 0.0, 7, FF0000">
-<PARAM NAME = "lattice3_atom2" VALUE="0.25, 0.25, 0.25, 3, 0000FF">
-<PARAM NAME = "lattice4" VALUE="GaN">
-<PARAM NAME = "lattice4_lattice" VALUE="Hexagonal">
-<PARAM NAME = "lattice4_a" VALUE="3.180">
-<PARAM NAME = "lattice4_c" VALUE="5.166">
-<PARAM NAME = "lattice4_atom1" VALUE="0.0, 0.0, 0.0, 7, 0000FF">
-<PARAM NAME = "lattice4_atom2" VALUE="0.333, 0.667, 0.5, 7, 0000FF">
-<PARAM NAME = "lattice4_atom3" VALUE="0.0, 0.0, 0.375, 3, 00FF00">
-<PARAM NAME = "lattice4_atom4" VALUE="0.333, 0.667, 0.875, 3, 00FF00">
-<PARAM NAME = "lattice5" VALUE="SiC">
-<PARAM NAME = "lattice5_lattice" VALUE="Hexagonal">
-<PARAM NAME = "lattice5_a" VALUE="3.076">
-<PARAM NAME = "lattice5_c" VALUE="5.048">
-<PARAM NAME = "lattice5_atom1" VALUE="0.0, 0.0, 0.0, 7, FFC800">
-<PARAM NAME = "lattice5_atom2" VALUE="0.333, 0.667, 0.5, 7, FFC800">
-<PARAM NAME = "lattice5_atom3" VALUE="0.0, 0.0, 0.375, 3, 00FFFF">
-<PARAM NAME = "lattice5_atom4" VALUE="0.333, 0.667, 0.875, 3, 00FFFF">
-<PARAM NAME = "lattice6" VALUE="CsCl">
-<PARAM NAME = "lattice6_lattice" VALUE="Simple Cubic">
-<PARAM NAME = "lattice6_a" VALUE="4.12">
-<PARAM NAME = "lattice6_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
-<PARAM NAME = "lattice6_atom2" VALUE="0.5, 0.5, 0.5, 3, 0000FF">
-<PARAM NAME = "lattice7" VALUE="Fe">
-<PARAM NAME = "lattice7_lattice" VALUE="Body-Centered Cubic">
-<PARAM NAME = "lattice7_a" VALUE="2.87">
-<PARAM NAME = "lattice7_atom1" VALUE="0.0, 0.0, 0.0, 4, FFC800">
-<PARAM NAME = "lattice8" VALUE="Au">
-<PARAM NAME = "lattice8_lattice" VALUE="Face-Centered Cubic">
-<PARAM NAME = "lattice8_a" VALUE="4.08">
-<PARAM NAME = "lattice8_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
-<PARAM NAME = "lattice9" VALUE="CaF2">
-<PARAM NAME = "lattice9_lattice" VALUE="Face-Centered Cubic">
-<PARAM NAME = "lattice9_a" VALUE="5.464">
-<PARAM NAME = "lattice9_atom1" VALUE="0.0, 0.0, 0.0, 7, FFC800">
-<PARAM NAME = "lattice9_atom2" VALUE="0.25, -0.25, 0.25, 3, FF0000">
-<PARAM NAME = "lattice9_atom3" VALUE="0.25, 0.24, 0.25, 3, FF0000">
-<PARAM NAME = "lattice10" VALUE="Mg">
-<PARAM NAME = "lattice10_lattice" VALUE="Hexagonal">
-<PARAM NAME = "lattice10_a" VALUE="3.21">
-<PARAM NAME = "lattice10_c" VALUE="5.21">
-<PARAM NAME = "lattice10_atom1" VALUE="0.0, 0.0, 0.0, 6, 00FFFF">
-<PARAM NAME = "lattice10_atom2" VALUE="0.667, 0.333, 0.5, 6, 00FFFF">
-<PARAM NAME = "lattice11" VALUE="BaTiO3">
-<PARAM NAME = "lattice11_lattice" VALUE="Simple Cubic">
-<PARAM NAME = "lattice11_a" VALUE="4.01">
-<PARAM NAME = "lattice11_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
-<PARAM NAME = "lattice11_atom2" VALUE="0.5, 0.5, 0.5, 5, 00FF00">
-<PARAM NAME = "lattice11_atom3" VALUE="0.0, 0.5, 0.5, 3, 0000FF">
-<PARAM NAME = "lattice11_atom4" VALUE="0.5, 0.0, 0.5, 3, 0000FF">
-<PARAM NAME = "lattice11_atom5" VALUE="0.5, 0.5, 0.0, 3, 0000FF">
-<PARAM NAME = "lattice12" VALUE="Sn(white)">
-<PARAM NAME = "lattice12_lattice" VALUE="Simple Tetragonal">
-<PARAM NAME = "lattice12_a" VALUE="5.82">
-<PARAM NAME = "lattice12_c" VALUE="3.17">
-<PARAM NAME = "lattice12_atom1" VALUE="0.0, 0.0, 0.0, 4, 00FF00">
-<PARAM NAME = "lattice12_atom2" VALUE="0.0, 0.5, 0.25, 4, 00FF00">
-<PARAM NAME = "lattice12_atom3" VALUE="0.5, 0.0, 0.75, 4, 00FF00">
-<PARAM NAME = "lattice12_atom4" VALUE="0.5, 0.5, 0.5, 4, 00FF00">
-<PARAM NAME = "lattice13" VALUE="Hg">
-<PARAM NAME = "lattice13_lattice" VALUE="Trigonal">
-<PARAM NAME = "lattice13_a" VALUE="2.99">
-<PARAM NAME = "lattice13_alpha" VALUE="70.75">
-<PARAM NAME = "lattice13_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FFFF">
-<PARAM NAME = "lattice14" VALUE="Sb">
-<PARAM NAME = "lattice14_lattice" VALUE="Trigonal">
-<PARAM NAME = "lattice14_a" VALUE="4.51">
-<PARAM NAME = "lattice14_alpha" VALUE="57.1">
-<PARAM NAME = "lattice14_atom1" VALUE="0.233, 0.233, 0.233, 4, 00FF00">
-<PARAM NAME = "lattice14_atom2" VALUE="-0.233, -0.233, -0.233, 4, 00FF00">
-<PARAM NAME = "lattice15" VALUE="CdI2">
-<PARAM NAME = "lattice15_lattice" VALUE="Hexagonal">
-<PARAM NAME = "lattice15_a" VALUE="4.24">
-<PARAM NAME = "lattice15_c" VALUE="6.84">
-<PARAM NAME = "lattice15_atom1" VALUE="0.0, 0.0, 0.0, 3, FF0000">
-<PARAM NAME = "lattice15_atom2" VALUE="0.333, 0.667, 0.25, 6, 00FFFF">
-<PARAM NAME = "lattice15_atom3" VALUE="0.667, 0.333, -0.25, 6, 00FFFF">
-<PARAM NAME = "lattice16" VALUE="NaCl">
-<PARAM NAME = "lattice16_lattice" VALUE="Face-Centered Cubic">
-<PARAM NAME = "lattice16_a" VALUE="5.63">
-<PARAM NAME = "lattice16_atom1" VALUE="0.0, 0.0, 0.0, 4, 00FF00">
-<PARAM NAME = "lattice16_atom2" VALUE="0.5, 0.5, 0.5, 6, 0000FF">
-<PARAM NAME = "lattice17" VALUE="Cubic-ZnS">
-<PARAM NAME = "lattice17_lattice" VALUE="Face-Centered Cubic">
-<PARAM NAME = "lattice17_a" VALUE="5.41">
-<PARAM NAME = "lattice17_atom1" VALUE="0.0, 0.0, 0.0, 3, 0000FF">
-<PARAM NAME = "lattice17_atom2" VALUE="0.25, 0.25, 0.25, 7, FFC800">
-<PARAM NAME = "lattice18" VALUE="Hex-ZnS">
-<PARAM NAME = "lattice18_lattice" VALUE="Hexagonal">
-<PARAM NAME = "lattice18_a" VALUE="3.076">
-<PARAM NAME = "lattice18_c" VALUE="5.048">
-<PARAM NAME = "lattice18_atom1" VALUE="0.0, 0.0, 0.0, 3, 0000FF">
-<PARAM NAME = "lattice18_atom2" VALUE="0.667, 0.333, 0.5, 3, 0000FF">
-<PARAM NAME = "lattice18_atom3" VALUE="0.0, 0.0, 0.375, 7, FFC800">
-<PARAM NAME = "lattice18_atom4" VALUE="0.667, 0.333, 0.875, 7, FFC800">
-<PARAM NAME = "lattice19" VALUE="Cu">
-<PARAM NAME = "lattice19_lattice" VALUE="Face-Centered Cubic">
-<PARAM NAME = "lattice19_a" VALUE="3.61">
-<PARAM NAME = "lattice19_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FFFF">
-<PARAM NAME = "lattice20" VALUE="Ag">
-<PARAM NAME = "lattice20_lattice" VALUE="Face-Centered Cubic">
-<PARAM NAME = "lattice20_a" VALUE="4.09">
-<PARAM NAME = "lattice20_atom1" VALUE="0.0, 0.0, 0.0, 6, 00FF00">
-<PARAM NAME = "lattice21" VALUE="Mo">
-<PARAM NAME = "lattice21_lattice" VALUE="Body-Centered Cubic">
-<PARAM NAME = "lattice21_a" VALUE="3.15">
-<PARAM NAME = "lattice21_atom1" VALUE="0.0, 0.0, 0.0, 7, FF0000">
-<PARAM NAME = "lattice22" VALUE="W">
-<PARAM NAME = "lattice22_lattice" VALUE="Body-Centered Cubic">
-<PARAM NAME = "lattice22_a" VALUE="3.16">
-<PARAM NAME = "lattice22_atom1" VALUE="0.0, 0.0, 0.0, 8, 0000FF">
-<PARAM NAME = "lattice23" VALUE="Be">
-<PARAM NAME = "lattice23_lattice" VALUE="Hexagonal">
-<PARAM NAME = "lattice23_a" VALUE="2.29">
-<PARAM NAME = "lattice23_c" VALUE="3.58">
-<PARAM NAME = "lattice23_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
-<PARAM NAME = "lattice23_atom2" VALUE="0.667, 0.333, 0.5, 5, FFC800">
-<PARAM NAME = "lattice24" VALUE="Zn">
-<PARAM NAME = "lattice24_lattice" VALUE="Hexagonal">
-<PARAM NAME = "lattice24_a" VALUE="2.66">
-<PARAM NAME = "lattice24_c" VALUE="4.95">
-<PARAM NAME = "lattice24_atom1" VALUE="0.0, 0.0, 0.0, 6, 0000FF">
-<PARAM NAME = "lattice24_atom2" VALUE="0.667, 0.333, 0.5, 6, 0000FF">
-<PARAM NAME = "lattice25" VALUE="Ti">
-<PARAM NAME = "lattice25_lattice" VALUE="Hexagonal">
-<PARAM NAME = "lattice25_a" VALUE="2.95">
-<PARAM NAME = "lattice25_c" VALUE="4.69">
-<PARAM NAME = "lattice25_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
-<PARAM NAME = "lattice25_atom2" VALUE="0.667, 0.333, 0.5, 7, 00FFFF">
-<PARAM NAME = "lattice26" VALUE="Bi">
-<PARAM NAME = "lattice26_lattice" VALUE="Trigonal">
-<PARAM NAME = "lattice26_a" VALUE="4.75">
-<PARAM NAME = "lattice26_alpha" VALUE="57.233">
-<PARAM NAME = "lattice26_atom1" VALUE="0.237, 0.237, 0.237, 6, 00FF00">
-<PARAM NAME = "lattice26_atom2" VALUE="-0.237, -0.237, -0.237, 6, 00FF00">
+                                </NOEMBED>
+                                </EMBED>
+                            </COMMENT>
+                        </OBJECT>
 
-
-</APPLET>
--->
+                        <!--
+                        <APPLET CODE = "Demo1.class" ARCHIVE = "unitcell21.jar" WIDTH = 700 HEIGHT = 400>
+                        <PARAM NAME = "lattice1" VALUE="Si">
+                        <PARAM NAME = "lattice1_lattice" VALUE="Face-Centered Cubic">
+                        <PARAM NAME = "lattice1_a" VALUE="5.43">
+                        <PARAM NAME = "lattice1_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FF00">
+                        <PARAM NAME = "lattice1_atom2" VALUE="0.25, 0.25, 0.25, 5, 00FF00">
+                        <PARAM NAME = "lattice2" VALUE="GaAs">
+                        <PARAM NAME = "lattice2_lattice" VALUE="Face-Centered Cubic">
+                        <PARAM NAME = "lattice2_a" VALUE="5.6533">
+                        <PARAM NAME = "lattice2_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
+                        <PARAM NAME = "lattice2_atom2" VALUE="0.25, 0.25, 0.25, 4, 00FFFF">
+                        <PARAM NAME = "lattice3" VALUE="InP">
+                        <PARAM NAME = "lattice3_lattice" VALUE="Face-Centered Cubic">
+                        <PARAM NAME = "lattice3_a" VALUE="5.8686">
+                        <PARAM NAME = "lattice3_atom1" VALUE="0.0, 0.0, 0.0, 7, FF0000">
+                        <PARAM NAME = "lattice3_atom2" VALUE="0.25, 0.25, 0.25, 3, 0000FF">
+                        <PARAM NAME = "lattice4" VALUE="GaN">
+                        <PARAM NAME = "lattice4_lattice" VALUE="Hexagonal">
+                        <PARAM NAME = "lattice4_a" VALUE="3.180">
+                        <PARAM NAME = "lattice4_c" VALUE="5.166">
+                        <PARAM NAME = "lattice4_atom1" VALUE="0.0, 0.0, 0.0, 7, 0000FF">
+                        <PARAM NAME = "lattice4_atom2" VALUE="0.333, 0.667, 0.5, 7, 0000FF">
+                        <PARAM NAME = "lattice4_atom3" VALUE="0.0, 0.0, 0.375, 3, 00FF00">
+                        <PARAM NAME = "lattice4_atom4" VALUE="0.333, 0.667, 0.875, 3, 00FF00">
+                        <PARAM NAME = "lattice5" VALUE="SiC">
+                        <PARAM NAME = "lattice5_lattice" VALUE="Hexagonal">
+                        <PARAM NAME = "lattice5_a" VALUE="3.076">
+                        <PARAM NAME = "lattice5_c" VALUE="5.048">
+                        <PARAM NAME = "lattice5_atom1" VALUE="0.0, 0.0, 0.0, 7, FFC800">
+                        <PARAM NAME = "lattice5_atom2" VALUE="0.333, 0.667, 0.5, 7, FFC800">
+                        <PARAM NAME = "lattice5_atom3" VALUE="0.0, 0.0, 0.375, 3, 00FFFF">
+                        <PARAM NAME = "lattice5_atom4" VALUE="0.333, 0.667, 0.875, 3, 00FFFF">
+                        <PARAM NAME = "lattice6" VALUE="CsCl">
+                        <PARAM NAME = "lattice6_lattice" VALUE="Simple Cubic">
+                        <PARAM NAME = "lattice6_a" VALUE="4.12">
+                        <PARAM NAME = "lattice6_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
+                        <PARAM NAME = "lattice6_atom2" VALUE="0.5, 0.5, 0.5, 3, 0000FF">
+                        <PARAM NAME = "lattice7" VALUE="Fe">
+                        <PARAM NAME = "lattice7_lattice" VALUE="Body-Centered Cubic">
+                        <PARAM NAME = "lattice7_a" VALUE="2.87">
+                        <PARAM NAME = "lattice7_atom1" VALUE="0.0, 0.0, 0.0, 4, FFC800">
+                        <PARAM NAME = "lattice8" VALUE="Au">
+                        <PARAM NAME = "lattice8_lattice" VALUE="Face-Centered Cubic">
+                        <PARAM NAME = "lattice8_a" VALUE="4.08">
+                        <PARAM NAME = "lattice8_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
+                        <PARAM NAME = "lattice9" VALUE="CaF2">
+                        <PARAM NAME = "lattice9_lattice" VALUE="Face-Centered Cubic">
+                        <PARAM NAME = "lattice9_a" VALUE="5.464">
+                        <PARAM NAME = "lattice9_atom1" VALUE="0.0, 0.0, 0.0, 7, FFC800">
+                        <PARAM NAME = "lattice9_atom2" VALUE="0.25, -0.25, 0.25, 3, FF0000">
+                        <PARAM NAME = "lattice9_atom3" VALUE="0.25, 0.24, 0.25, 3, FF0000">
+                        <PARAM NAME = "lattice10" VALUE="Mg">
+                        <PARAM NAME = "lattice10_lattice" VALUE="Hexagonal">
+                        <PARAM NAME = "lattice10_a" VALUE="3.21">
+                        <PARAM NAME = "lattice10_c" VALUE="5.21">
+                        <PARAM NAME = "lattice10_atom1" VALUE="0.0, 0.0, 0.0, 6, 00FFFF">
+                        <PARAM NAME = "lattice10_atom2" VALUE="0.667, 0.333, 0.5, 6, 00FFFF">
+                        <PARAM NAME = "lattice11" VALUE="BaTiO3">
+                        <PARAM NAME = "lattice11_lattice" VALUE="Simple Cubic">
+                        <PARAM NAME = "lattice11_a" VALUE="4.01">
+                        <PARAM NAME = "lattice11_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
+                        <PARAM NAME = "lattice11_atom2" VALUE="0.5, 0.5, 0.5, 5, 00FF00">
+                        <PARAM NAME = "lattice11_atom3" VALUE="0.0, 0.5, 0.5, 3, 0000FF">
+                        <PARAM NAME = "lattice11_atom4" VALUE="0.5, 0.0, 0.5, 3, 0000FF">
+                        <PARAM NAME = "lattice11_atom5" VALUE="0.5, 0.5, 0.0, 3, 0000FF">
+                        <PARAM NAME = "lattice12" VALUE="Sn(white)">
+                        <PARAM NAME = "lattice12_lattice" VALUE="Simple Tetragonal">
+                        <PARAM NAME = "lattice12_a" VALUE="5.82">
+                        <PARAM NAME = "lattice12_c" VALUE="3.17">
+                        <PARAM NAME = "lattice12_atom1" VALUE="0.0, 0.0, 0.0, 4, 00FF00">
+                        <PARAM NAME = "lattice12_atom2" VALUE="0.0, 0.5, 0.25, 4, 00FF00">
+                        <PARAM NAME = "lattice12_atom3" VALUE="0.5, 0.0, 0.75, 4, 00FF00">
+                        <PARAM NAME = "lattice12_atom4" VALUE="0.5, 0.5, 0.5, 4, 00FF00">
+                        <PARAM NAME = "lattice13" VALUE="Hg">
+                        <PARAM NAME = "lattice13_lattice" VALUE="Trigonal">
+                        <PARAM NAME = "lattice13_a" VALUE="2.99">
+                        <PARAM NAME = "lattice13_alpha" VALUE="70.75">
+                        <PARAM NAME = "lattice13_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FFFF">
+                        <PARAM NAME = "lattice14" VALUE="Sb">
+                        <PARAM NAME = "lattice14_lattice" VALUE="Trigonal">
+                        <PARAM NAME = "lattice14_a" VALUE="4.51">
+                        <PARAM NAME = "lattice14_alpha" VALUE="57.1">
+                        <PARAM NAME = "lattice14_atom1" VALUE="0.233, 0.233, 0.233, 4, 00FF00">
+                        <PARAM NAME = "lattice14_atom2" VALUE="-0.233, -0.233, -0.233, 4, 00FF00">
+                        <PARAM NAME = "lattice15" VALUE="CdI2">
+                        <PARAM NAME = "lattice15_lattice" VALUE="Hexagonal">
+                        <PARAM NAME = "lattice15_a" VALUE="4.24">
+                        <PARAM NAME = "lattice15_c" VALUE="6.84">
+                        <PARAM NAME = "lattice15_atom1" VALUE="0.0, 0.0, 0.0, 3, FF0000">
+                        <PARAM NAME = "lattice15_atom2" VALUE="0.333, 0.667, 0.25, 6, 00FFFF">
+                        <PARAM NAME = "lattice15_atom3" VALUE="0.667, 0.333, -0.25, 6, 00FFFF">
+                        <PARAM NAME = "lattice16" VALUE="NaCl">
+                        <PARAM NAME = "lattice16_lattice" VALUE="Face-Centered Cubic">
+                        <PARAM NAME = "lattice16_a" VALUE="5.63">
+                        <PARAM NAME = "lattice16_atom1" VALUE="0.0, 0.0, 0.0, 4, 00FF00">
+                        <PARAM NAME = "lattice16_atom2" VALUE="0.5, 0.5, 0.5, 6, 0000FF">
+                        <PARAM NAME = "lattice17" VALUE="Cubic-ZnS">
+                        <PARAM NAME = "lattice17_lattice" VALUE="Face-Centered Cubic">
+                        <PARAM NAME = "lattice17_a" VALUE="5.41">
+                        <PARAM NAME = "lattice17_atom1" VALUE="0.0, 0.0, 0.0, 3, 0000FF">
+                        <PARAM NAME = "lattice17_atom2" VALUE="0.25, 0.25, 0.25, 7, FFC800">
+                        <PARAM NAME = "lattice18" VALUE="Hex-ZnS">
+                        <PARAM NAME = "lattice18_lattice" VALUE="Hexagonal">
+                        <PARAM NAME = "lattice18_a" VALUE="3.076">
+                        <PARAM NAME = "lattice18_c" VALUE="5.048">
+                        <PARAM NAME = "lattice18_atom1" VALUE="0.0, 0.0, 0.0, 3, 0000FF">
+                        <PARAM NAME = "lattice18_atom2" VALUE="0.667, 0.333, 0.5, 3, 0000FF">
+                        <PARAM NAME = "lattice18_atom3" VALUE="0.0, 0.0, 0.375, 7, FFC800">
+                        <PARAM NAME = "lattice18_atom4" VALUE="0.667, 0.333, 0.875, 7, FFC800">
+                        <PARAM NAME = "lattice19" VALUE="Cu">
+                        <PARAM NAME = "lattice19_lattice" VALUE="Face-Centered Cubic">
+                        <PARAM NAME = "lattice19_a" VALUE="3.61">
+                        <PARAM NAME = "lattice19_atom1" VALUE="0.0, 0.0, 0.0, 5, 00FFFF">
+                        <PARAM NAME = "lattice20" VALUE="Ag">
+                        <PARAM NAME = "lattice20_lattice" VALUE="Face-Centered Cubic">
+                        <PARAM NAME = "lattice20_a" VALUE="4.09">
+                        <PARAM NAME = "lattice20_atom1" VALUE="0.0, 0.0, 0.0, 6, 00FF00">
+                        <PARAM NAME = "lattice21" VALUE="Mo">
+                        <PARAM NAME = "lattice21_lattice" VALUE="Body-Centered Cubic">
+                        <PARAM NAME = "lattice21_a" VALUE="3.15">
+                        <PARAM NAME = "lattice21_atom1" VALUE="0.0, 0.0, 0.0, 7, FF0000">
+                        <PARAM NAME = "lattice22" VALUE="W">
+                        <PARAM NAME = "lattice22_lattice" VALUE="Body-Centered Cubic">
+                        <PARAM NAME = "lattice22_a" VALUE="3.16">
+                        <PARAM NAME = "lattice22_atom1" VALUE="0.0, 0.0, 0.0, 8, 0000FF">
+                        <PARAM NAME = "lattice23" VALUE="Be">
+                        <PARAM NAME = "lattice23_lattice" VALUE="Hexagonal">
+                        <PARAM NAME = "lattice23_a" VALUE="2.29">
+                        <PARAM NAME = "lattice23_c" VALUE="3.58">
+                        <PARAM NAME = "lattice23_atom1" VALUE="0.0, 0.0, 0.0, 5, FFC800">
+                        <PARAM NAME = "lattice23_atom2" VALUE="0.667, 0.333, 0.5, 5, FFC800">
+                        <PARAM NAME = "lattice24" VALUE="Zn">
+                        <PARAM NAME = "lattice24_lattice" VALUE="Hexagonal">
+                        <PARAM NAME = "lattice24_a" VALUE="2.66">
+                        <PARAM NAME = "lattice24_c" VALUE="4.95">
+                        <PARAM NAME = "lattice24_atom1" VALUE="0.0, 0.0, 0.0, 6, 0000FF">
+                        <PARAM NAME = "lattice24_atom2" VALUE="0.667, 0.333, 0.5, 6, 0000FF">
+                        <PARAM NAME = "lattice25" VALUE="Ti">
+                        <PARAM NAME = "lattice25_lattice" VALUE="Hexagonal">
+                        <PARAM NAME = "lattice25_a" VALUE="2.95">
+                        <PARAM NAME = "lattice25_c" VALUE="4.69">
+                        <PARAM NAME = "lattice25_atom1" VALUE="0.0, 0.0, 0.0, 7, 00FFFF">
+                        <PARAM NAME = "lattice25_atom2" VALUE="0.667, 0.333, 0.5, 7, 00FFFF">
+                        <PARAM NAME = "lattice26" VALUE="Bi">
+                        <PARAM NAME = "lattice26_lattice" VALUE="Trigonal">
+                        <PARAM NAME = "lattice26_a" VALUE="4.75">
+                        <PARAM NAME = "lattice26_alpha" VALUE="57.233">
+                        <PARAM NAME = "lattice26_atom1" VALUE="0.237, 0.237, 0.237, 6, 00FF00">
+                        <PARAM NAME = "lattice26_atom2" VALUE="-0.237, -0.237, -0.237, 6, 00FF00">
 
 
-<!--"END_CONVERTED_APPLET"-->
+                        </APPLET>
+                        -->
 
-    
-</TD>
-</TR>
-</TABLE>
 
-<br>
-	<br>	
-	Назад, <a href="../index.html"> к списку лабораторных работ</a>.</center>
-	<p>
-	</td>
-  </tr>
-  <tr bgcolor=#FEF2DE>
-	<td>
-	<center>РФиЭ БГУ, кафедра Физической Электроники</center>
-	</td>
-  </tr>
+                        <!--"END_CONVERTED_APPLET"-->
+
+
+                    </TD>
+                </TR>
+            </TABLE>
+
+            <br>
+            <br>
+            Назад, <a href="../index.html"> к списку лабораторных работ</a>.</center>
+            <p>
+        </td>
+    </tr>
+    <tr bgcolor=#FEF2DE>
+        <td>
+            <center>РФиЭ БГУ, кафедра Физической Электроники</center>
+        </td>
+    </tr>
 </table>
 </BODY>
 </HTML>
