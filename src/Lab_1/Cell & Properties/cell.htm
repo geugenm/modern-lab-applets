@@ -1,62 +1,67 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!-- saved from url=(0070)http://jas2.eng.buffalo.edu/applets/education/solid/unitCell/cell.html -->
-<HTML><HEAD><TITLE>Ячейка со свойствами материала</TITLE>
-<META http-equiv=Content-Type content="text/html; charset=utf-8">
-<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
-<style>
-td{
-	font-family: verdana, arial;
-	font-size: 12px
-}
-.comm{
-	font-size: 10px;
-	color: #999999
-}
-.title{
-	font-size: 26px;
-	color: #0E9700
-}
-a{
-	text-decoration: none;
-	font-weight: bold
-}
-.стиль1 {color: #ff0000}
-</style>
-</HEAD>
-<BODY text=#000000 vLink=#66AE36 aLink=#298F01 link=#298F01 bgColor=#ffffff topmargin=5 leftmargin=5 marginwidth=0 marginheight=0>
-<table border=0 cellpadding=2 cellspacing=4 width=100%>
-<tr bgcolor=#FEF2DE>
-	<td>
-	<center class=title>
-	  <A href="../index.html" target="_top">Строение кристалла</A>
-	</center>
-	</td>
-  </tr>
-</table>
-<table border=0 cellpadding=2 cellspacing=4 width=100%>
-<tr bgcolor=#FEF9F0 align=center>
-<td>
-<p>
-  <APPLET  height=350 width=360  code=CrystalViewer.class>
-    <PARAM NAME="height" VALUE="350">
-    <PARAM NAME="width" VALUE="360">
-    <PARAM NAME="code" VALUE="CrystalViewer.class">
-    <PARAM NAME="codeBase" VALUE="\">
-  </APPLET> 
-  </p>
-<p><BR>
-    Посмотреть в объеме:<FONT color=#ff0000> кликните мышкой на ячейку </FONT><span class="стиль1">и двигайте</span>. 
-    <BR>
-&nbsp; </p>
-<p>&nbsp; </p>
-<UL>
-  <LI>Назад, <a href="../../index.html" target="_top"> к списку лабораторных работ</a>. </LI></UL>
-</tr>
-</td>
-<tr bgcolor=#FEF2DE>
-	<td>
-	<center>РФиЭ БГУ, кафедра Физической Электроники</center>
-	</td>
-  </tr>
-</table>
-</BODY></HTML>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Ячейка со свойствами материала</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333333;
+        }
+
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        applet {
+            width: 360px;
+            height: 350px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #0078d4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .click-hint {
+            color: #0078d4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a target="_top" style="text-decoration: none; color: #0078d4;">Строение кристалла</a>
+    </header>
+
+    <section>
+        <applet height="350" width="360" code="CrystalViewer.class" codeBase="/" align="middle">
+                <p class="error-message">
+                    Для просмотра этой страницы необходима поддержка апплетов в вашем браузере.
+                    Если у вас нет необходимого плагина, рекомендуем установить <a href="http://home.netscape.com/comprod/mirror/index.html" class="download-link">Cheerj плагин</a>.
+                </p>
+        </applet>
+
+        <p>
+            Посмотреть в объеме: <span class="click-hint">кликните мышкой на ячейку</span> и двигайте.
+        </p>
+    </section>
+</body>
+</html>

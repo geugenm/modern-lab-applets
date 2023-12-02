@@ -1,69 +1,103 @@
-<HTML>
-<HEAD>
-<META http-equiv=Content-Type content="text/html; charset=utf-8">
-<TITLE> Энергетические зоны и носители заряда </TITLE>
-<style>
-td{
-	font-family: verdana, arial;
-	font-size: 12px
-}
-.comm{
-	font-size: 10px;
-	color: #999999
-}
-.title{
-	font-size: 26px;
-	color: #0E9700
-}
-a{
-	text-decoration: none;
-	font-weight: bold
-}
-</style>
-</HEAD>
-<BODY text=#000000 vLink=#66AE36 aLink=#298F01 link=#298F01 bgColor=#ffffff topmargin=5 leftmargin=5 marginwidth=0 marginheight=0>
-<table border=0 cellpadding=2 cellspacing=4 width=100%>
-  <tr bgcolor=#FEF2DE>
-	<td>
-	<center class=title>
-	  Энергетические зоны и носители заряда 
-	</center>
-	</td>
-  </tr>
-  
-  <tr bgcolor=#FEF9F0 align=center>
-	<td>
-	<br>
-	<applet code=PointDiffusion.class width=650 height=350>
-<blockquote>
-<center>Your browser doesn't understand the &lt;APPLET> tag.
-<p>A snapshot of the browser screen is:
-<p><img SRC="diff1.gif" height=498 width=600>
-<br>&nbsp;
-<br>&nbsp;
-<br>&nbsp;
-<br>&nbsp;
-<p><img SRC="diff2.gif" height=500 width=600>
-<p>
-<hr>
-</blockquote>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Энергетические зоны и носители заряда</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333333;
+        }
 
-</applet><br>
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
+        }
 
-		
+        section {
+            margin: 20px auto;
+            max-width: 650px;
+            text-align: center;
+        }
 
-	<br>
-	<br>	
-	<center>
-              <LI>Назад, <a href="../index.html"> к списку апплетов к лабораторной работе "Энергетические зоны и носители заряда"</a>.<br></LI>
-	Назад, <a href="../index.html"> к списку лабораторных работ</a>.</center>
-	</td>
-  </tr>
-  <tr bgcolor=#FEF2DE>
-	<td>
-	<center>РФиЭ БГУ, кафедра Физической Электроники</center>
-	</td>
-  </tr>
-</table>
-</BODY>
-</HTML>
+        h2 {
+            font-size: 18px;
+            color: #0E9700;
+            margin-bottom: 20px;
+        }
+
+        .applet-box {
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .applet-error {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <header>Энергетические зоны и носители заряда</header>
+
+    <section>
+        <div class="applet-box">
+            <applet code="PointDiffusion.class" width="650" height="350">
+                <p class="applet-error">
+                    Для просмотра этой страницы необходима поддержка апплетов в вашем браузере.
+                    Если у вас нет необходимого плагина, рекомендуем установить <a href="http://home.netscape.com/comprod/mirror/index.html" class="download-link">Cheerj плагин</a>.
+                </p>
+            </applet>
+        </div>
+        <br>
+        <ul>
+            <li><a href="../index.html" class="back-button">Назад</a></li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>РФиЭ БГУ, кафедра Физической Электроники</p>
+    </footer>
+</body>
+</html>

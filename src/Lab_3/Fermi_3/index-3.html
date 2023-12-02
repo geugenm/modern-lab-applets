@@ -1,75 +1,125 @@
-<HTML>
-<HEAD>
-<META http-equiv=Content-Type content="text/html; charset=utf-8">
-<META NAME="HTML DESIGN" CONTENT="Alla A">
-<TITLE>Функции Ферми-Дирака и Максвелла-Больцмана (концентрация носителей и уровень Ферми)</TITLE>
-<style>
-td{
-        font-family: verdana, arial;
-        font-size: 12px
-}
-.comm{
-        font-size: 10px;
-        color: #999999
-}
-.title{
-        font-size: 26px;
-        color: #0E9700
-}
-a{
-        text-decoration: none;
-        font-weight: bold
-}
-</style>
-</HEAD>
-<BODY text=#000000 vLink=#66AE36 aLink=#298F01 link=#298F01 bgColor=#ffffff topmargin=5 leftmargin=5 marginwidth=0 marginheight=0>
-<table border=0 cellpadding=2 cellspacing=4 width=100%>
-  <tr bgcolor=#FEF2DE>
-        <td>
-        <center class=title>Функции Ферми-Дирака и Максвелла-Больцмана<BR><FONT SIZE=2>(концентрация носителей и уровень Ферми)</font></center>
-        </td>
-  </tr>
-  <tr bgcolor=#FEF9F0 align=left>
-        <td>
-        <br>
-        <center>
-        <table width=90% border=0 cellpadding=0 cellspacing=0 height=1>
-          <tr>
-                <td>
-                <P align=justify>
-                Концентрация электронов в слабо- или среднелегированном полупроводнике, с донорными примесями (к примеру), может быть найдена с помощью следующей формулы (если  уровень Ферми Ef известен): n = Nc exp[ -(Ec-Ef)/kT ], где Nc - это константа материала (плотность состояний зоны проводимости), а  Ec-Ef - это энергетическое разделение границы зоны проводимости(Ec) от уровня Ферми (Ef), а kT - это тепловая энергия (0.0259 эВ при 300K). Однако эта формула не справедлива, если полупроводник <I>сильно</I> легирован (<B>n &gt; 0.1 Nc</B> для n-типа или <B>p &gt; 0.1 Nv</B> для p-типа).
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Функции Ферми-Дирака и Максвелла-Больцмана (концентрация носителей и уровень Ферми)</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333333;
+        }
+
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 650px;
+            text-align: justify;
+        }
+
+        .applet-link {
+            color: #0078d4;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+<header>Функции Ферми-Дирака и Максвелла-Больцмана (концентрация носителей и уровень Ферми)</header>
+
+<section>
+    <table border="0" cellpadding="0" cellspacing="0" height="1" width="90%">
+        <tr>
+            <td>
+
+                Концентрация электронов в слабо- или среднелегированном полупроводнике, с донорными примесями (к
+                примеру), может быть найдена с помощью следующей формулы (если уровень Ферми Ef известен): n = Nc exp[
+                -(Ec-Ef)/kT ], где Nc - это константа материала (плотность состояний зоны проводимости), а Ec-Ef - это
+                энергетическое разделение границы зоны проводимости(Ec) от уровня Ферми (Ef), а kT - это тепловая
+                энергия (0.0259 эВ при 300K). Однако эта формула не справедлива, если полупроводник <I>сильно</I>
+                легирован (<B>n &gt; 0.1 Nc</B> для n-типа или <B>p &gt; 0.1 Nv</B> для p-типа).
                 <br><br>
                 Сильнолегированный материал полупроводника исползуется в следующих устройствах:
-                <LI><p align=justify>область эмиттера транзистора с биполярным переходом  [в кремниевом  ТБП, легирование эмиттера типичное - 10<SUP>19</SUP>cм<SUP>-3</SUP>];</LI>
-                <LI><p align=justify>область базы в AlGaAs/GaAs HBT, где у  эмиттера AlGaAs уровень легирования составляет  5x10<SUP>17</SUP>примесей/cм<SUP>3</SUP>, а уровень легирования базы GaAs -  5x10<SUP>18</SUP> примесей/cм<SUP>3</SUP>;</LI>
-                <LI><p align=justify>обе  области p- и n-типа pn-перехода в лазерном диоде  GaAs с p  n - около 10<SUP>18</SUP> cм<SUP>-3</SUP>;</LI>
-                <LI><p align=justify>активная область в гетеропереходе лазерного диода AlGaAs/GaAs, где уровень инжекции в активной области около 10<SUP>18</SUP> cм<SUP>-3</SUP>,</LI>
-                <LI><p align=justify>примесно-легированная область AlGaAs/GaAs(MODFET),где Al<SUB>0.3</SUB>Ga<SUB>0.7</SUB>As слой легирован с  N<SUB>d</SUB> = 1.5x10<SUP>18</SUP> cм<SUP>-3</SUP>;</LI>
-                <LI><p align=justify>области стока и затвора в  Si (MOSFET), где уровень легирования очень высокий.</LI>
+                <LI>область эмиттера транзистора с биполярным переходом [в кремниевом ТБП, легирование эмиттера типичное
+                    - 10<SUP>19</SUP>cм<SUP>-3</SUP>];
+                </LI>
+                <LI>область базы в AlGaAs/GaAs HBT, где у эмиттера AlGaAs уровень легирования составляет
+                    5x10<SUP>17</SUP>примесей/cм<SUP>3</SUP>, а уровень легирования базы GaAs - 5x10<SUP>18</SUP>
+                    примесей/cм<SUP>3</SUP>;
+                </LI>
+                <LI>обе области p- и n-типа pn-перехода в лазерном диоде GaAs с p n - около 10<SUP>18</SUP>
+                    cм<SUP>-3</SUP>;
+                </LI>
+                <LI>активная область в гетеропереходе лазерного диода AlGaAs/GaAs, где уровень инжекции в активной
+                    области около 10<SUP>18</SUP> cм<SUP>-3</SUP>,
+                </LI>
+                <LI>примесно-легированная область AlGaAs/GaAs(MODFET),где Al<SUB>0.3</SUB>Ga<SUB>0.7</SUB>As слой
+                    легирован с N<SUB>d</SUB> = 1.5x10<SUP>18</SUP> cм<SUP>-3</SUP>;
+                </LI>
+                <LI>области стока и затвора в Si (MOSFET), где уровень легирования очень высокий.</LI>
                 <br><br>
-                Формула простой экспоненциальной  концентрации в   слабо- или среднелегированном полупроводнике называется приближением <B><I>Максвелла-Больцмана</I></B> (MБ); а точное выражение концентрации, которое требуется для сильнолегированного материала, называется  формулой <B><I>Ферми-Дирака</I></B> (ФД). Используйте этот апплет, чтобы быстро увидеть разницу между этими формулами, в частности, в областях с  высокой концентрацией носителей. Для сильного легирования, заметьте: (I) n/Nc &gt; 0.1, или p/Nv &gt; 0.1; (II) Ec - Ef &lt; 3 kT, или Ef - Ev &lt; 3 kT; или (III)  dn/n = 0, или dp/p = 0, где dn или dp - это разница между MБ и ФД.
-                </P>
-                </td>
-          </tr>
-        </table>
-        <br><br>
-        Посмотреть апплет <a href="http://jas.eng.buffalo.edu/education/semicon/fermi/heavyVSmoderate/index.html" target=_blank>здесь</a>
-        <p>
-        <hr width=80% style="height: 1px; color: #0E9700"><br>
-        </center>
-        <p>
-        <UL>
-        <LI>Назад, <a href="../index.html"> к списку апплетов к лабораторной работе "Уровень Ферми"</a>.</LI>
-        <LI>Назад, <a href="../../index.html"> к списку лабораторных работ</a>.</LI>
-        </UL>
-        <p>
-        </td>
-  </tr>
-  <tr bgcolor=#FEF2DE>
-        <td>
-        <center>РФиЭ БГУ, кафедра Физической Электроники</center>
-        </td>
-  </tr>
-</table>
-</BODY>
-</HTML>
+                Формула простой экспоненциальной концентрации в слабо- или среднелегированном полупроводнике называется
+                приближением <B><I>Максвелла-Больцмана</I></B> (MБ); а точное выражение концентрации, которое требуется
+                для сильнолегированного материала, называется формулой <B><I>Ферми-Дирака</I></B> (ФД). Используйте этот
+                апплет, чтобы быстро увидеть разницу между этими формулами, в частности, в областях с высокой
+                концентрацией носителей. Для сильного легирования, заметьте: (I) n/Nc &gt; 0.1, или p/Nv &gt; 0.1; (II)
+                Ec - Ef &lt; 3 kT, или Ef - Ev &lt; 3 kT; или (III) dn/n = 0, или dp/p = 0, где dn или dp - это разница
+                между MБ и ФД.
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <p>
+        Посмотреть апплет <a class="applet-link"
+                             href="http://jas.eng.buffalo.edu/education/semicon/fermi/heavyVSmoderate/index.html" target="_blank">здесь</a>.
+    </p>
+    <br>
+    <ul>
+        <li><a class="back-button" href="../index.html">Назад</a></li>
+    </ul>
+</section>
+
+<footer class="footer">
+    <p>РФиЭ БГУ, кафедра Физической Электроники</p>
+</footer>
+</body>
+</html>

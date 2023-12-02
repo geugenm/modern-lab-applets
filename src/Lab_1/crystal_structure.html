@@ -1,307 +1,357 @@
 <!-- saved from url=(0022)http://internet.e-mail -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
+<HTML lang="">
 <HEAD>
-   <TITLE>Applets in Semiconductor, Microelectronics and Photonics</TITLE>
-   <META NAME="Author" CONTENT="Dr.C.R.Wie">
-   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (WinNT; I) [Netscape]">
-   <META NAME="Classification" CONTENT="Education">
-   <META NAME="KeyWords" CONTENT="Semiconductor Applets">
-   
-<SCRIPT language="JavaScript">
-<!-- hide me  
-var ua="UA";ua=navigator.userAgent;
-function whichBrowser(){var br="BR";
-if(ua.indexOf("NAV")!=-1){br="Navio"} if(ua.indexOf("Opera")!=-1){br="Opera"} if(ua.indexOf("MSIE")!=-1){br="IE"}
-if((ua.indexOf('Mozilla')!= -1)&&((ua.indexOf('Spoofer')==-1)&&(ua.indexOf('compatible')==-1))){br="NS"}
-return br}
-b=whichBrowser();
+    <TITLE>Applets in Semiconductor, Microelectronics and Photonics</TITLE>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <META NAME="Author" CONTENT="Dr.C.R.Wie">
+    <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (WinNT; I) [Netscape]">
+    <META NAME="Classification" CONTENT="Education">
+    <META NAME="KeyWords" CONTENT="Semiconductor Applets">
 
-function whichVersion(br){var bv=0;bv=navigator.appVersion.substring(0,1);
-if(br=="IE"){(parseInt(bv));}if(br=="NS"){(parseInt(bv));}return bv;}
-v=whichVersion(b);
+    <SCRIPT language="JavaScript">
+        let ua = "UA";
+        ua = navigator.userAgent;
 
-function whichPlatform()
-{var os="OS";if((ua.indexOf("Win98")!=-1)||(ua.indexOf("Windows 98")!=-1)){os='win32_98'}
+        function whichBrowser() {
+            let br = "BR";
+            if (ua.indexOf("NAV") !== -1) {
+                br = "Navio"
+            }
+            if (ua.indexOf("Opera") !== -1) {
+                br = "Opera"
+            }
+            if (ua.indexOf("MSIE") !== -1) {
+                br = "IE"
+            }
+            if ((ua.indexOf('Mozilla') !== -1) && ((ua.indexOf('Spoofer') === -1) && (ua.indexOf('compatible') === -1))) {
+                br = "NS"
+            }
+            return br
+        }
 
-if((ua.indexOf("Win95")!=-1)||(ua.indexOf("Windows 95")!=-1)){os='win32_95'}
-else if((ua.indexOf("WinNT")!=-1)||(ua.indexOf("Windows NT")!=-1)){os='win32_NT'}
-else if((ua.indexOf("Win16")!=-1)||(ua.indexOf("Windows 3.1")!=-1)){os='win16'}
-else if((ua.indexOf("Macintosh")!=-1)||(ua.indexOf("Mac")!=-1)){os='Mac';}else if(ua.indexOf("SunOS")!=-1){os='unix sun'}
-else if(ua.indexOf("IRIX")!=-1){os='unix sgi'}else if(ua.indexOf("HP-UX")!=-1){os='unix hp'}
-else if(ua.indexOf("AIX")!=-1){os='unix ibm'}else if(ua.indexOf("OS/2")!=-1){os='os/2'}else if(ua.indexOf("Linux")!=-1){ os='linux';}
-return os;}
+        b = whichBrowser();
 
-o=whichPlatform();
+        function whichVersion(br) {
+            let bv;
+            bv = navigator.appVersion.substring(0, 1);
+            if (br === "IE") {
+                (parseInt(bv));
+            }
+            if (br === "NS") {
+                (parseInt(bv));
+            }
+            return bv;
+        }
 
-function miniwinpopup(w, h, myurl, targetstring, l, t)
-{var popup=new Object();
-popup.w=w;popup.h=h;popup.l=l;popup.t=t;
-popup.url=myurl;popup.trgt=targetstring;
+        v = whichVersion(b);
 
-if((b=="IE")||(v==2))
-	{window.open(popup.url,popup.trgt,
-"width="+popup.w+",height="+popup.h+",resizable=1,status=0,left="+popup.l+",top="+popup.t+",menubar=0,scrollbars=1,toolbar=0,location=0,directories=0")}
+        function whichPlatform() {
+            let os = "OS";
+            if ((ua.indexOf("Win98") !== -1) || (ua.indexOf("Windows 98") !== -1)) {
+                os = 'win32_98'
+            }
 
-else {window1=window.open(popup.url, popup.trgt,         "width="+popup.w+",height="+popup.h+",resizable=1,status=0,left="+popup.l+",top="+popup.t+",menubar=0,scrollbars=1,toolbar=0,location=0,directories=0");
-window1.focus();}}
+            if ((ua.indexOf("Win95") !== -1) || (ua.indexOf("Windows 95") !== -1)) {
+                os = 'win32_95'
+            } else if ((ua.indexOf("WinNT") !== -1) || (ua.indexOf("Windows NT") !== -1)) {
+                os = 'win32_NT'
+            } else if ((ua.indexOf("Win16") !== -1) || (ua.indexOf("Windows 3.1") !== -1)) {
+                os = 'win16'
+            } else if ((ua.indexOf("Macintosh") !== -1) || (ua.indexOf("Mac") !== -1)) {
+                os = 'Mac';
+            } else if (ua.indexOf("SunOS") !== -1) {
+                os = 'unix sun'
+            } else if (ua.indexOf("IRIX") !== -1) {
+                os = 'unix sgi'
+            } else if (ua.indexOf("HP-UX") !== -1) {
+                os = 'unix hp'
+            } else if (ua.indexOf("AIX") !== -1) {
+                os = 'unix ibm'
+            } else if (ua.indexOf("OS/2") !== -1) {
+                os = 'os/2'
+            } else if (ua.indexOf("Linux") !== -1) {
+                os = 'linux';
+            }
+            return os;
+        }
 
-function menuWindow()
-{
-	window.open("menu.html","menuWindow","resizable,width=170,height=230,left=0,top=0");
-}
-function textWindow(page)
-{
-	miniwinpopup(470,500, page, "AppWindow",295,10); 
-}
-function appletWindow(page, w, h)
-{
-	miniwinpopup(w, h, page, "AppWindow",20,10); 
-}
+        o = whichPlatform();
 
-// end hide -->
-</SCRIPT>
+        function miniwinpopup(w, h, myurl, targetstring, l, t) {
+            const popup = {};
+            popup.w = w;
+            popup.h = h;
+            popup.l = l;
+            popup.t = t;
+            popup.url = myurl;
+            popup.trgt = targetstring;
 
-<style>
-td{
-	font-family: verdana, arial;
-	font-size: 12px
-}
-.comm{
-	font-size: 10px;
-	color: #999999
-}
-.title{
-	font-size: 26px;
-	color: #0E9700
-}
-a{
-	text-decoration: none;
-	font-weight: bold
-}
-</style>
+            let window1;
+            if ((b === "IE") || (v === 2)) {
+                window.open(popup.url, popup.trgt,
+                    "width=" + popup.w + ",height=" + popup.h + ",resizable=1,status=0,left=" + popup.l + ",top=" + popup.t + ",menubar=0,scrollbars=1,toolbar=0,location=0,directories=0")
+            } else {
+                window1 = window.open(popup.url, popup.trgt, "width=" + popup.w + ",height=" + popup.h + ",resizable=1,status=0,left=" + popup.l + ",top=" + popup.t + ",menubar=0,scrollbars=1,toolbar=0,location=0,directories=0");
+                window1.focus();
+            }
+        }
+
+        function menuWindow() {
+            window.open("menu.html", "menuWindow", "resizable,width=170,height=230,left=0,top=0");
+        }
+
+        function textWindow(page) {
+            miniwinpopup(470, 500, page, "AppWindow", 295, 10);
+        }
+
+        function appletWindow(page, w, h) {
+            miniwinpopup(w, h, page, "AppWindow", 20, 10);
+        }
+
+        // end hide -->
+    </SCRIPT>
+
+    <style>
+        td {
+            font-family: verdana, arial,serif;
+            font-size: 12px
+        }
+
+        .title {
+            font-size: 26px;
+            color: #0E9700
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold
+        }
+    </style>
 </HEAD>
-<BODY text=#000000 vLink=#66AE36 aLink=#298F01 link=#298F01 bgColor=#ffffff topmargin=5 leftmargin=5 marginwidth=0 marginheight=0>
+<BODY text=#000000 vLink=#66AE36 aLink=#298F01 link=#298F01 bgColor=#ffffff topmargin=5 leftmargin=5 marginwidth=0
+      marginheight=0>
 <table border=0 cellpadding=2 cellspacing=4 width=100%>
-  <tr bgcolor=#FEF2DE>
-	<td>
-	<center class=title>
-	  Строение кристалла
-	</center>
-	</td>
-  </tr>
-  <tr bgcolor=#FEF9F0 align=center>
-	<td>
+    <tr bgcolor=#FEF2DE>
+        <td>
+            <center class=title>
+                Строение кристалла
+            </center>
+        </td>
+    </tr>
+    <tr bgcolor=#FEF9F0 align=center>
+        <td>
 
 
-<OBJECT classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
-    width="550" height="350" align="baseline" 
-    codebase="http://java.sun.com/products/plugin/1.3/jinstall-13-win32.cab#Version=1,3,0,0">
-    
-    <PARAM NAME="code" VALUE="UnitCellApplet.class">
-    <PARAM NAME="codebase" VALUE="crystal_structure">
-    <PARAM NAME="archive" VALUE="unitcell15.jar">
-    <PARAM NAME="type" VALUE="application/x-java-applet;version=1.3">
-    <PARAM NAME="scriptable" VALUE="true">
-    
-	<param name="lattice1" value="Si">
-	<param name="lattice1_lattice" value="FaceCenteredCubic">
-	<param name="lattice1_a" value="5.43">
-	<param name="lattice1_atom1" value="C, 0.0, 0.0, 0.0, 5">
-	<param name="lattice1_atom2" value="C, 0.25, 0.25, 0.25, 5">
+            <OBJECT classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+                    width="550" height="350" align="baseline"
+                    codebase="http://java.sun.com/products/plugin/1.3/jinstall-13-win32.cab#Version=1,3,0,0">
 
-	<param name="lattice2" value="GaAs">
-	<param name="lattice2_lattice" value="FaceCenteredCubic">
-	<param name="lattice2_a" value="5.6533">
-	<param name="lattice2_atom1" value="D, 0.0, 0.0, 0.0, 5">
-	<param name="lattice2_atom2" value="E, 0.25, 0.25, 0.25, 4">
+                <PARAM NAME="code" VALUE="UnitCellApplet.class">
+                <PARAM NAME="codebase" VALUE="crystal_structure">
+                <PARAM NAME="archive" VALUE="unitcell15.jar">
+                <PARAM NAME="type" VALUE="application/x-java-applet;version=1.3">
+                <PARAM NAME="scriptable" VALUE="true">
 
-	<param name="lattice3" value="InP">
-	<param name="lattice3_lattice" value="FaceCenteredCubic">
-	<param name="lattice3_a" value="5.8686">
-	<param name="lattice3_atom1" value="A, 0.0, 0.0, 0.0, 7">
-	<param name="lattice3_atom2" value="B, 0.25, 0.25, 0.25, 3">
+                <param name="lattice1" value="Si">
+                <param name="lattice1_lattice" value="FaceCenteredCubic">
+                <param name="lattice1_a" value="5.43">
+                <param name="lattice1_atom1" value="C, 0.0, 0.0, 0.0, 5">
+                <param name="lattice1_atom2" value="C, 0.25, 0.25, 0.25, 5">
 
-	<param name="lattice4" value="GaN">
-	<param name="lattice4_lattice" value="Hexagonal">
-	<param name="lattice4_a" value="3.180">
-	<param name="lattice4_c" value="5.166">
-	<param name="lattice4_atom1" value="B, 0.0, 0.0, 0.0, 7">
-	<param name="lattice4_atom2" value="B, 0.333, 0.667, 0.5, 7">
-	<param name="lattice4_atom3" value="C, 0.0, 0.0, 0.375, 3">
-	<param name="lattice4_atom4" value="C, 0.333, 0.667, 0.875, 3">
+                <param name="lattice2" value="GaAs">
+                <param name="lattice2_lattice" value="FaceCenteredCubic">
+                <param name="lattice2_a" value="5.6533">
+                <param name="lattice2_atom1" value="D, 0.0, 0.0, 0.0, 5">
+                <param name="lattice2_atom2" value="E, 0.25, 0.25, 0.25, 4">
 
-	<param name="lattice5" value="SiC">
-	<param name="lattice5_lattice" value="Hexagonal">
-	<param name="lattice5_a" value="3.076">
-	<param name="lattice5_c" value="5.048">
-	<param name="lattice5_atom1" value="D, 0.0, 0.0, 0.0, 7">
-	<param name="lattice5_atom2" value="D, 0.333, 0.667, 0.5, 7">
-	<param name="lattice5_atom3" value="E, 0.0, 0.0, 0.375, 3">
-	<param name="lattice5_atom4" value="E, 0.333, 0.667, 0.875, 3">
+                <param name="lattice3" value="InP">
+                <param name="lattice3_lattice" value="FaceCenteredCubic">
+                <param name="lattice3_a" value="5.8686">
+                <param name="lattice3_atom1" value="A, 0.0, 0.0, 0.0, 7">
+                <param name="lattice3_atom2" value="B, 0.25, 0.25, 0.25, 3">
 
-	<param name="lattice6" value="CsCl">
-	<param name="lattice6_lattice" value="SimpleCubic">
-	<param name="lattice6_a" value="4.12">
-	<param name="lattice6_atom1" value="E, 0.0, 0.0, 0.0, 7">
-	<param name="lattice6_atom2" value="B, 0.5, 0.5, 0.5, 3">
+                <param name="lattice4" value="GaN">
+                <param name="lattice4_lattice" value="Hexagonal">
+                <param name="lattice4_a" value="3.180">
+                <param name="lattice4_c" value="5.166">
+                <param name="lattice4_atom1" value="B, 0.0, 0.0, 0.0, 7">
+                <param name="lattice4_atom2" value="B, 0.333, 0.667, 0.5, 7">
+                <param name="lattice4_atom3" value="C, 0.0, 0.0, 0.375, 3">
+                <param name="lattice4_atom4" value="C, 0.333, 0.667, 0.875, 3">
 
- 	<param name="lattice7" value="Fe">
-	<param name="lattice7_lattice" value="BodyCenteredCubic">
-	<param name="lattice7_a" value="2.87">
-	<param name="lattice7_atom1" value="D, 0.0, 0.0, 0.0, 4">
+                <param name="lattice5" value="SiC">
+                <param name="lattice5_lattice" value="Hexagonal">
+                <param name="lattice5_a" value="3.076">
+                <param name="lattice5_c" value="5.048">
+                <param name="lattice5_atom1" value="D, 0.0, 0.0, 0.0, 7">
+                <param name="lattice5_atom2" value="D, 0.333, 0.667, 0.5, 7">
+                <param name="lattice5_atom3" value="E, 0.0, 0.0, 0.375, 3">
+                <param name="lattice5_atom4" value="E, 0.333, 0.667, 0.875, 3">
 
- 	<param name="lattice8" value="Au">
-	<param name="lattice8_lattice" value="FaceCenteredCubic">
-	<param name="lattice8_a" value="4.08">
-	<param name="lattice8_atom1" value="D, 0.0, 0.0, 0.0, 5">
+                <param name="lattice6" value="CsCl">
+                <param name="lattice6_lattice" value="SimpleCubic">
+                <param name="lattice6_a" value="4.12">
+                <param name="lattice6_atom1" value="E, 0.0, 0.0, 0.0, 7">
+                <param name="lattice6_atom2" value="B, 0.5, 0.5, 0.5, 3">
 
- 	<param name="lattice9" value="CaF2">
-	<param name="lattice9_lattice" value="FaceCenteredCubic">
-	<param name="lattice9_a" value="5.464">
-	<param name="lattice9_atom1" value="D, 0.0, 0.0, 0.0, 7">
-	<param name="lattice9_atom2" value="A, 0.25, -0.25, 0.25, 3">
-	<param name="lattice9_atom3" value="A, 0.25, 0.24, 0.25, 3">
+                <param name="lattice7" value="Fe">
+                <param name="lattice7_lattice" value="BodyCenteredCubic">
+                <param name="lattice7_a" value="2.87">
+                <param name="lattice7_atom1" value="D, 0.0, 0.0, 0.0, 4">
 
-	<param name="lattice10" value="Mg">
-	<param name="lattice10_lattice" value="Hexagonal">
-	<param name="lattice10_a" value="3.21">
-	<param name="lattice10_c" value="5.21">
-	<param name="lattice10_atom1" value="E, 0.0, 0.0, 0.0, 6">
-	<param name="lattice10_atom2" value="E, 0.667, 0.333, 0.5, 6">
+                <param name="lattice8" value="Au">
+                <param name="lattice8_lattice" value="FaceCenteredCubic">
+                <param name="lattice8_a" value="4.08">
+                <param name="lattice8_atom1" value="D, 0.0, 0.0, 0.0, 5">
 
-	<param name="lattice11" value="BaTiO3">
-	<param name="lattice11_lattice" value="SimpleCubic">
-	<param name="lattice11_a" value="4.01">
-	<param name="lattice11_atom1" value="E, 0.0, 0.0, 0.0, 7">
-	<param name="lattice11_atom2" value="C, 0.5, 0.5, 0.5, 5">
-	<param name="lattice11_atom3" value="B, 0.0, 0.5, 0.5, 3">	
-	<param name="lattice11_atom4" value="B, 0.5, 0.0, 0.5, 3">
-	<param name="lattice11_atom5" value="B, 0.5, 0.5, 0.0, 3">
+                <param name="lattice9" value="CaF2">
+                <param name="lattice9_lattice" value="FaceCenteredCubic">
+                <param name="lattice9_a" value="5.464">
+                <param name="lattice9_atom1" value="D, 0.0, 0.0, 0.0, 7">
+                <param name="lattice9_atom2" value="A, 0.25, -0.25, 0.25, 3">
+                <param name="lattice9_atom3" value="A, 0.25, 0.24, 0.25, 3">
 
-	<param name="lattice12" value="Sn(white)">
-	<param name="lattice12_lattice" value="Tetragonal">
-	<param name="lattice12_a" value="5.82">
-	<param name="lattice12_c" value="3.17">
-	<param name="lattice12_atom1" value="C, 0.0, 0.0, 0.0, 4">
-	<param name="lattice12_atom2" value="C, 0.0, 0.5, 0.25, 4">
-	<param name="lattice12_atom3" value="C, 0.5, 0.0, 0.75, 4">
-	<param name="lattice12_atom4" value="C, 0.5, 0.5, 0.5, 4">
+                <param name="lattice10" value="Mg">
+                <param name="lattice10_lattice" value="Hexagonal">
+                <param name="lattice10_a" value="3.21">
+                <param name="lattice10_c" value="5.21">
+                <param name="lattice10_atom1" value="E, 0.0, 0.0, 0.0, 6">
+                <param name="lattice10_atom2" value="E, 0.667, 0.333, 0.5, 6">
 
-	<param name="lattice13" value="Hg">
-	<param name="lattice13_lattice" value="Trigonal">
-	<param name="lattice13_a" value="2.99">
-	<param name="lattice13_alpha" value="70.75">
-	<param name="lattice13_atom1" value="D, 0.0, 0.0, 0.0, 5">
+                <param name="lattice11" value="BaTiO3">
+                <param name="lattice11_lattice" value="SimpleCubic">
+                <param name="lattice11_a" value="4.01">
+                <param name="lattice11_atom1" value="E, 0.0, 0.0, 0.0, 7">
+                <param name="lattice11_atom2" value="C, 0.5, 0.5, 0.5, 5">
+                <param name="lattice11_atom3" value="B, 0.0, 0.5, 0.5, 3">
+                <param name="lattice11_atom4" value="B, 0.5, 0.0, 0.5, 3">
+                <param name="lattice11_atom5" value="B, 0.5, 0.5, 0.0, 3">
 
-	<param name="lattice14" value="Sb">
-	<param name="lattice14_lattice" value="Trigonal">
-	<param name="lattice14_a" value="4.51">
-	<param name="lattice14_alpha" value="57.1">
-	<param name="lattice14_atom1" value="C, 0.233, 0.233, 0.233, 4">
-	<param name="lattice14_atom2" value="C, -0.233, -0.233, -0.233, 4">
+                <param name="lattice12" value="Sn(white)">
+                <param name="lattice12_lattice" value="Tetragonal">
+                <param name="lattice12_a" value="5.82">
+                <param name="lattice12_c" value="3.17">
+                <param name="lattice12_atom1" value="C, 0.0, 0.0, 0.0, 4">
+                <param name="lattice12_atom2" value="C, 0.0, 0.5, 0.25, 4">
+                <param name="lattice12_atom3" value="C, 0.5, 0.0, 0.75, 4">
+                <param name="lattice12_atom4" value="C, 0.5, 0.5, 0.5, 4">
 
-	<param name="lattice15" value="CdI2">
-	<param name="lattice15_lattice" value="Hexagonal">
-	<param name="lattice15_a" value="4.24">
-	<param name="lattice15_c" value="6.84">
-	<param name="lattice15_atom1" value="A, 0.0, 0.0, 0.0, 3">
-	<param name="lattice15_atom2" value="E, 0.333, 0.667, 0.25, 6">
-	<param name="lattice15_atom3" value="E, 0.667, 0.333, -0.25, 6">
+                <param name="lattice13" value="Hg">
+                <param name="lattice13_lattice" value="Trigonal">
+                <param name="lattice13_a" value="2.99">
+                <param name="lattice13_alpha" value="70.75">
+                <param name="lattice13_atom1" value="D, 0.0, 0.0, 0.0, 5">
 
- 	<param name="lattice16" value="NaCl">
-	<param name="lattice16_lattice" value="FaceCenteredCubic">
-	<param name="lattice16_a" value="5.63">
-	<param name="lattice16_atom1" value="C, 0.0, 0.0, 0.0, 4">
-	<param name="lattice16_atom2" value="B, 0.5, 0.5, 0.5, 6">
-	
-	<param name="lattice17" value="Cubic-ZnS">
-	<param name="lattice17_lattice" value="FaceCenteredCubic">
-	<param name="lattice17_a" value="5.41">
-	<param name="lattice17_atom1" value="B, 0.0, 0.0, 0.0, 3">
-	<param name="lattice17_atom2" value="D, 0.25, 0.25, 0.25, 7">
+                <param name="lattice14" value="Sb">
+                <param name="lattice14_lattice" value="Trigonal">
+                <param name="lattice14_a" value="4.51">
+                <param name="lattice14_alpha" value="57.1">
+                <param name="lattice14_atom1" value="C, 0.233, 0.233, 0.233, 4">
+                <param name="lattice14_atom2" value="C, -0.233, -0.233, -0.233, 4">
 
-	<param name="lattice18" value="Hex-ZnS">
-	<param name="lattice18_lattice" value="Hexagonal">
-	<param name="lattice18_a" value="3.076">
-	<param name="lattice18_c" value="5.048">
-	<param name="lattice18_atom1" value="B, 0.0, 0.0, 0.0, 3">
-	<param name="lattice18_atom2" value="B, 0.667, 0.333, 0.5, 3">
-	<param name="lattice18_atom3" value="D, 0.0, 0.0, 0.375, 7">
-	<param name="lattice18_atom4" value="D, 0.667, 0.333, 0.875, 7">
+                <param name="lattice15" value="CdI2">
+                <param name="lattice15_lattice" value="Hexagonal">
+                <param name="lattice15_a" value="4.24">
+                <param name="lattice15_c" value="6.84">
+                <param name="lattice15_atom1" value="A, 0.0, 0.0, 0.0, 3">
+                <param name="lattice15_atom2" value="E, 0.333, 0.667, 0.25, 6">
+                <param name="lattice15_atom3" value="E, 0.667, 0.333, -0.25, 6">
 
- 	<param name="lattice19" value="Cu">
-	<param name="lattice19_lattice" value="FaceCenteredCubic">
-	<param name="lattice19_a" value="3.61">
-	<param name="lattice19_atom1" value="E, 0.0, 0.0, 0.0, 5">
+                <param name="lattice16" value="NaCl">
+                <param name="lattice16_lattice" value="FaceCenteredCubic">
+                <param name="lattice16_a" value="5.63">
+                <param name="lattice16_atom1" value="C, 0.0, 0.0, 0.0, 4">
+                <param name="lattice16_atom2" value="B, 0.5, 0.5, 0.5, 6">
 
- 	<param name="lattice20" value="Ag">
-	<param name="lattice20_lattice" value="FaceCenteredCubic">
-	<param name="lattice20_a" value="4.09">
-	<param name="lattice20_atom1" value="C, 0.0, 0.0, 0.0, 6">
+                <param name="lattice17" value="Cubic-ZnS">
+                <param name="lattice17_lattice" value="FaceCenteredCubic">
+                <param name="lattice17_a" value="5.41">
+                <param name="lattice17_atom1" value="B, 0.0, 0.0, 0.0, 3">
+                <param name="lattice17_atom2" value="D, 0.25, 0.25, 0.25, 7">
 
- 	<param name="lattice21" value="Mo">
-	<param name="lattice21_lattice" value="BodyCenteredCubic">
-	<param name="lattice21_a" value="3.15">
-	<param name="lattice21_atom1" value="A, 0.0, 0.0, 0.0, 7">
+                <param name="lattice18" value="Hex-ZnS">
+                <param name="lattice18_lattice" value="Hexagonal">
+                <param name="lattice18_a" value="3.076">
+                <param name="lattice18_c" value="5.048">
+                <param name="lattice18_atom1" value="B, 0.0, 0.0, 0.0, 3">
+                <param name="lattice18_atom2" value="B, 0.667, 0.333, 0.5, 3">
+                <param name="lattice18_atom3" value="D, 0.0, 0.0, 0.375, 7">
+                <param name="lattice18_atom4" value="D, 0.667, 0.333, 0.875, 7">
 
- 	<param name="lattice22" value="W">
-	<param name="lattice22_lattice" value="BodyCenteredCubic">
-	<param name="lattice22_a" value="3.16">
-	<param name="lattice22_atom1" value="B, 0.0, 0.0, 0.0, 8">
+                <param name="lattice19" value="Cu">
+                <param name="lattice19_lattice" value="FaceCenteredCubic">
+                <param name="lattice19_a" value="3.61">
+                <param name="lattice19_atom1" value="E, 0.0, 0.0, 0.0, 5">
 
-	<param name="lattice23" value="Be">
-	<param name="lattice23_lattice" value="Hexagonal">
-	<param name="lattice23_a" value="2.29">
-	<param name="lattice23_c" value="3.58">
-	<param name="lattice23_atom1" value="D, 0.0, 0.0, 0.0, 5">
-	<param name="lattice23_atom2" value="D, 0.667, 0.333, 0.5, 5">
+                <param name="lattice20" value="Ag">
+                <param name="lattice20_lattice" value="FaceCenteredCubic">
+                <param name="lattice20_a" value="4.09">
+                <param name="lattice20_atom1" value="C, 0.0, 0.0, 0.0, 6">
 
-	<param name="lattice24" value="Zn">
-	<param name="lattice24_lattice" value="Hexagonal">
-	<param name="lattice24_a" value="2.66">
-	<param name="lattice24_c" value="4.95">
-	<param name="lattice24_atom1" value="B, 0.0, 0.0, 0.0, 6">
-	<param name="lattice24_atom2" value="B, 0.667, 0.333, 0.5, 6">
+                <param name="lattice21" value="Mo">
+                <param name="lattice21_lattice" value="BodyCenteredCubic">
+                <param name="lattice21_a" value="3.15">
+                <param name="lattice21_atom1" value="A, 0.0, 0.0, 0.0, 7">
 
-	<param name="lattice25" value="Ti">
-	<param name="lattice25_lattice" value="Hexagonal">
-	<param name="lattice25_a" value="2.95">
-	<param name="lattice25_c" value="4.69">
-	<param name="lattice25_atom1" value="E, 0.0, 0.0, 0.0, 7">
-	<param name="lattice25_atom2" value="E, 0.667, 0.333, 0.5, 7">
+                <param name="lattice22" value="W">
+                <param name="lattice22_lattice" value="BodyCenteredCubic">
+                <param name="lattice22_a" value="3.16">
+                <param name="lattice22_atom1" value="B, 0.0, 0.0, 0.0, 8">
 
-	<param name="lattice26" value="Bi">
-	<param name="lattice26_lattice" value="Trigonal">
-	<param name="lattice26_a" value="4.75">
-	<param name="lattice26_alpha" value="57.233">
-	<param name="lattice26_atom1" value="C, 0.237, 0.237, 0.237, 6">
-	<param name="lattice26_atom2" value="C, -0.237, -0.237, -0.237, 6">
+                <param name="lattice23" value="Be">
+                <param name="lattice23_lattice" value="Hexagonal">
+                <param name="lattice23_a" value="2.29">
+                <param name="lattice23_c" value="3.58">
+                <param name="lattice23_atom1" value="D, 0.0, 0.0, 0.0, 5">
+                <param name="lattice23_atom2" value="D, 0.667, 0.333, 0.5, 5">
 
-    <COMMENT>
-    <EMBED type="application/x-java-applet;version=1.3" width="550"
-       height="350" align="baseline" code="UnitCellApplet.class" 
-	archive="crystal_structure/unitcell15.jar"
-       codebase="."
-       pluginspage="http://java.sun.com/products/plugin/1.3/plugin-install.html">
-    <NOEMBED>
-    </COMMENT>
-           No Java 2 SDK, Standard Edition v 1.3 support for APPLET!!
-    </NOEMBED>
-    </EMBED>            
-</OBJECT></P>
+                <param name="lattice24" value="Zn">
+                <param name="lattice24_lattice" value="Hexagonal">
+                <param name="lattice24_a" value="2.66">
+                <param name="lattice24_c" value="4.95">
+                <param name="lattice24_atom1" value="B, 0.0, 0.0, 0.0, 6">
+                <param name="lattice24_atom2" value="B, 0.667, 0.333, 0.5, 6">
 
-	<br>
-	<br>	
-	Назад, <a href="../index.html"> к списку лабораторных работ</a>.</center>
-	<p>
-	</td>
-  </tr>
-  <tr bgcolor=#FEF2DE>
-	<td>
-	<center>РФиЭ БГУ, кафедра Физической Электроники</center>
-	</td>
-  </tr>
+                <param name="lattice25" value="Ti">
+                <param name="lattice25_lattice" value="Hexagonal">
+                <param name="lattice25_a" value="2.95">
+                <param name="lattice25_c" value="4.69">
+                <param name="lattice25_atom1" value="E, 0.0, 0.0, 0.0, 7">
+                <param name="lattice25_atom2" value="E, 0.667, 0.333, 0.5, 7">
+
+                <param name="lattice26" value="Bi">
+                <param name="lattice26_lattice" value="Trigonal">
+                <param name="lattice26_a" value="4.75">
+                <param name="lattice26_alpha" value="57.233">
+                <param name="lattice26_atom1" value="C, 0.237, 0.237, 0.237, 6">
+                <param name="lattice26_atom2" value="C, -0.237, -0.237, -0.237, 6">
+
+                <COMMENT>
+                    <EMBED type="application/x-java-applet;version=1.3" width="550"
+                           height="350" align="baseline" code="UnitCellApplet.class"
+                           archive="crystal_structure/unitcell15.jar"
+                           codebase="."
+                           pluginspage="http://java.sun.com/products/plugin/1.3/plugin-install.html">
+                    <NOEMBED>
+                </COMMENT>
+                No Java 2 SDK, Standard Edition v 1.3 support for APPLET!!
+                </NOEMBED>
+                </EMBED>
+            </OBJECT>
+            </P>
+
+            <br>
+            <br>
+            Назад, <a href="../index.html"> к списку лабораторных работ</a>.</center>
+            <p>
+        </td>
+    </tr>
+    <tr bgcolor=#FEF2DE>
+        <td>
+            <center>РФиЭ БГУ, кафедра Физической Электроники</center>
+        </td>
+    </tr>
 </table>
 </BODY>
 </HTML>
