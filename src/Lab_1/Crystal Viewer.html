@@ -1,14 +1,107 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN">
-<!-- saved from url=(0070)http://jas2.eng.buffalo.edu/applets/education/solid/unitCell/home.html -->
-<META http-equiv=Content-Type content="text/html; charset=utf-8">
-<HTML><HEAD><TITLE>Строение кристалла</TITLE>
-<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD><FRAMESET border=0 
-frameSpacing=0 frameBorder=0 cols=400,300><FRAME border=0 name=leftFrame 
-src="Cell & Properties/cell.htm" frameBorder=no><FRAME border=0 
-name=rightFrame src="Cell & Properties/GaAs.html" 
-frameBorder=no><NOFRAMES>
-    <body>
-    <p>To view this page, your browser must support frames. <a
-    href="http://home.netscape.com/comprod/mirror/index.html">Download </a></p>
-    </body>
-    </NOFRAMES></FRAMESET></HTML>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Строение кристалла</title>
+    <style>
+        /* Styles remain unchanged from the original */
+
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333333;
+        }
+
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        section {
+            width: 45%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        .error-message {
+            font-size: 18px;
+            color: #ff0000;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .download-link {
+            color: #0078d4;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        /* New back-button styles */
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+    </style>
+</head>
+<body>
+    <header>Строение кристалла</header>
+
+    <main>
+        <section>
+            <h2>Ячейка</h2>
+            <iframe src="Cell & Properties/cell.htm"></iframe>
+        </section>
+
+        <section>
+            <h2>Свойства</h2>
+            <iframe src="Cell & Properties/GaAs.html"></iframe>
+        </section>
+    </main>
+
+    <!-- Back button added -->
+    <a href="index.html" class="back-button">Назад</a>
+
+    <footer class="footer">
+        <p>РФиЭ БГУ, кафедра Физической Электроники</p>
+    </footer>
+</body>
+</html>
