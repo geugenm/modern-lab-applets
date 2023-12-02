@@ -18,10 +18,10 @@ To run this script, you can use the following command in your terminal:
 python3 script.py
 """
 
-import webbrowser
+import logging
 import socket
 import subprocess
-import logging
+import webbrowser
 
 # Define the custom log level
 VERBOSE = 15

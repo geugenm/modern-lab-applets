@@ -1,9 +1,9 @@
 # Import the necessary modules
-import os
-import codecs
-import chardet
-import logging
 import argparse
+import chardet
+import codecs
+import logging
+import os
 
 # Define the source and target encoding
 source_encoding = "windows-1251"

@@ -1,7 +1,7 @@
-import os
-import fileinput
 import argparse
+import fileinput
 import logging
+import os
 
 
 def replace_charset_in_file(file_path):

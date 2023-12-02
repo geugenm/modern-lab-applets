@@ -63,6 +63,11 @@ class ServerUI:
 
         self.logger.info(f"Server started at {timestamp}")
 
+    @staticmethod
+    def is_port_in_use(port):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            return s.connect_ex(('localhost', port)) == 0
+
     def start_server(self):
         self.start_button.config(state=tk.DISABLED)
         self.directory_entry.config(state=tk.DISABLED)
@@ -78,6 +83,10 @@ class ServerUI:
             return
 
         port = int(self.port.get())
+
+        if self.is_port_in_use(port):
+            messagebox.showinfo("Port in Use", f"Port {port} is already in use. Please choose another port.")
+            return
 
         self.server = socketserver.TCPServer(("localhost", port), http.server.SimpleHTTPRequestHandler)
         self.server_thread = threading.Thread(target=self.server.serve_forever)
@@ -121,7 +130,7 @@ def run_server(directory, port, log_file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Java WebAssembly Translation Server with UI")
-    parser.add_argument("-dir", "--directory", type=str, default="", help="Directory to open")
+    parser.add_argument("-dir", "--directory", type=str, default="./", help="Directory to open")
     parser.add_argument("-p", "--port", type=int, default=8080, help="Port to run the server on")
     parser.add_argument("-log", "--logfile", type=str, default="log.txt", help="Log file name")
     args = parser.parse_args()
