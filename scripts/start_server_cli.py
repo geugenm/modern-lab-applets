@@ -31,9 +31,11 @@ logging.addLevelName(logging.VERBOSE, 'VERBOSE')
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
 
+
 def verbose(self, message, *args, **kwargs):
-   if self.isEnabledFor(logging.VERBOSE):
-       self._log(logging.VERBOSE, message, args, **kwargs)
+    if self.isEnabledFor(logging.VERBOSE):
+        self._log(logging.VERBOSE, message, args, **kwargs)
+
 
 logging.Logger.verbose = verbose
 
@@ -49,61 +51,67 @@ SERVER_COMMAND = ['python', '-m', 'http.server']
 APPLETS_SOURCE = 'https://edurfe.bsu.by/mod/resource/view.php?id=3910'
 APPLETS_REAL_SOURCE = 'https://www.acsu.buffalo.edu/~wie/applet/applet.old'
 
+
 def find_available_port(start_port):
- """Find an available port starting from the given port."""
- hostname = socket.gethostname()
- ip_address = socket.gethostbyname(hostname)
- logger.verbose('Checking for available port starting from %s', start_port)
- with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-  if s.connect_ex((ip_address, start_port)) == 0:
-      return find_available_port(start_port + 1)
-  else:
-      logger.verbose('Found available port: %s', start_port)
-      return start_port
+    """Find an available port starting from the given port."""
+    hostname = socket.gethostname()
+    ip_address = socket.gethostbyname(hostname)
+    logger.verbose('Checking for available port starting from %s', start_port)
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        if s.connect_ex((ip_address, start_port)) == 0:
+            return find_available_port(start_port + 1)
+        else:
+            logger.verbose('Found available port: %s', start_port)
+            return start_port
+
 
 def open_url(url):
- """Open a URL in the default browser."""
- logger.verbose('Opening URL: %s', url)
- try:
-   webbrowser.open(url)
- except Exception as e:
-   logger.error('Failed to open URL: %s', e)
+    """Open a URL in the default browser."""
+    logger.verbose('Opening URL: %s', url)
+    try:
+        webbrowser.open(url)
+    except Exception as e:
+        logger.error('Failed to open URL: %s', e)
+
 
 def start_server(port):
- """Start a simple HTTP server on the given port as a subprocess."""
- hostname = socket.gethostname()
- ip_address = socket.gethostbyname(hostname)
- logger.verbose('Starting server on port: %s', port)
- try:
-   server_process = subprocess.Popen(SERVER_COMMAND + [str(port)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
- except Exception as e:
-   logger.error('Failed to start server: %s', e)
-   return
+    """Start a simple HTTP server on the given port as a subprocess."""
+    hostname = socket.gethostname()
+    ip_address = socket.gethostbyname(hostname)
+    logger.verbose('Starting server on port: %s', port)
+    try:
+        server_process = subprocess.Popen(SERVER_COMMAND + [str(port)], stdout=subprocess.PIPE,
+                                          stderr=subprocess.STDOUT)
+    except Exception as e:
+        logger.error('Failed to start server: %s', e)
+        return
 
- # Open a server URL in the browser
- open_url(f'http://{ip_address}:{port}')
+    # Open a server URL in the browser
+    open_url(f'http://{ip_address}:{port}')
 
- while True:
-  output = server_process.stdout.readline()
-  if output == '' and server_process.poll() is not None:
-      break
-  if output:
-      logger.verbose('Server output: %s', output.strip())
+    while True:
+        output = server_process.stdout.readline()
+        if output == '' and server_process.poll() is not None:
+            break
+        if output:
+            logger.verbose('Server output: %s', output.strip())
+
 
 def main():
- """Main function."""
- logger.verbose('Opening special links in the browser')
- open_url(APPLETS_EXTENSION_URL)
+    """Main function."""
+    logger.verbose('Opening special links in the browser')
+    open_url(APPLETS_EXTENSION_URL)
 
- # Find an available port starting from 8000
- logger.verbose('Finding an available port starting from %s', START_PORT)
- port = find_available_port(START_PORT)
- if port is None:
-  raise Exception("No available ports found.")
+    # Find an available port starting from 8000
+    logger.verbose('Finding an available port starting from %s', START_PORT)
+    port = find_available_port(START_PORT)
+    if port is None:
+        raise Exception("No available ports found.")
 
- # Start a simple HTTP server on the found port as a subprocess
- logger.verbose('Starting server on found port')
- start_server(port)
+    # Start a simple HTTP server on the found port as a subprocess
+    logger.verbose('Starting server on found port')
+    start_server(port)
+
 
 if __name__ == "__main__":
- main()
+    main()

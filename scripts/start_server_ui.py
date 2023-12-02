@@ -8,6 +8,7 @@ import os
 import http.client
 import logging
 
+
 class ServerUI:
     def __init__(self, root):
         self.root = root
@@ -103,6 +104,7 @@ class ServerUI:
         except ConnectionRefusedError:
             self.logger.info(f"Server is not running at http://localhost:{port}")
 
+
 def run_server(directory, port, log_file):
     root = tk.Tk()
     server_ui = ServerUI(root)
@@ -110,6 +112,7 @@ def run_server(directory, port, log_file):
     server_ui.port.set(port)
     server_ui.log_file = log_file
     root.mainloop()
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Python Server with UI")
