@@ -1,214 +1,246 @@
-<HTML>
+<HTML lang="ru">
 <HEAD>
-<META http-equiv=Content-Type content="text/html; charset=utf-8">
-<TITLE>Функция Ферми и электронная населённость локализованных энергетических состояний</TITLE>
-<style>
-td{
-    font-family: verdana, arial;
-    font-size: 10pt
-}
-.title{
-    font-size: 26px;
-    color: #0E9700
-}
-.title1{
-    font-size: 17px;
-    font-weight: bolder;
-    color: #0E9700
-}
-.title2{
-    font-size: 15px;
-    font-weight: bolder;
-    font-style: italic;
-    color: #0E9700
-}
-a{
-    text-decoration: none;
-	font-weight: bold
-}
-.formula{
-	font-family:'Times New Roman';
-	font-size: 13pt
-}
-</style>
+    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+    <TITLE>Функция Ферми и электронная населённость локализованных энергетических состояний</TITLE>
+    <style>
+        td {
+            font-family: verdana, arial, serif;
+            font-size: 10pt
+        }
+
+        .title {
+            font-size: 26px;
+            color: #0E9700
+        }
+
+        .title1 {
+            font-size: 17px;
+            font-weight: bolder;
+            color: #0E9700
+        }
+
+        .title2 {
+            font-size: 15px;
+            font-weight: bolder;
+            font-style: italic;
+            color: #0E9700
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold
+        }
+
+        .formula {
+            font-family: 'Times New Roman';
+            font-size: 13pt
+        }
+    </style>
 </HEAD>
-<BODY text=#000000 vLink=#66ae36 aLink=#298f01 link=#298f01 bgColor=#ffffff topmargin=5 leftmargin=5 marginwidth="0" marginheight="0">
-<table border=0 cellpadding=2 cellspacing=4 width="100%" ID="Table1">
-  <tr bgcolor=#fef2de>
+<BODY aLink=#298f01 bgColor=#ffffff leftmargin=5 link=#298f01 marginheight="0" marginwidth="0" text=#000000 topmargin=5
+      vLink=#66ae36>
+<table ID="Table1" border=0 cellpadding=2 cellspacing=4 width="100%">
+    <tr bgcolor=#fef2de>
         <td>
-        <center class=title>Функция Ферми и электронная населённость локализованных энергетических состояний</center>
+            <center class=title>Функция Ферми и электронная населённость локализованных энергетических состояний
+            </center>
         </td>
-  </tr>
-  <tr bgcolor=#fef9f0>
+    </tr>
+    <tr bgcolor=#fef9f0>
         <td>
-        <br>
-        <center>
-        <hr width="98%" style="COLOR: #0e9700; HEIGHT: 1px">
-        <br>
-        <table border=0 cellpadding=2 cellspacing=4 width="95%" ID="Table2">
-          <tr>
-                <td>
-                <center class=title1>Задание по Апплету</CENTER>
-				<font size=-1>
-				<p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><B><I>Функция распределения Ферми, её влияние на 
-занятие электронами энергетических состояний и температурный эффект</I></B>.<BR>
-&nbsp;Ответьте на следующие  вопросы.</P>
+            <br>
+            <center>
+                <hr style="COLOR: #0e9700; HEIGHT: 1px" width="98%">
+                <br>
+                <table ID="Table2" border=0 cellpadding=2 cellspacing=4 width="95%">
+                    <tr>
+                        <td>
+                            <center class=title1>Задание по Апплету</CENTER>
+                            <font size=-1>
+                                <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px"><B><I>Функция распределения
+                                    Ферми, её влияние на
+                                    занятие электронами энергетических состояний и температурный эффект</I></B>.<BR>
+                                    &nbsp;Ответьте на следующие вопросы.</P>
 
-<UL>
-<UL>
-<LI>Посчитайте f(E<SUB>F</SUB> + 0.06eV) и 1 - f(E<SUB>F</SUB> - 0.06eV),
-используя функцию Ферми f(E) = 1 / [ 1 + e(E-E<SUB>F</SUB>)/kT ] и  заполните следующую таблицу.&nbsp; 
-  kT = 0.0259 * ( T / 300) eV.<BR>
-</LI>
+                                <UL>
+                                    <UL>
+                                        <LI>Посчитайте f(E<SUB>F</SUB> + 0.06eV) и 1 - f(E<SUB>F</SUB> - 0.06eV),
+                                            используя функцию Ферми f(E) = 1 / [ 1 + e(E-E<SUB>F</SUB>)/kT ] и заполните
+                                            следующую таблицу.&nbsp;
+                                            kT = 0.0259 * ( T / 300) eV.<BR>
+                                        </LI>
 
-<UL>
-<UL>
-<TABLE>
-<TR>
-<TD>&nbsp;<U>Температура</U>&nbsp;</TD>
+                                        <UL>
+                                            <UL>
+                                                <TABLE>
+                                                    <TR>
+                                                        <TD>&nbsp;<U>Температура</U>&nbsp;</TD>
 
-<TD>&nbsp;<U>f(E<SUB>F</SUB> + 0.06eV)</U>&nbsp;</TD>
+                                                        <TD>&nbsp;<U>f(E<SUB>F</SUB> + 0.06eV)</U>&nbsp;</TD>
 
-<TD>&nbsp;<U>1 - f(E<SUB>F</SUB> - 0.06eV)</U>&nbsp;&nbsp;</TD>
-</TR>
+                                                        <TD>&nbsp;<U>1 - f(E<SUB>F</SUB> - 0.06eV)</U>&nbsp;&nbsp;</TD>
+                                                    </TR>
 
-<TR>
-<TD>
-<CENTER><P>300K</P></CENTER>
-</TD>
+                                                    <TR>
+                                                        <TD>
+                                                            <CENTER><P>300K</P></CENTER>
+                                                        </TD>
 
-<TD>
-<CENTER><P>&nbsp;___________&nbsp;</P></CENTER>
-</TD>
+                                                        <TD>
+                                                            <CENTER><P>&nbsp;___________&nbsp;</P></CENTER>
+                                                        </TD>
 
-<TD>
-<CENTER><P>&nbsp;___________&nbsp;</P></CENTER>
-</TD>
-</TR>
+                                                        <TD>
+                                                            <CENTER><P>&nbsp;___________&nbsp;</P></CENTER>
+                                                        </TD>
+                                                    </TR>
 
-<TR>
-<TD>
-<CENTER><P>500K</P></CENTER>
-</TD>
+                                                    <TR>
+                                                        <TD>
+                                                            <CENTER><P>500K</P></CENTER>
+                                                        </TD>
 
-<TD>
-<CENTER><P>&nbsp;___________&nbsp;</P></CENTER>
-</TD>
+                                                        <TD>
+                                                            <CENTER><P>&nbsp;___________&nbsp;</P></CENTER>
+                                                        </TD>
 
-<TD>
-<CENTER><P>&nbsp;___________&nbsp;</P></CENTER>
-</TD>
-</TR>
+                                                        <TD>
+                                                            <CENTER><P>&nbsp;___________&nbsp;</P></CENTER>
+                                                        </TD>
+                                                    </TR>
 
-<TR>
-<TD>
-<CENTER><P>900K</P></CENTER>
-</TD>
+                                                    <TR>
+                                                        <TD>
+                                                            <CENTER><P>900K</P></CENTER>
+                                                        </TD>
 
-<TD>&nbsp;___________&nbsp;</TD>
+                                                        <TD>&nbsp;___________&nbsp;</TD>
 
-<TD>
-<CENTER><P>&nbsp;___________&nbsp;</P></CENTER>
-</TD>
-</TR>
-</TABLE>
-</UL>
-</UL>
+                                                        <TD>
+                                                            <CENTER><P>&nbsp;___________&nbsp;</P></CENTER>
+                                                        </TD>
+                                                    </TR>
+                                                </TABLE>
+                                            </UL>
+                                        </UL>
 
-<LI><p align=justify>(1) &nbsp;Установите температуру в апплете на одно из значений выше,
-а  E<SUB>F</SUB> совместите с одним из энергетических уровней. Посчитайте число занятых состояний
-на уровне 60meV над E<SUB>F</SUB> и разделите их на 16 (общее число состояний на этом уровне) с точностью  f(E<SUB>F</SUB>
-+ 0.06 eV). Сравните с рассчитанным значением. &nbsp;Посчитайте число вакантных состояний
-для уровня при E<SUB>F</SUB> - 60 meV и разделите их на
-16 с точностью  1 - f(E<SUB>F</SUB> - 60 meV). Сравните с рассчитанным значением.<BR>
-(2) Действительно ли,что f( E<SUB>F</SUB> + E<SUB>0</SUB>) = 1 - f( E<SUB>F</SUB>
-- E<SUB>0</SUB>) для данного значения энергии E<SUB>0</SUB> ?&nbsp;&nbsp;Объясните,
-что это равенство значит, то есть, вероятность занятого или ваканатного состояния
- или симметрию распределения электронов f(E) относительно E<SUB>F</SUB>  ? &nbsp;&nbsp;<BR>
-(3) При высоких  температурах распределение Ферми вокруг E<SUB>F</SUB>
-более гладкое.&nbsp;&nbsp;Объясните, как повышенная тепловая энергия
- воздействует на энергетическое распределение электронов.</LI>
+                                        <LI><p align=justify>(1) &nbsp;Установите температуру в апплете на одно из
+                                            значений выше,
+                                            а E<SUB>F</SUB> совместите с одним из энергетических уровней. Посчитайте
+                                            число занятых состояний
+                                            на уровне 60meV над E<SUB>F</SUB> и разделите их на 16 (общее число
+                                            состояний на этом уровне) с точностью f(E<SUB>F</SUB>
+                                            + 0.06 eV). Сравните с рассчитанным значением. &nbsp;Посчитайте число
+                                            вакантных состояний
+                                            для уровня при E<SUB>F</SUB> - 60 meV и разделите их на
+                                            16 с точностью 1 - f(E<SUB>F</SUB> - 60 meV). Сравните с рассчитанным
+                                            значением.<BR>
+                                            (2) Действительно ли,что f( E<SUB>F</SUB> + E<SUB>0</SUB>) = 1 - f(
+                                            E<SUB>F</SUB>
+                                            - E<SUB>0</SUB>) для данного значения энергии E<SUB>0</SUB> ?&nbsp;&nbsp;Объясните,
+                                            что это равенство значит, то есть, вероятность занятого или ваканатного
+                                            состояния
+                                            или симметрию распределения электронов f(E) относительно E<SUB>F</SUB> ?
+                                            &nbsp;&nbsp;<BR>
+                                            (3) При высоких температурах распределение Ферми вокруг E<SUB>F</SUB>
+                                            более гладкое.&nbsp;&nbsp;Объясните, как повышенная тепловая энергия
+                                            воздействует на энергетическое распределение электронов.</LI>
 
-<UL>
-<LI><p align=justify>Насколько знаечний kT отстоят от границы зон ?  <A HREF="#completely"> Они полностью пусты или полностью заполнены</A> ?? &nbsp;</LI>
+                                        <UL>
+                                            <LI><p align=justify>Насколько знаечний kT отстоят от границы зон ? <A
+                                                    HREF="#completely"> Они полностью пусты или полностью заполнены</A>
+                                                ?? &nbsp;</LI>
 
-<LI><p align=justify>Помогает ли  апплет понять вам, почему нужно использовать 3kT или 4kT
-в качестве предела энергии  в аппроксиамции к f(E) ?</LI>
-</UL>
+                                            <LI><p align=justify>Помогает ли апплет понять вам, почему нужно
+                                                использовать 3kT или 4kT
+                                                в качестве предела энергии в аппроксиамции к f(E) ?</LI>
+                                        </UL>
 
-<!---<LI><p align=justify>Обсудите следующие вопросы :
-  <!-- <A HREF="mailto:wie@eng.buffalo.edu">email</A>:</LI>  -->
+                                        <!---<LI><p align=justify>Обсудите следующие вопросы :
+                                        <A HREF="mailto:wie@eng.buffalo.edu">email</A>:</LI>  -->
 
-<!--<UL> -->
-<!--<LI><p align=justify>Сравнивая ваше (предыдущее) понимание функции Ферми, основанное  -->
-<!--на математическойon the mathematical formula (eg, Eq. 1-10 of Yang) and a static illustration  -->
-<!--(eg, Fig.1-17, p.18 of Yang), did this applet improve the clarity of the  -->
-<!--physical meaning of the distribution function ?&nbsp;&nbsp;How did this  -->
-<!--applet affect your understanding or perception ?</LI>  -->
+                                        <!--<UL> -->
+                                        <!--<LI><p align=justify>Сравнивая ваше (предыдущее) понимание функции Ферми, основанное  -->
+                                        <!--на математическойon the mathematical formula (eg, Eq. 1-10 of Yang) and a static illustration  -->
+                                        <!--(eg, Fig.1-17, p.18 of Yang), did this applet improve the clarity of the  -->
+                                        <!--physical meaning of the distribution function ?&nbsp;&nbsp;How did this  -->
+                                        <!--applet affect your understanding or perception ?</LI>  -->
 
-<!--<LI><p align=justify>Before using this applet (ie, from formula and some static figures  -->
-<!--alone), did you have an immediate 'feeling' that the energy states below  -->
-<!--<FONT COLOR="#FF00FF">Ef</FONT> must be occupied by electron ? Did this  -->
-<!--applet help you augment this notion ? </LI>  -->
+                                        <!--<LI><p align=justify>Before using this applet (ie, from formula and some static figures  -->
+                                        <!--alone), did you have an immediate 'feeling' that the energy states below  -->
+                                        <!--<FONT COLOR="#FF00FF">Ef</FONT> must be occupied by electron ? Did this  -->
+                                        <!--applet help you augment this notion ? </LI>  -->
 
-<!--<LI> <p align=justify>Please make any comments as to how to improve this applet for a more   -->
-<!--effective learning of the concepts/principles ?&nbsp;&nbsp;&nbsp;<BR>    -->
-<BR>
-</LI>
-</UL>
-</UL>
-</UL>
+                                        <!--<LI> <p align=justify>Please make any comments as to how to improve this applet for a more   -->
+                                        <!--effective learning of the concepts/principles ?&nbsp;&nbsp;&nbsp;<BR>    -->
+                                        <BR>
+                                        </LI>
+                                    </UL>
+                                </UL>
+                                </UL>
 
-<P>
-<HR WIDTH="100%"></P>
+                                <P>
+                                <HR WIDTH="100%">
+                                </P>
 
-<P>Основные наблюдения :</P>
-<p align=justify><SUP>1 <A NAME="completely"></A></SUP><FONT COLOR="#FF0000">Полностью заполненный или полностью пустой
-</FONT>: &nbsp;Так как в этом апплете
- всего 16 энергетических состояний на каждом уровне,то, если вероятность населённости(занятия) 
-меньше, либо равна  1/16, ни одно из состояний, возможно, не будет занято  на данном
-энергетическом уровне  (<FONT COLOR="#FF0000">полностью пустой уровень</FONT>). &nbsp;Подобно этому,
-если вероятность занятия больше, чем  1.0 - 1/16,то  все состояния 
-могут быть заняты (<FONT COLOR="#FF0000">полностью заполненный уровень</FONT>).
-&nbsp;&nbsp;Это справедливо только тогда, когда точность для вероятности порядка 6x10<SUP>-2</SUP>.&nbsp;&nbsp;Это не должно привести вас к заключению, что
-каждый уровень будт пустым, не важно сколько состояний на данном энергетическом уровне, если E - Ef &gt; 4kT, к примеру.<br>
-				Очень хороший пример очень маленького значения f(E), но  когда большое количество
-элетронов с определёнными состояниями приходится в полупроводнике на энергетическую зону. &nbsp;При 300K (kT = 0.0259 eV), позвольте  сравнить границу зоны  проводимости, Ec, значение на которой около  Ec - Ef = 0.5 eV. Заметьте, что Ec - Ef = 19.3kT &gt;&gt;
-4kT. Разве это означает, что при E = Ec ВСЕ состояния вакантны, и  электронов проводимости нет? Нет ! &nbsp;	Фактически  1.16x10<SUP><FONT SIZE=2>11</FONT></SUP>
-электронов приходится на cм</FONT><SUP><FONT SIZE=2>3</FONT></SUP><FONT SIZE=-1>
- в энергетитеческих состояниях  около Ec, потому что n = Nc*f(E) или 1.16E11 = 4.13E-9*2.8E19.
-Поэтому получаем 1.16x10<SUP><FONT SIZE=-2>11</FONT></SUP> электронов на cм<SUP>3</SUP>.&nbsp;&nbsp;&nbsp;
+                                <P>Основные наблюдения :</P>
+                                <p align=justify><SUP>1 <A NAME="completely"></A></SUP><FONT COLOR="#FF0000">Полностью
+                                    заполненный или полностью пустой
+                                </FONT>: &nbsp;Так как в этом апплете
+                                    всего 16 энергетических состояний на каждом уровне,то, если вероятность
+                                    населённости(занятия)
+                                    меньше, либо равна 1/16, ни одно из состояний, возможно, не будет занято на данном
+                                    энергетическом уровне (<FONT COLOR="#FF0000">полностью пустой уровень</FONT>).
+                                    &nbsp;Подобно этому,
+                                    если вероятность занятия больше, чем 1.0 - 1/16,то все состояния
+                                    могут быть заняты (<FONT COLOR="#FF0000">полностью заполненный уровень</FONT>).
+                                    &nbsp;&nbsp;Это справедливо только тогда, когда точность для вероятности порядка
+                                    6x10<SUP>-2</SUP>.&nbsp;&nbsp;Это не должно привести вас к заключению, что
+                                    каждый уровень будт пустым, не важно сколько состояний на данном энергетическом
+                                    уровне, если E - Ef &gt; 4kT, к примеру.<br>
+                                    Очень хороший пример очень маленького значения f(E), но когда большое количество
+                                    элетронов с определёнными состояниями приходится в полупроводнике на энергетическую
+                                    зону. &nbsp;При 300K (kT = 0.0259 eV), позвольте сравнить границу зоны проводимости,
+                                    Ec, значение на которой около Ec - Ef = 0.5 eV. Заметьте, что Ec - Ef = 19.3kT &gt;&gt;
+                                    4kT. Разве это означает, что при E = Ec ВСЕ состояния вакантны, и электронов
+                                    проводимости нет? Нет ! &nbsp; Фактически 1.16x10<SUP><FONT SIZE=2>11</FONT></SUP>
+                                    электронов приходится на cм</FONT><SUP><FONT SIZE=2>3</FONT></SUP><FONT SIZE=-1>
+                            в энергетитеческих состояниях около Ec, потому что n = Nc*f(E) или 1.16E11 = 4.13E-9*2.8E19.
+                            Поэтому получаем 1.16x10<SUP><FONT SIZE=-2>11</FONT></SUP> электронов на cм<SUP>3</SUP>.&nbsp;&nbsp;&nbsp;
 
-<!--Это благодаря тому, что арифметически ноль (или очень маленькое число) times infinity 
-(<!--или очень большому числу) - это не нольis not zero.
- &nbsp; -->
-Здесь,<br> f(E) = f(Ec - Ef) = f(0.5eV) = 4.13 x 10<SUP>-9</SUP>,то есть смысл в том, что около  4 состояний будет занято
-для каждого биллиона состояний(???) !&nbsp;&nbsp;Но в зоне проводимости
-кремния (Si),  имеется около  2.8x10<SUP>19</SUP> состояний на cм<SUP>3</SUP>, (Nc=2.8x10<SUP>19</SUP> cм<SUP>-3</SUP>), то есть число очень велико.
-&nbsp;&nbsp;
-<!--Вне  2.8x10<SUP>19</SUP> состояний. -->
- Более 1.16x10<SUP><FONT SIZE=-2>11</FONT></SUP> состояний занято электронами.</p>
-</FONT>
-				</td>
-			  </tr>
-			</TBODY>
-			</table>
-		    <br>
-        <hr width=98% style="height: 1px; color: #0E9700"><br>
-        </center>
-        <p>
-		<UL>
-			<LI>Назад, <a href="../index.html"> к списку апплетов к лабораторной работе "Уровень Ферми"</a>.</LI>
-			<LI>Назад, <a href="../../index.html"> к списку лабораторных работ</a>.</LI>
-		</UL>
-        <p>
+                            <!--Это благодаря тому, что арифметически ноль (или очень маленькое число) times infinity
+                            (или очень большому числу) - это не нольis not zero.
+                             &nbsp; -->
+                            Здесь,<br> f(E) = f(Ec - Ef) = f(0.5eV) = 4.13 x 10<SUP>-9</SUP>,то есть смысл в том, что
+                            около 4 состояний будет занято
+                            для каждого биллиона состояний(???) !&nbsp;&nbsp;Но в зоне проводимости
+                            кремния (Si), имеется около 2.8x10<SUP>19</SUP> состояний на cм<SUP>3</SUP>, (Nc=2.8x10<SUP>19</SUP>
+                            cм<SUP>-3</SUP>), то есть число очень велико.
+                            &nbsp;&nbsp;
+                            <!--Вне  2.8x10<SUP>19</SUP> состояний. -->
+                            Более 1.16x10<SUP><FONT SIZE=-2>11</FONT></SUP> состояний занято электронами.</p>
+                        </FONT>
+                        </td>
+                    </tr>
+                    </TBODY>
+                </table>
+                <br>
+                <hr style="height: 1px; color: #0E9700" width=98%>
+                <br>
+            </center>
+            <p>
+            <UL>
+                <LI>Назад, <a href="../index.html"> к списку апплетов к лабораторной работе "Уровень Ферми"</a>.</LI>
+                <LI>Назад, <a href="../../index.html"> к списку лабораторных работ</a>.</LI>
+            </UL>
+            <p>
         </td>
-  </tr>
-  <tr bgcolor=#FEF2DE>
+    </tr>
+    <tr bgcolor=#FEF2DE>
         <td>
-        <center>РФиЭ БГУ, кафедра Физической Электроники</center>
+            <center>РФиЭ БГУ, кафедра Физической Электроники</center>
         </td>
-  </tr>
+    </tr>
 </table>
 </BODY>
 </HTML>
