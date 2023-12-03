@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Концентрация носителей в Si (или любом другом полупроводнике) в зависимости от Уровня Ферми и плотности состояний</title>
+    <title>Концентрация носителей в Si (или любом другом полупроводнике) в зависимости от Уровня Ферми и плотности
+        состояний</title>
     <style>
         body {
             font-family: Segoe UI, Arial, sans-serif;
@@ -38,6 +39,7 @@
 
         .back-button {
             display: block;
+            width: fit-content;
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
@@ -48,6 +50,7 @@
             transition: background-color 0.3s ease;
             margin: 10px auto;
         }
+
 
         .back-button:hover {
             background-color: #005a9e;
@@ -61,25 +64,35 @@
             color: #666666;
         }
     </style>
+    <script src="https://cjrtnc.leaningtech.com/3.0rc2/cj3loader.js"></script>
+    <script>
+        window.onload = function () {
+            cheerpjInit();
+        };
+    </script>
 </head>
 <body>
-    <header>Концентрация носителей в Si (или любом другом полупроводнике) в зависимости от Уровня Ферми и плотности состояний</header>
+<header>Концентрация носителей в Si (или любом другом полупроводнике) в зависимости от Уровня Ферми и плотности
+    состояний
+</header>
 
-    <section>
-        <div class="applet-container">
-            <object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
-            WIDTH="460" HEIGHT="360" NAME="Applet" ALIGN="middle"
-            codebase="http://java.sun.com/products/plugin/1.2/jinstall-12-win32.cab#Version=1,2,0,0" border="0">
-                <PARAM NAME="CODE" VALUE="hyl/FermiCarrier.class">
-                <param name="type" value="application/x-java-applet;version=1.2">
-            </object>
-        </div>
-        <p>
-        <a href="../index.html" class="back-button">Назад</a>
-    </section>
+<section>
+    <div class="applet-container">
+        <object ALIGN="middle"
+                HEIGHT="360" NAME="Applet" WIDTH="460" border="0"
+                classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+                codebase="http://java.sun.com/products/plugin/1.2/jinstall-12-win32.cab#Version=1,2,0,0">
+            <PARAM NAME="CODE" VALUE="hyl/FermiCarrier.class">
+            <param name="type" value="application/x-java-applet;version=1.2">
+        </object>
+    </div>
+</section>
 
-    <footer class="footer">
-        <p>РФиЭ БГУ, кафедра Физической Электроники</p>
-    </footer>
+<a class="back-button" href="../index.html">Назад</a>
+
+
+<footer class="footer">
+    <p>РФиЭ БГУ, кафедра Физической Электроники</p>
+</footer>
 </body>
 </html>

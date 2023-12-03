@@ -45,23 +45,30 @@
             font-weight: bold;
         }
     </style>
+    <script src="https://cjrtnc.leaningtech.com/3.0rc2/cj3loader.js"></script>
+    <script>
+        window.onload = function () {
+            cheerpjInit();
+        };
+    </script>
 </head>
 <body>
-    <header>
-        <a target="_top" style="text-decoration: none; color: #0078d4;">Строение кристалла</a>
-    </header>
+<header>
+    <a style="text-decoration: none; color: #0078d4;" target="_top">Строение кристалла</a>
+</header>
 
-    <section>
-        <applet height="350" width="360" code="CrystalViewer.class" codeBase="/" align="middle">
-                <p class="error-message">
-                    Для просмотра этой страницы необходима поддержка апплетов в вашем браузере.
-                    Если у вас нет необходимого плагина, рекомендуем установить <a href="http://home.netscape.com/comprod/mirror/index.html" class="download-link">Cheerj плагин</a>.
-                </p>
-        </applet>
-
-        <p>
-            Посмотреть в объеме: <span class="click-hint">кликните мышкой на ячейку</span> и двигайте.
+<section>
+    <applet align="middle" code="CrystalViewer.class" height="350" width="360">
+        <p class="error-message">
+            Для просмотра этой страницы необходима поддержка апплетов в вашем браузере.
+            Если у вас нет необходимого плагина, рекомендуем установить <a
+                class="download-link" href="http://home.netscape.com/comprod/mirror/index.html">Cheerj плагин</a>.
+            Если плагин у вас установлен, пожалуйста, подождите загрузки (до 15 сек).
         </p>
-    </section>
+    </applet>
+    <p>
+        Посмотреть в объеме: <span class="click-hint">кликните мышкой на ячейку</span> и двигайте.
+    </p>
+</section>
 </body>
 </html>

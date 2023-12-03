@@ -1,99 +1,126 @@
-<HTML>
+<HTML lang="ru">
 <HEAD>
-<META http-equiv=Content-Type content="text/html; charset=utf-8">
-<TITLE>Концентрация носителей в полупроводнике в зависимости от уровня Ферми и плотности состояний</TITLE>
-<style>
-td{
-    font-family: verdana, arial;
-    font-size: 10pt
-}
-.title{
-    font-size: 26px;
-    color: #0E9700
-}
-.title1{
-    font-size: 17px;
-    font-weight: bolder;
-    color: #0E9700
-}
-.title2{
-    font-size: 15px;
-    font-weight: bolder;
-    font-style: italic;
-    color: #0E9700
-}
-a{
-    text-decoration: none;
-	font-weight: bold
-}
-.formula{
-	font-family:'Times New Roman';
-	font-size: 13pt
-}
-</style>
+    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+    <TITLE>Концентрация носителей в полупроводнике в зависимости от уровня Ферми и плотности состояний</TITLE>
+    <style>
+        td {
+            font-family: verdana, arial, serif;
+            font-size: 10pt
+        }
+
+        .title {
+            font-size: 26px;
+            color: #0E9700
+        }
+
+        .title1 {
+            font-size: 17px;
+            font-weight: bolder;
+            color: #0E9700
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold
+        }
+
+        .formula {
+            font-family: 'Times New Roman',serif;
+            font-size: 13pt
+        }
+    </style>
 </HEAD>
-<BODY text=#000000 vLink=#66ae36 aLink=#298f01 link=#298f01 bgColor=#ffffff topmargin=5 leftmargin=5 marginwidth="0" marginheight="0">
-<table border=0 cellpadding=2 cellspacing=4 width="100%" ID="Table2">
-  <TBODY>
-  <tr bgcolor=#fef2de>
+<BODY aLink=#298f01 bgColor=#ffffff leftmargin=5 link=#298f01 marginheight="0" marginwidth="0" text=#000000 topmargin=5
+      vLink=#66ae36>
+<table ID="Table2" border=0 cellpadding=2 cellspacing=4 width="100%">
+    <TBODY>
+    <tr bgcolor=#fef2de>
         <td>
-        <center class=title>Концентрация носителей в Si (или любом другом полупроводнике) в зависимости от Уровня Ферми и плотности состояний</center>
+            <center class=title>Концентрация носителей в Si (или любом другом полупроводнике) в зависимости от Уровня
+                Ферми и плотности состояний
+            </center>
         </td>
-  </tr>
-  <tr bgcolor=#fef9f0>
+    </tr>
+    <tr bgcolor=#fef9f0>
         <td>
-        <br>
-        <center>
-        <hr width="98%" style="COLOR: #0e9700; HEIGHT: 1px">
-        <br>
-        <table border=0 cellpadding=2 cellspacing=4 width="95%" ID="Table3">
-        <TBODY>
-          <tr>
-                <td>
-                <center class=title1>Математический анализ</center>
-				<p align=justify style="MARGIN-BOTTOM: 0px"><font size=-1>
-				<b>I.Плотность состояний (ПС) для электронов в полупроводниковом кристалле.</b><br>
-				Поведение электронов в полупроводниковом кристалле под влиянием периодического кристаллографического потенциала подобно модели  свободных частиц, но с другой массой, нежели чем в вакууме. Эта новая масса 'свободного'  электрона зовётся <I>эффективной </I>массой, m*.<br>
-				Математически (в квантовой механике или волновой механике)  движение свободной частицы (для одномерного случая) описывается следующим образом : </P>
-				<CENTER calss=formula><i><FONT FACE="symbol">y</FONT>(x, t) = A exp[ i (kx + <FONT FACE="symbol">w</FONT>t)]. ----- (волновая функция свободной частицы)</i></CENTER>
-				<p align=justify style="MARGIN-BOTTOM: 0px">Это синусоидальная волна travelling , называемая волновой функцией свободных электронов.<br>
-				Энергия электрона : </P>
-				<CENTER class=formula><i>E<FONT FACE="symbol">y</FONT>(x, t) = - (<STRIKE>h</STRIKE><SUP>2</SUP>/2m*)d<SUP>2</SUP>/dx<SUP>2</SUP> <FONT FACE="symbol">y</FONT>(x, t) = <STRIKE>h</STRIKE><SUP>2</SUP>k<SUP>2</SUP>/2m* <FONT FACE="symbol">y</FONT>(x, t).</i></CENTER>
-				<p align=justify style="MARGIN-BOTTOM: 0px">Или,</P>
-				<CENTER class=formula><i>E = <STRIKE>h</STRIKE><SUP>2</SUP>k<SUP>2</SUP>/2m*.</i></CENTER>
-				<p align=justify style="MARGIN-BOTTOM: 0px">Для части полупроводника, мы требуем, чтобы волновая функция точно такой же, как у противоложной поверхности (<I>периодическое граничное условие</I>). Если мы полагаем, что объём полупроводика L x L x L = V, то</P>
-				<CENTER class=formula><i><FONT FACE="symbol">y</FONT>(x+L, t) = <FONT FACE="symbol">y</FONT>(x,t). ----- (периодическое граничное условие)</i></CENTER>
-				<p align=justify style="MARGIN-BOTTOM: 0px">Это даёт(yields) :</P>
-				<CENTER class=formula><i>exp[i kL] = 1.</i></CENTER>
-				<p align=justify style="MARGIN-BOTTOM: 0px">Или,</P>
-				<CENTER class=formula><i>kL = n 2<FONT FACE="symbol">p</FONT>/ L. &nbsp;&nbsp; n = ... -2, -1, 0, 1, 2, 3, ...</i></CENTER>
-				<p align=justify style="MARGIN-BOTTOM: 0px">Для движения электрона по всему объёму(moving around in a bulk ) полупроводника ( 3-мерный случай), его энергия будет равной </P>
-				<CENTER class=formula><i>E = <STRIKE>h</STRIKE><SUP>2</SUP>(k<SUB>x</SUB><SUP>2</SUP> + k<SUB>y</SUB><SUP>2</SUP> + k<SUB>z</SUB><SUP>2</SUP>)/2m*<BR> = h<SUP>2</SUP>(n<SUB>x</SUB><SUP>2</SUP> + n<SUB>y</SUB><SUP>2</SUP> + n<SUB>z</SUB><SUP>2</SUP>)/2m*L<SUP>2</SUP></i></CENTER>
-				<p align=justify style="MARGIN-BOTTOM: 0px">где n<SUB>x</SUB>, n<SUB>y</SUB>, n<SUB>z</SUB> = ... -2, -1, 0, 1, 2, 3, ... Здесь, точка (n<SUB>x</SUB>, n<SUB>y</SUB>, n<SUB>z</SUB>) в 3-мерном  k<SUB>x</SUB>, k<SUB>y</SUB>, k<SUB>z</SUB>  пространстве соответствует квантовому энергетическому состоянию  (если рассматривать спин электрона, то два квантовых состояния).<br>
-				Если  считать число (n<SUB>x</SUB>, n<SUB>y</SUB>, n<SUB>z</SUB>) состояний на единицу объёма, в интервале энергии E ~ E+dE, находим :</P>
-				<CENTER class=formula><i>g(E)dE = 4<FONT FACE="symbol">p</FONT> (2m*/h<SUP><FONT SIZE=-1>2</FONT></SUP>)<SUP><FONT SIZE=-1>3/2</FONT></SUP> E<SUP><FONT SIZE=-1>1/2</FONT></SUP>.</i></CENTER>
-				<b>II. Функция Распределения Ферми, f(E)</b><br>
-				Смотреть<A HREF="../Fermi_2/math-2.html"> здесь</A>.
-				</td>
-			  </tr>
-			</TBODY>
-			</table>
-		    <br>
-        <hr width=80% style="height: 1px; color: #0E9700"><br>
-        </center>
-        <p>
-		<UL>
-			<LI>Назад, <a href="../index.html"> к списку апплетов к лабораторной работе "Уровень Ферми"</a>.</LI>
-			<LI>Назад, <a href="../../index.html"> к списку лабораторных работ</a>.</LI>
-		</UL>
-        <p>
+            <br>
+            <center>
+                <hr style="COLOR: #0e9700; HEIGHT: 1px" width="98%">
+                <br>
+                <table ID="Table3" border=0 cellpadding=2 cellspacing=4 width="95%">
+                    <TBODY>
+                    <tr>
+                        <td>
+                            <center class=title1>Математический анализ</center>
+                            <p align=justify style="MARGIN-BOTTOM: 0px">
+                                <b>I.Плотность состояний (ПС) для электронов в полупроводниковом кристалле.</b><br>
+                                Поведение электронов в полупроводниковом кристалле под влиянием периодического
+                                кристаллографического потенциала подобно модели свободных частиц, но с другой массой,
+                                нежели чем в вакууме. Эта новая масса 'свободного' электрона зовётся <I>эффективной </I>массой,
+                                m*.<br>
+                                Математически (в квантовой механике или волновой механике) движение свободной частицы
+                                (для одномерного случая) описывается следующим образом :</P>
+                            <CENTER calss=formula><i><FONT FACE="symbol">y</FONT>(x, t) = A exp[ i (kx + <FONT
+                                    FACE="symbol">w</FONT>t)]. ----- (волновая функция свободной частицы)</i></CENTER>
+                            <p align=justify style="MARGIN-BOTTOM: 0px">Это синусоидальная волна travelling , называемая
+                                волновой функцией свободных электронов.<br>
+                                Энергия электрона : </P>
+                            <CENTER class=formula><i>E<FONT FACE="symbol">y</FONT>(x, t) = -
+                                (<STRIKE>h</STRIKE><SUP>2</SUP>/2m*)d<SUP>2</SUP>/dx<SUP>2</SUP> <FONT
+                                        FACE="symbol">y</FONT>(x, t) = <STRIKE>h</STRIKE><SUP>2</SUP>k<SUP>2</SUP>/2m*
+                                <FONT FACE="symbol">y</FONT>(x, t).</i></CENTER>
+                            <p align=justify style="MARGIN-BOTTOM: 0px">Или,</P>
+                            <CENTER class=formula><i>E = <STRIKE>h</STRIKE><SUP>2</SUP>k<SUP>2</SUP>/2m*.</i></CENTER>
+                            <p align=justify style="MARGIN-BOTTOM: 0px">Для части полупроводника, мы требуем, чтобы
+                                волновая функция точно такой же, как у противоложной поверхности (<I>периодическое
+                                    граничное условие</I>). Если мы полагаем, что объём полупроводика L x L x L = V, то
+                            </P>
+                            <CENTER class=formula><i><FONT FACE="symbol">y</FONT>(x+L, t) = <FONT FACE="symbol">y</FONT>(x,t).
+                                ----- (периодическое граничное условие)</i></CENTER>
+                            <p align=justify style="MARGIN-BOTTOM: 0px">Это даёт(yields) :</P>
+                            <CENTER class=formula><i>exp[i kL] = 1.</i></CENTER>
+                            <p align=justify style="MARGIN-BOTTOM: 0px">Или,</P>
+                            <CENTER class=formula><i>kL = n 2<FONT FACE="symbol">p</FONT>/ L. &nbsp;&nbsp; n = ... -2,
+                                -1, 0, 1, 2, 3, ...</i></CENTER>
+                            <p align=justify style="MARGIN-BOTTOM: 0px">Для движения электрона по всему объёму(moving
+                                around in a bulk ) полупроводника ( 3-мерный случай), его энергия будет равной </P>
+                            <CENTER class=formula><i>E = <STRIKE>h</STRIKE><SUP>2</SUP>(k<SUB>x</SUB><SUP>2</SUP> +
+                                k<SUB>y</SUB><SUP>2</SUP> + k<SUB>z</SUB><SUP>2</SUP>)/2m*<BR> =
+                                h<SUP>2</SUP>(n<SUB>x</SUB><SUP>2</SUP> + n<SUB>y</SUB><SUP>2</SUP> + n<SUB>z</SUB><SUP>2</SUP>)/2m*L<SUP>2</SUP></i>
+                            </CENTER>
+                            <p align=justify style="MARGIN-BOTTOM: 0px">где n<SUB>x</SUB>, n<SUB>y</SUB>, n<SUB>z</SUB>
+                                = ... -2, -1, 0, 1, 2, 3, ... Здесь, точка (n<SUB>x</SUB>, n<SUB>y</SUB>, n<SUB>z</SUB>)
+                                в 3-мерном k<SUB>x</SUB>, k<SUB>y</SUB>, k<SUB>z</SUB> пространстве соответствует
+                                квантовому энергетическому состоянию (если рассматривать спин электрона, то два
+                                квантовых состояния).<br>
+                                Если считать число (n<SUB>x</SUB>, n<SUB>y</SUB>, n<SUB>z</SUB>) состояний на единицу
+                                объёма, в интервале энергии E ~ E+dE, находим :</P>
+                            <CENTER class=formula><i>g(E)dE = 4<FONT FACE="symbol">p</FONT> (2m*/h<SUP><FONT
+                                    SIZE=-1>2</FONT></SUP>)<SUP><FONT SIZE=-1>3/2</FONT></SUP> E<SUP><FONT
+                                    SIZE=-1>1/2</FONT></SUP>.</i></CENTER>
+                            <b>II. Функция Распределения Ферми, f(E)</b><br>
+                            Смотреть<A HREF="../Fermi_2/math-2.html"> здесь</A>.
+                        </td>
+                    </tr>
+                    </TBODY>
+                </table>
+                <br>
+                <hr style="height: 1px; color: #0E9700" width=80%>
+                <br>
+            </center>
+            <p>
+            <UL>
+                <LI>Назад, <a href="../index.html"> к списку апплетов к лабораторной работе "Уровень Ферми"</a>.</LI>
+                <LI>Назад, <a href="../../index.html"> к списку лабораторных работ</a>.</LI>
+            </UL>
+            <p>
         </td>
-  </tr>
-  <tr bgcolor=#FEF2DE>
+    </tr>
+    <tr bgcolor=#FEF2DE>
         <td>
-        <center>РФиЭ БГУ, кафедра Физической Электроники</center>
+            <center>РФиЭ БГУ, кафедра Физической Электроники</center>
         </td>
-  </tr>
+    </tr>
 </table>
 </BODY>
 </HTML>

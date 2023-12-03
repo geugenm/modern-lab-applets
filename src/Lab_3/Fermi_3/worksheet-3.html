@@ -1,107 +1,118 @@
-<HTML>
+<HTML lang="ru">
 <HEAD>
-<META http-equiv=Content-Type content="text/html; charset=utf-8">
-<TITLE>Функции Ферми-Дирака и Максвелла-Больцмана (концентрация носителей и уровень Ферми)</TITLE>
-<style>
-td{
-    font-family: verdana, arial;
-    font-size: 10pt
-}
-.title{
-    font-size: 26px;
-    color: #0E9700
-}
-.title1{
-    font-size: 17px;
-    font-weight: bolder;
-    color: #0E9700
-}
-.title2{
-    font-size: 15px;
-    font-weight: bolder;
-    font-style: italic;
-    color: #0E9700
-}
-a{
-    text-decoration: none;
-	font-weight: bold
-}
-.formula{
-	font-family:'Times New Roman';
-	font-size: 13pt
-}
-</style>
+    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
+    <TITLE>Функции Ферми-Дирака и Максвелла-Больцмана (концентрация носителей и уровень Ферми)</TITLE>
+    <style>
+        td {
+            font-family: verdana, arial,serif;
+            font-size: 10pt
+        }
+
+        .title {
+            font-size: 26px;
+            color: #0E9700
+        }
+
+        .title1 {
+            font-size: 17px;
+            font-weight: bolder;
+            color: #0E9700
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold
+        }
+
+    </style>
 </HEAD>
-<BODY text=#000000 vLink=#66ae36 aLink=#298f01 link=#298f01 bgColor=#ffffff topmargin=5 leftmargin=5 marginwidth="0" marginheight="0">
-<table border=0 cellpadding=2 cellspacing=4 width="100%" ID="Table1">
-  <tr bgcolor=#fef2de>
+<BODY aLink=#298f01 bgColor=#ffffff leftmargin=5 link=#298f01 marginheight="0" marginwidth="0" text=#000000 topmargin=5
+      vLink=#66ae36>
+<table ID="Table1" border=0 cellpadding=2 cellspacing=4 width="100%">
+    <tr bgcolor=#fef2de>
         <td>
-        <center class=title>Функции Ферми-Дирака и Максвелла-Больцмана<BR><FONT SIZE=2>(концентрация носителей и уровень Ферми)</font></center>
+            <center class=title>Функции Ферми-Дирака и Максвелла-Больцмана<BR><span SIZE=2>(концентрация носителей и
+                уровень Ферми)</span></center>
         </td>
-  </tr>
-  <tr bgcolor=#fef9f0>
+    </tr>
+    <tr bgcolor=#fef9f0>
         <td>
-        <br>
-        <center>
-        <hr width="98%" style="COLOR: #0e9700; HEIGHT: 1px">
-        <br>
-        <table border=0 cellpadding=2 cellspacing=4 width="95%" ID="Table2">
-          <tr>
-                <td>
-                <center class=title1>Задание по апплету</center><font size=-1>
-				<p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Задача Седра-Смитта
-<br>В кремниевом слое легированным фосфором с примесной концентрацией около
-10<sup>16</sup>/cм<sup>3</sup> найдите концентрации дырок и электронов
-при 300K и 400K.&nbsp; Используйте n<sub>i</sub> = 10<sup>10</sup> cм<sup>-3</sup> при 300K.
-<p>Цели:
-<br>При выполнении этой работы студенты должны  понимать
-физический смысл  параметров и посчитать концентрации дырок и электронов, используя апплет.
-<p>До работы (теоретические расчёты):
-<p>a)Найдите концентрации дырок и электронов (на cм<sup>3</sup>) для различных температур.&nbsp; 
-<br>b)Подставьте эти значения в форумлу для n<sub>i</sub> =&nbsp; BT<sup>3</sup>
-exp(-E<sub>g</sub>/kT)&nbsp;, содержащую собственную концентрацию  ni=(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-)/cм<sup>3</sup>
-<p>c) Посчитате концентрации дырок, используя p<sub>no</sub>=(n<sub>i</sub><sup>2</sup>/N<sub>d</sub>),
-где Nd  -  это примесная концентрация, данная выше (в постановке задачи).
-<p>d)Таким образом концентрации дырок и электронов: 
-p<sub>no</sub>=(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )/ cм<sup>3</sup>&nbsp;&nbsp;
-and&nbsp; n<sub>no</sub>=(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )/ cм<sup>3</sup>
-<br>&nbsp;
-<p>Работа с Апплетом:
-<p>( Посетите  виртуальную лабораторию по адресу: <a href=http://jas.eng.buffalo.edu/education/semicon/fermi/heavyVSmoderate>http://jas.eng.buffalo.edu/education/semicon/fermi/heavyVSmoderate</a> )
-<br>1) Апплет позволяет увидеть различные параметры для различных
-значений  уровня Ферми и абсолютной температуры.
-<p>Выполнение работы:
-<p>2) Используйте  кнопку “MB”, чтобы спрятать  данные связанные с распределением Mаксвелла-Больцмана.
-<p>3) Заполните  текстовые поля (внизу апплета) для 300K. Вы также можете сделать это, кликая  на стрелочки в поле, расположенном ниже поля темпратуры.
-<p>4) Убедитесь, что материал, с которым вы работаете, это кремний.
-<p>5) Уровни Ферми (Ef) могут быть установлены при помощи стрелочек, расположенных в верхней части апплета.
-<p>6) Изменяйте занчение Ef, пока n не станет равной уровню легирования фосфором (донор). Затем извлеките концентрации электронов (n) и дырок(p).&nbsp; Это новое значение для T=300K.
-<p>7)&nbsp; Задайте значение температуры, равное  400K.&nbsp;Повторите  задания 5)
- и 6).&nbsp; Значения n и p - это концентрации основных и неосновных  носителей заряда при 400K.&nbsp; Решение найдено.
-<p>8) Кнопки Ef, FD, MB, Relconc и Delta могут быть использованы для наблюдения значений уровня Ферми, FD и MB (для функций Ферми-Дирака и Максвелла-Больцмана соответственно).
-<br>Эти кнопки используются для отображения значений в окне апплета.
-<p>9) При помощи апплета вы можете увидеть значения &nbsp; Eg и kT.
-				</td>
-			  </tr>
-			</TBODY>
-			</table>
-		    <br>
-        <hr width=98% style="height: 1px; color: #0E9700"><br>
-        </center>
-        <p>
-		<UL>
-			<LI>Назад, <a href="../index.html"> к списку апплетов к лабораторной работе "Уровень Ферми"</a>.</LI>
-			<LI>Назад, <a href="../../index.html"> к списку лабораторных работ</a>.</LI>
-		</UL>
-        <p>
+            <br>
+            <center>
+                <hr style="COLOR: #0e9700; HEIGHT: 1px" width="98%">
+                <br>
+                <table ID="Table2" border=0 cellpadding=2 cellspacing=4 width="95%">
+                    <tr>
+                        <td>
+                            <center class=title1>Задание по апплету</center>
+                            <span style="font-size: smaller; ">
+                                <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Задача Седра-Смитта
+                                    <br>В кремниевом слое легированным фосфором с примесной концентрацией около
+                                    10<sup>16</sup>/cм<sup>3</sup> найдите концентрации дырок и электронов
+                                    при 300K и 400K.&nbsp; Используйте n<sub>i</sub> = 10<sup>10</sup> cм<sup>-3</sup>
+                                    при 300K.
+                                <p>Цели:
+                                    <br>При выполнении этой работы студенты должны понимать
+                                    физический смысл параметров и посчитать концентрации дырок и электронов, используя
+                                    апплет.
+                                <p>До работы (теоретические расчёты):
+                                <p>a)Найдите концентрации дырок и электронов (на cм<sup>3</sup>) для различных
+                                    температур.&nbsp;
+                                    <br>b)Подставьте эти значения в форумлу для n<sub>i</sub> =&nbsp; BT<sup>3</sup>
+                                    exp(-E<sub>g</sub>/kT)&nbsp;, содержащую собственную концентрацию ni=(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    )/cм<sup>3</sup>
+                                <p>c) Посчитате концентрации дырок, используя p<sub>no</sub>=(n<sub>i</sub><sup>2</sup>/N<sub>d</sub>),
+                                    где Nd - это примесная концентрация, данная выше (в постановке задачи).
+                                <p>d)Таким образом концентрации дырок и электронов:
+                                    p<sub>no</sub>=(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )/ cм<sup>3</sup>&nbsp;&nbsp;
+                                    and&nbsp; n<sub>no</sub>=(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )/ cм<sup>3</sup>
+                                    <br>&nbsp;
+                                <p>Работа с Апплетом:
+                                <p>( Посетите виртуальную лабораторию по адресу: <a
+                                        href=http://jas.eng.buffalo.edu/education/semicon/fermi/heavyVSmoderate>http://jas.eng.buffalo.edu/education/semicon/fermi/heavyVSmoderate</a>
+                                    )
+                                    <br>1) Апплет позволяет увидеть различные параметры для различных
+                                    значений уровня Ферми и абсолютной температуры.
+                                <p>Выполнение работы:
+                                <p>2) Используйте кнопку “MB”, чтобы спрятать данные связанные с распределением
+                                    Mаксвелла-Больцмана.
+                                <p>3) Заполните текстовые поля (внизу апплета) для 300K. Вы также можете сделать это,
+                                    кликая на стрелочки в поле, расположенном ниже поля темпратуры.
+                                <p>4) Убедитесь, что материал, с которым вы работаете, это кремний.
+                                <p>5) Уровни Ферми (Ef) могут быть установлены при помощи стрелочек, расположенных в
+                                    верхней части апплета.
+                                <p>6) Изменяйте занчение Ef, пока n не станет равной уровню легирования фосфором
+                                    (донор). Затем извлеките концентрации электронов (n) и дырок(p).&nbsp; Это новое
+                                    значение для T=300K.
+                                <p>7)&nbsp; Задайте значение температуры, равное 400K.&nbsp;Повторите задания 5)
+                                    и 6).&nbsp; Значения n и p - это концентрации основных и неосновных носителей заряда
+                                    при 400K.&nbsp; Решение найдено.
+                                <p>8) Кнопки Ef, FD, MB, Relconc и Delta могут быть использованы для наблюдения значений
+                                    уровня Ферми, FD и MB (для функций Ферми-Дирака и Максвелла-Больцмана
+                                    соответственно).
+                                    <br>Эти кнопки используются для отображения значений в окне апплета.
+                                <p>9) При помощи апплета вы можете увидеть значения &nbsp; Eg и kT.
+                        </td>
+                    </tr>
+                    </TBODY>
+                </table>
+                <br>
+                <hr style="height: 1px; color: #0E9700" width=98%>
+                <br>
+            </center>
+            <p>
+            <UL>
+                <LI>Назад, <a href="../index.html"> к списку апплетов к лабораторной работе "Уровень Ферми"</a>.</LI>
+                <LI>Назад, <a href="../../index.html"> к списку лабораторных работ</a>.</LI>
+            </UL>
+            <p>
         </td>
-  </tr>
-  <tr bgcolor=#FEF2DE>
+    </tr>
+    <tr bgcolor=#FEF2DE>
         <td>
-        <center>РФиЭ БГУ, кафедра Физической Электроники</center>
+            <center>РФиЭ БГУ, кафедра Физической Электроники</center>
         </td>
-  </tr>
+    </tr>
 </table>
 </BODY>
 </HTML>
