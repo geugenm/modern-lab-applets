@@ -1,4 +1,4 @@
-## Modernized computer applets for semiconductors course
+## Modernized computer applets for semiconductors course. 
 
 <div align="center">
   <a href="https://github.com/geugenm/modern-lab-comp-applets">
@@ -7,7 +7,7 @@
   <h3 align="center">Applets REMASTERED</h3>
 
   <p align="center">
-    This repository has been established with the primary objective of enhancing the functionality of applets in 2023, ensuring seamless execution for all users, thereby facilitating a smooth and trouble-free experience.
+    This repository has been established with the primary objective of enhancing the functionality of applets in 2023, ensuring seamless execution for all users, thereby facilitating a smooth and trouble-free experience. 
     <br />
     <a href="https://github.com/geugenm/modern-lab-comp-applets/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
@@ -50,4 +50,7 @@ python3 scripts/start_server_ui.py -dir=src/
 1. Clone this repository.
 2. Install the CheerpJ plugin.
 3. Run the script using the command mentioned above.
-4. Every time you go to a page with applet just click on the icon of *CheerJ* plugin to run it.
+4. Every time you go to a page with applet just wait for the loading. As it applets and slow java, so it might take u even a minute to wait.
+
+### How does it work?
+The Java runtime invokes an interceptor and converter to WebAssembly. This process allows Java to be compiled to WebAssembly and run in a web browser. WebAssembly is a binary format that enables the execution of code by modern web browsers at near-native speeds. When a web page loads a WebAssembly module, the browser downloads the module's binary file and compiles it to machine code using a virtual machine called the WebAssembly Runtime, which is integrated into the browser's JavaScript engine
