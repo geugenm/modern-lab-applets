@@ -7,7 +7,7 @@
   <h3 align="center">Applets REMASTERED</h3>
 
   <p align="center">
-    This repository was created in order to improve applets experience in 2023. So everyone will be able to run them without problems
+    This repository has been established with the primary objective of enhancing the functionality of applets in 2023, ensuring seamless execution for all users, thereby facilitating a smooth and trouble-free experience.
     <br />
     <a href="https://github.com/geugenm/modern-lab-comp-applets/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
@@ -42,10 +42,9 @@ python3 scripts/start_server_ui.py -dir=src/
 - **Start Button:** Initiates the server.
 - **Stop Button:** Terminates the running server.
 - **Open URL Button:** Opens the server URL in the browser.
-- **Check Button:** Checks if the server is running.
 
 ### Note
-- This script is intended for Linux systems and may not work correctly on other operating systems.
+- This script is intended for Unix & Windows systems and may not work correctly on other operating systems.
 
 ### How to Use
 1. Clone this repository.
