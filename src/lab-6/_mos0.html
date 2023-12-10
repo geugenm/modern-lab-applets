@@ -1,98 +1,67 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <META http-equiv=Content-Type content="text/html">
-    <meta charset="UTF-8">
-    <META NAME="TRANSLATOR" CONTENT="Andrei A">
-    <META NAME="GENERATOR" CONTENT="Alla A">
-    <title>Р­Р»РµРєС‚СЂРѕСЃС‚Р°С‚РёС‡РµСЃРєРёРµ СЃРІРѕР№СЃС‚РІР° РњРћРџ РїРѕР»РµРІРѕРіРѕ С‚СЂР°РЅР·РёСЃС‚РѕСЂР°</title>
-    <style>
-        body {
-            font-family: Segoe UI, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #000000;
-        }
+<HTML>
+<HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META NAME="TRANSLATOR" CONTENT="Andrei A">
+<META NAME="GENERATOR" CONTENT="Alla A">
+<TITLE>Электростатические свойства МОП полевого транзистора</TITLE>
+<style>
+td{
+	font-family: verdana, arial;
+	font-size: 12px
+}
+.comm{
+	font-size: 10px;
+	color: #999999
+}
+.title{
+	font-size: 26px;
+	color: #0E9700
+}
+a{
+	text-decoration: none;
+	font-weight: bold
+}
+</style>
+</HEAD>
+<BODY text=#000000 vLink=#66AE36 aLink=#298F01 link=#298F01 bgColor=#ffffff topmargin=5 leftmargin=5 marginwidth=0 marginheight=0>
+<table border=0 cellpadding=2 cellspacing=4 width=100%>
+  <tr bgcolor=#FEF2DE>
+	<td>
+	<center class=title>Электростатические свойства МОП полевого транзистора<BR>
+        <font style="font-size:18px">(Инверсионный канал и пороговое напряжение)</font></center>
+	</td>
+  </tr>
+  <tr bgcolor=#FEF9F0 align=left>
+	<td>
+	<br>
+	<center>
+	<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" 
+	WIDTH="405" HEIGHT="360" NAME="Applet" ALIGN="middle"  
+	codebase="http://java.sun.com/products/plugin/1.2/jinstall-12-win32.cab#Version=1,2,0,0" border=1>
+		<PARAM NAME = CODE VALUE = "MosApplet_0.class" >
+		<PARAM NAME = CODEBASE VALUE = "." >
+		<PARAM NAME = ARCHIVE VALUE = "mos_0.jar" >
+		<PARAM NAME = NAME VALUE = "was translated by Androoha of RPh&E labs and now successfully" >
+		<param name="type" value="application/x-java-applet;version=1.2">
+	</object>
+	<p>
+	<hr width=80% style="height: 1px; color: #0E9700"><br>
+	</center>
+	<p>
+	
+<UL>
+<LI>Назад, <a href="index.html"> к списку апплетов к лабораторной работе №3</a>.</LI>
+<LI>Назад, <a href="../index.html"> к списку лабораторных работ</a>.</LI>
+</UL>
+	<p>
+	</td>
+  </tr>
+  <tr bgcolor=#FEF2DE>
+	<td>
+	<center>РФиЭ БГУ, кафедра Физической Электроники</center>
+	</td>
+  </tr>
+</table>
+</BODY>
+</HTML>
 
-        .title {
-            font-size: 2rem;
-            color: #0078d4;
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .applet-container {
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .applet-container applet {
-            display: block;
-            margin: 0 auto;
-        }
-
-        .back-button {
-            display: block;
-            width: 150px;
-            margin: 20px auto;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #0078d4;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #005a9e;
-        }
-
-        .footer {
-            text-align: center;
-            background-color: #f0f0f0;
-            padding: 10px 0;
-            font-size: 12px;
-            color: #666666;
-        }
-    </style>
-    <script src="https://cjrtnc.leaningtech.com/3.0rc2/cj3loader.js"></script>
-    <script>
-        window.onload = function () {
-            cheerpjInit();
-        };
-    </script>
-</head>
-<body>
-<div class="title">Р­Р»РµРєС‚СЂРѕСЃС‚Р°С‚РёС‡РµСЃРєРёРµ СЃРІРѕР№СЃС‚РІР° РњРћРџ РїРѕР»РµРІРѕРіРѕ С‚СЂР°РЅР·РёСЃС‚РѕСЂР°</div>
-
-<hr style="height: 1px; color: #0078d4; background-color: #0078d4; border: none;">
-
-<div class="container">
-    <div class="applet-container">
-        <applet archive="mos_0.jar" code="MosApplet_0.class" height="360" width="405"></applet>
-    </div>
-</div>
-
-
-<a class="back-button" href="index.html">РќР°Р·Р°Рґ</a>
-
-
-<footer class="footer">
-    <p>Р Р¤РёР­ Р‘Р“РЈ, РєР°С„РµРґСЂР° Р¤РёР·РёС‡РµСЃРєРѕР№ Р­Р»РµРєС‚СЂРѕРЅРёРєРё</p>
-</footer>
-</body>
-</html>
