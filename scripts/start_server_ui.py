@@ -110,7 +110,8 @@ class ServerUI:
     def stop_server(self):
         if hasattr(self, 'server'):
             self.server.shutdown()
-            self.server.server_close()
+            self.server_thread.join(timeout=2)  # Wait for server thread to complete for 2 seconds
+            self.server.server_close()  # Close the server socket
             self.stop_button.config(state=tk.DISABLED)
             self.open_button.config(state=tk.DISABLED)
             self.status_label.config(text="STATUS: OFF", foreground="red")
