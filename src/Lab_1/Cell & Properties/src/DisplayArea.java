@@ -73,30 +73,32 @@ class DisplayArea
     }
 
     public void run() {
-        /*  19 */
-        Thread.currentThread().setPriority(6);
-        /*  20 */
-        this.backBuffer = createImage((size()).width, (size()).height);
-        /*  21 */
-        this.backGC = this.backBuffer.getGraphics();
-        /*  22 */
-        setModel("GaAs");
-        /*  23 */
-        while (this.athread != null) {
+        Thread.currentThread().setPriority(Thread.NORM_PRIORITY); // Set to normal priority
 
+        if (!isDisplayable()) {
+            repaint();
+            validate();
+        }
 
+        if (backBuffer == null) {
+            backBuffer = createImage(getWidth(), getHeight());
+            backGC = backBuffer.getGraphics();
+        }
+
+        setModel("GaAs"); // Set the model (assuming this method exists)
+
+        while (athread != null) {
             try {
-                /*  27 */
                 Thread.sleep(20L);
-            }
-            /*  29 */ catch (InterruptedException interruptedException) {
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt(); // Re-set the interrupt flag
                 return;
             }
 
-            /*  33 */
             repaint();
         }
     }
+
 
     public void start() {
         /*  39 */
