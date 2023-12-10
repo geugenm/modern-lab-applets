@@ -20,6 +20,24 @@ class ServerUI:
         self.style = ttk.Style()
         self.style.theme_use('clam')  # Using a theme that resembles a modern style
 
+        # Calculate the required width and height for the window
+        title_width = root.winfo_reqwidth()
+        title_height = root.winfo_reqheight()
+        button_width = root.winfo_rootx() - root.winfo_x()
+        button_height = root.winfo_rooty() - root.winfo_y()
+
+        # Calculate the size of the window including title and button space
+        window_width = title_width + 2 * button_width
+        window_height = title_height + button_height
+
+        # Set the window size and position it to ensure the title is fully displayed
+        screen_width = root.winfo_screenwidth()
+        screen_height = root.winfo_screenheight()
+        window_x = (screen_width // 2) - (window_width // 2)
+        window_y = (screen_height // 2) - (window_height // 2)
+
+        self.root.geometry(f"{window_width}x{window_height}+{window_x}+{window_y}")
+
         self.directory = tk.StringVar(value="")  # Default directory
         self.port = tk.StringVar(value="8080")  # Default port
 
