@@ -31,6 +31,7 @@ To run this script, use the following command in your terminal:
 python3 scripts/start_server_ui.py -dir=src/
 ```
 
+Start the server and press open url button, now you can browse through applets!
 
 ### Functionality
 - Opens the Wikipedia link in your default browser.
@@ -45,12 +46,6 @@ python3 scripts/start_server_ui.py -dir=src/
 
 ### Note
 - This script is intended for Unix & Windows systems and may not work correctly on other operating systems.
-
-### How to Use
-1. Clone this repository.
-2. Install the CheerpJ plugin.
-3. Run the script using the command mentioned above.
-4. Every time you go to a page with applet just wait for the loading. As it applets and slow java, so it might take u even a minute to wait.
 
 ### How does it work?
 The Java runtime invokes an interceptor and converter to WebAssembly. This process allows Java to be compiled to WebAssembly and run in a web browser. WebAssembly is a binary format that enables the execution of code by modern web browsers at near-native speeds. When a web page loads a WebAssembly module, the browser downloads the module's binary file and compiles it to machine code using a virtual machine called the WebAssembly Runtime, which is integrated into the browser's JavaScript engine
