@@ -1,19 +1,9 @@
-/*    */
-
 import java.applet.Applet;
 import java.awt.*;
 
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */ class Util
-        /*    */ {
-    /*    */
+
+class Util {
+
     public static Frame getFrame(Component component) {
         /* 15 */
         Object obj = component;
@@ -28,12 +18,10 @@ import java.awt.*;
             /* 21 */
         }
         return null;
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public static Applet getApplet(Component component) {
         /* 26 */
         Object obj = component;
@@ -48,9 +36,9 @@ import java.awt.*;
             /* 32 */
         }
         return null;
-        /*    */
+
     }
-    /*    */
+
 }
 
 

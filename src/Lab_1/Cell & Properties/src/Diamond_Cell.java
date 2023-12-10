@@ -1,42 +1,31 @@
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */ class Diamond_Cell
-        /*    */ extends F_Cubic_Cell
-        /*    */ {
-    /*    */   Diamond_Cell(threeDPoint threedpoint) {
+class Diamond_Cell
+        extends F_Cubic_Cell {
+    Diamond_Cell(threeDPoint threedpoint) {
         /* 12 */
         super(threedpoint);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */   Diamond_Cell(threeDPoint threedpoint, Atom atom, Atom atom1, Atom atom2) {
+
+    Diamond_Cell(threeDPoint threedpoint, Atom atom, Atom atom1, Atom atom2) {
         /* 17 */
         super(threedpoint);
         /* 18 */
         this.ball_N_sticks = new drawingObject[46];
         /* 19 */
         build_cell(atom, atom1, atom2);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */   Diamond_Cell(threeDPoint threedpoint, Atom atom, Atom atom1) {
+
+    Diamond_Cell(threeDPoint threedpoint, Atom atom, Atom atom1) {
         /* 24 */
         this(threedpoint, atom, atom, atom1);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */   void build_cell(Atom atom, Atom atom1, Atom atom2) {
+
+    void build_cell(Atom atom, Atom atom1, Atom atom2) {
         /* 29 */
         build_cell(atom, atom1);
         /* 30 */
@@ -79,9 +68,9 @@
         this.ball_N_sticks[44] = new stick((vertex) this.ball_N_sticks[29], (vertex) this.ball_N_sticks[24]);
         /* 49 */
         this.ball_N_sticks[45] = new stick((vertex) this.ball_N_sticks[29], (vertex) this.ball_N_sticks[25]);
-        /*    */
+
     }
-    /*    */
+
 }
 
 

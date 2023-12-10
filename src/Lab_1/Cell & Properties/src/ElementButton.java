@@ -1,17 +1,14 @@
-/*    */
-
 import java.awt.*;
 
-/*    */
-/*    */ class ElementButton
-        /*    */ extends Button {
-    /*    */ int group_num;
-    /*    */ int atomic_num;
-    /*    */ ButtonGroupVars group_var;
-    /*    */ Color orig_color;
 
-    /*    */
-    /*    */
+class ElementButton
+        extends Button {
+    int group_num;
+    int atomic_num;
+    ButtonGroupVars group_var;
+    Color orig_color;
+
+
     public ElementButton(String s, int i, ButtonGroupVars buttongroupvars) {
         /* 14 */
         super(s);
@@ -45,43 +42,39 @@ import java.awt.*;
             /* 32 */ System.out.println("Illegal atomic number");
         /* 33 */
         this.group_var = buttongroupvars;
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public boolean action(Event event, Object obj) {
         /* 38 */
         Component[] acomponent = getParent().getComponents();
         /* 39 */
         if (this.group_var.isInTransction() && this.group_var.getEnvCharge() + charge() == 0) {
-            /*    */
+
             /* 41 */
             this.group_var.setEnvCharge(0);
             /* 42 */
             this.group_var.setState(false);
             /* 43 */
-            for (int i = 0; i < acomponent.length; i++)
-                /*    */ {
+            for (int i = 0; i < acomponent.length; i++) {
                 /* 45 */
                 Component component = acomponent[i];
                 /* 46 */
-                if (component instanceof ElementButton)
-                    /*    */ {
+                if (component instanceof ElementButton) {
                     /* 48 */
                     component.setForeground(((ElementButton) component).orig_color);
                     /* 49 */
                     component.enable();
-                    /*    */
+
                 }
-                /*    */
-                /*    */
+
+
             }
-            /*    */
+
             /* 54 */
         } else if (!this.group_var.isInTransction() && charge() != 4) {
-            /*    */
+
             /* 56 */
             setForeground(Color.red);
             /* 57 */
@@ -92,52 +85,50 @@ import java.awt.*;
             for (int j = 0; j < acomponent.length; j++) {
                 /* 60 */
                 if (acomponent[j] instanceof ElementButton) {
-                    /*    */
+
                     /* 62 */
                     ElementButton elementbutton = (ElementButton) acomponent[j];
                     /* 63 */
                     if (elementbutton != this)
                         /* 64 */ if (elementbutton.charge() + this.group_var.getEnvCharge() == 0) {
-                        /*    */
+
                         /* 66 */
                         elementbutton.setForeground(Color.green);
-                        /*    */
+
                     } else {
-                        /*    */
+
                         /* 69 */
                         elementbutton.setForeground(Color.gray);
                         /* 70 */
                         elementbutton.disable();
-                        /*    */
+
                     }
-                    /*    */
+
                 }
-                /*    */
+
             }
-            /*    */
+
         }
         /* 75 */
         getParent().repaint();
         /* 76 */
         return super.action(event, obj);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public int charge() {
         /* 81 */
         if (this.group_num <= 4) {
             /* 82 */
             return this.group_num;
-            /*    */
+
         }
         /* 84 */
         return this.group_num - 8;
-        /*    */
+
     }
-    /*    */
+
 }
 
 

@@ -1,22 +1,20 @@
-/*    */
-
 import java.awt.*;
 import java.awt.image.ImageObserver;
 
-/*    */
-/*    */ class Legend {
-    /*    */   static int centX;
-    /*    */   static int centY;
-    /*    */ edge a_edge;
-    /*    */ stick a_stick;
-    /*    */ String label1;
+
+class Legend {
+    static int centX;
+    static int centY;
+    edge a_edge;
+    stick a_stick;
+    String label1;
     String label2;
     int offset;
     String lattice_const;
     String atom_dist;
 
-    /*    */
-    /*    */   Legend(Atom atom, Atom atom1, String s, String s1, String s2, String s3) {
+
+    Legend(Atom atom, Atom atom1, String s, String s1, String s2, String s3) {
         /* 14 */
         this.offset = 10;
         /* 15 */
@@ -43,19 +41,17 @@ import java.awt.image.ImageObserver;
         latticevertex2 = new latticevertex(atom3, new threeDPoint((centX + 22), (centY - this.offset), 0.0D));
         /* 26 */
         this.a_stick = new stick(latticevertex1, latticevertex2);
-        /*    */
+
     }
 
-    /*    */
-    /*    */   Legend(Atom atom, String s, String s1, String s2, String s3) {
+
+    Legend(Atom atom, String s, String s1, String s2, String s3) {
         /* 31 */
         this(atom, atom, s, s1, s2, s3);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public void paint(Graphics g, ImageObserver imageobserver) {
         /* 36 */
         this.a_edge.paint(g, imageobserver);
@@ -115,12 +111,10 @@ import java.awt.image.ImageObserver;
         g.drawString(this.label1, centX - 43, centY - this.offset + 4);
         /* 64 */
         g.drawString(this.label2, centX + 32, centY - this.offset + 4);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     protected void drawCenteredString(String s, int i, int j, int k, int l, Graphics g) {
         /* 69 */
         FontMetrics fontmetrics = g.getFontMetrics();
@@ -130,9 +124,9 @@ import java.awt.image.ImageObserver;
         int j1 = k + fontmetrics.getAscent() + (l - k - fontmetrics.getAscent() + fontmetrics.getDescent()) / 2;
         /* 72 */
         g.drawString(s, i1, j1);
-        /*    */
+
     }
-    /*    */
+
 }
 
 

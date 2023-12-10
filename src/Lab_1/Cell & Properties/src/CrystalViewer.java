@@ -1,28 +1,22 @@
-/*    */
-
 import java.applet.Applet;
 import java.awt.*;
 
-/*    */
-/*    */ public class CrystalViewer extends Applet {
-    /*    */ ControlPanel controls;
-    /*    */ DisplayArea display;
-    /*    */ String fileName;
-    /*    */ Thread athread;
-    /*    */ boolean inAnApplet;
 
-    /*    */
-    /*    */
-    /*    */
+public class CrystalViewer extends Applet {
+    ControlPanel controls;
+    DisplayArea display;
+    String fileName;
+    Thread athread;
+    boolean inAnApplet;
+
+
     public CrystalViewer() {
         /* 56 */
         this.inAnApplet = true;
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public static void main(String[] args) {
         /* 44 */
         Frame frame = new Frame("Molecular Model Viewer");
@@ -40,11 +34,10 @@ import java.awt.*;
         crystalviewer.start();
         /* 51 */
         frame.show();
-        /*    */
+
     }
 
-    /*    */
-    /*    */
+
     public void init() {
         /* 14 */
         setLayout(new BorderLayout(10, 10));
@@ -56,47 +49,41 @@ import java.awt.*;
         this.controls = new ControlPanel(this.display);
         /* 18 */
         add("North", this.controls);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public void start() {
         /* 23 */
         this.display.start();
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public void stop() {
         /* 28 */
         this.display.stop();
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public boolean handleEvent(Event event) {
         /* 33 */
         switch (event.id) {
-            /*    */
-            /*    */
+
+
             case 201:
                 /* 36 */
                 System.exit(0);
                 /* 37 */
                 return true;
-            /*    */
+
         }
         /* 39 */
         return false;
-        /*    */
+
     }
-    /*    */
+
 }
 
 

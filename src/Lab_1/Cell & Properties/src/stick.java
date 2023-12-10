@@ -1,20 +1,17 @@
-/*    */
-
 import java.awt.*;
 import java.awt.image.ImageObserver;
 
-/*    */
-/*    */ class stick
-        /*    */ extends drawingObject
-        /*    */ {
-    /*    */ vertex v0;
-    /*    */ vertex v1;
-    /*    */ double ratio0;
-    /*    */ double ratio1;
-    /*    */ Color ln_color;
 
-    /*    */
-    /*    */   stick(vertex vertex1, vertex vertex2) {
+class stick
+        extends drawingObject {
+    vertex v0;
+    vertex v1;
+    double ratio0;
+    double ratio1;
+    Color ln_color;
+
+
+    stick(vertex vertex1, vertex vertex2) {
         /* 15 */
         this.ln_color = Color.blue;
         /* 16 */
@@ -33,20 +30,17 @@ import java.awt.image.ImageObserver;
         this.ratio0 = this.v0.radius() / d3;
         /* 23 */
         this.ratio1 = this.v1.radius() / d3;
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */   double Z() {
+
+    double Z() {
         /* 28 */
         return (this.v0.Z() + this.v1.Z()) / 2.0D;
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public void paint(Graphics g, ImageObserver imageobserver) {
         /* 33 */
         double d = this.v0.X();
@@ -80,9 +74,9 @@ import java.awt.image.ImageObserver;
         g.drawLine(i - 1, k - 2, j + 1, l + 1);
         /* 48 */
         g.drawLine(i - 1, k + 2, j + 1, l - 1);
-        /*    */
+
     }
-    /*    */
+
 }
 
 

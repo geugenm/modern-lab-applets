@@ -1,34 +1,24 @@
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */ class F_Cubic_Cell
-        /*    */ extends Cubic_Cell
-        /*    */ {
-    /*    */   F_Cubic_Cell(threeDPoint threedpoint) {
+class F_Cubic_Cell
+        extends Cubic_Cell {
+    F_Cubic_Cell(threeDPoint threedpoint) {
         /* 12 */
         super(threedpoint);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */   F_Cubic_Cell(threeDPoint threedpoint, Atom atom, Atom atom1) {
+
+    F_Cubic_Cell(threeDPoint threedpoint, Atom atom, Atom atom1) {
         /* 17 */
         super(threedpoint);
         /* 18 */
         this.ball_N_sticks = new drawingObject[26];
         /* 19 */
         build_cell(atom, atom1);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */   void build_cell(Atom atom, Atom atom1) {
+
+    void build_cell(Atom atom, Atom atom1) {
         /* 24 */
         build_cell(atom);
         /* 25 */
@@ -43,9 +33,9 @@
         this.ball_N_sticks[24] = new centervertex(atom1, this.Pts[2], this.Pts[7]);
         /* 30 */
         this.ball_N_sticks[25] = new centervertex(atom1, this.Pts[4], this.Pts[7]);
-        /*    */
+
     }
-    /*    */
+
 }
 
 

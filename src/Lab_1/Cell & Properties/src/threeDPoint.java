@@ -1,39 +1,31 @@
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */ class threeDPoint
-        /*    */ {
-    /*    */ double X;
-    /*    */ double Y;
-    /*    */ double Z;
+class threeDPoint {
+    double X;
+    double Y;
+    double Z;
 
-    /*    */
-    /*    */   threeDPoint(double d, double d1, double d2) {
+
+    threeDPoint(double d, double d1, double d2) {
         /* 12 */
         this.X = d;
         /* 13 */
         this.Y = d1;
         /* 14 */
         this.Z = d2;
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */   threeDPoint(threeDPoint threedpoint) {
+
+    threeDPoint(threeDPoint threedpoint) {
         /* 19 */
         this.X = threedpoint.X;
         /* 20 */
         this.Y = threedpoint.Y;
         /* 21 */
         this.Z = threedpoint.Z;
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public void build(double d, double d1, double d2) {
         /* 26 */
         this.X = d;
@@ -41,12 +33,10 @@
         this.Y = d1;
         /* 28 */
         this.Z = d2;
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public void copy(threeDPoint threedpoint) {
         /* 33 */
         this.X = threedpoint.X;
@@ -54,9 +44,9 @@
         this.Y = threedpoint.Y;
         /* 35 */
         this.Z = threedpoint.Z;
-        /*    */
+
     }
-    /*    */
+
 }
 
 

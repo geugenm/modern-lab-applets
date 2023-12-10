@@ -1,37 +1,26 @@
-/*    */
-
 import java.awt.*;
 import java.awt.image.ImageObserver;
 
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */ class edge
-        /*    */ extends stick
-        /*    */ {
-    /*    */   static double minZ;
 
-    /*    */
-    /*    */   edge(vertex vertex1, vertex vertex2) {
+class edge
+        extends stick {
+    static double minZ;
+
+
+    edge(vertex vertex1, vertex vertex2) {
         /* 15 */
         super(vertex1, vertex2);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     static void get_minZ(double d) {
         /* 20 */
         minZ = d;
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */
+
     public void paint(Graphics g, ImageObserver imageobserver) {
         /* 25 */
         this.ln_color = (this.v0.Z() != minZ && this.v1.Z() != minZ) ? Color.white : Color.gray;
@@ -55,9 +44,9 @@ import java.awt.image.ImageObserver;
         g.setColor(this.ln_color);
         /* 35 */
         g.drawLine(i, k, j, l);
-        /*    */
+
     }
-    /*    */
+
 }
 
 

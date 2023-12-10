@@ -1,21 +1,14 @@
-/*    */
-
 import java.awt.*;
 
-/*    */
-/*    */ class ControlPanel extends Panel {
+
+class ControlPanel extends Panel {
     private final Panel displayPanel;
-    /*    */ DisplayArea display;
-    /*    */ Button showBonds;
-    /*    */ Label Type;
-    /*    */ Label modelName;
-    /*    */ AtomDialog atomButtons;
+    DisplayArea display;
+    Button showBonds;
     Label displayMesg;
-    Button abort;
     Choice models;
 
-    /*    */
-    /*    */
+
     public ControlPanel(DisplayArea displayarea) {
         /* 13 */
         this.display = displayarea;
@@ -53,64 +46,38 @@ import java.awt.*;
         setLayout(new BorderLayout());
         /* 30 */
         add("North", this.displayPanel);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
+
     public boolean action(Event event, Object obj) {
         /* 35 */
         if (event.target == this.models) {
-            /*    */
-            /* 37 */
             String s = obj.toString();
-            /* 38 */
-            if (s.equals("Ещё")) {
-                /*    */
-                /* 40 */
-                if (this.atomButtons == null)
-                    /* 41 */ this.atomButtons = new AtomDialog(this.display);
-                /* 42 */
-                this.atomButtons.show();
-                /*    */
-            } else {
-                /*    */
-                /* 45 */
-                this.display.setModel(s);
-                /*    */
-            }
-            /* 47 */
-            s = null;
-            /*    */
+            this.display.setModel(s);
         }
         /* 49 */
         if (event.target == this.showBonds)
             /* 50 */ if ("Показать границы".equals(obj)) {
-            /*    */
+
             /* 52 */
             this.display.showBonds();
             /* 53 */
             this.showBonds.setLabel("Спрятать границы");
-            /*    */
+
         }
         /* 55 */
         else if ("Спрятать границы".equals(obj)) {
-            /*    */
+
             /* 57 */
             this.display.hideBonds();
             /* 58 */
             this.showBonds.setLabel("Показать границы");
-            /*    */
+
         }
         /* 60 */
         return true;
-        /*    */
+
     }
-    /*    */
+
 }
-
-
-/* Location:              C:\Users\Evgeniy\IdeaProjects\modern-lab-comp-applets\src\Lab_1\Cell & Properties\!\ControlPanel.class
- * Java compiler version: 1 (45.3)
- * JD-Core Version:       1.1.3
- */

@@ -1,34 +1,25 @@
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */
-/*    */ class Cubic_Cell
-        /*    */ extends LatticeCell
-        /*    */ {
-    /*    */
-    /*    */
-    /*    */   Cubic_Cell(threeDPoint threedpoint) {
+class Cubic_Cell
+        extends LatticeCell {
+
+
+    Cubic_Cell(threeDPoint threedpoint) {
         /* 25 */
         super(threedpoint);
-        /*    */
+
     }
 
-    /*    */
-    /*    */
-    /*    */   Cubic_Cell(threeDPoint threedpoint, Atom atom) {
+
+    Cubic_Cell(threeDPoint threedpoint, Atom atom) {
         /* 30 */
         super(threedpoint);
         /* 31 */
         this.ball_N_sticks = new drawingObject[20];
         /* 32 */
         build_cell(atom);
-        /*    */
+
     }
 
-    /*    */   void build_lattice(threeDPoint threedpoint) {
+    void build_lattice(threeDPoint threedpoint) {
         /* 12 */
         char c = '';
         /* 13 */
@@ -47,9 +38,9 @@
         this.origPts[7] = new threeDPoint(threedpoint.X + (c / 2), threedpoint.Y - (c / 2), threedpoint.Z + (c / 2));
         /* 20 */
         this.origPts[3] = new threeDPoint(threedpoint.X + (c / 2), threedpoint.Y + (c / 2), threedpoint.Z + (c / 2));
-        /*    */
+
     }
-    /*    */
+
 }
 
 
