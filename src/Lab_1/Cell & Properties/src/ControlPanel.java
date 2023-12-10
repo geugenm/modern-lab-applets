@@ -10,11 +10,8 @@ class ControlPanel extends Panel {
 
 
     public ControlPanel(DisplayArea displayarea) {
-        /* 13 */
         this.display = displayarea;
-        /* 14 */
         this.models = new Choice();
-        /* 15 */
         this.models.addItem("AlAs");
         this.models.addItem("AlP");
         this.models.addItem("AlSb");
@@ -28,28 +25,23 @@ class ControlPanel extends Panel {
         this.models.addItem("InAs");
         this.models.addItem("InP");
         this.models.addItem("InSb");
-        /* 22 */
+        this.models.addItem("Si");
+        this.models.addItem("ZnS");
+        this.models.addItem("ZnSe");
+        this.models.addItem("ZnTe");
         this.showBonds = new Button("Показать границы");
-        /* 23 */
         this.displayMesg = new Label(" ", 1);
-        /* 24 */
         this.displayPanel = new Panel();
-        /* 25 */
         this.displayPanel.setLayout(new BorderLayout());
-        /* 26 */
         this.displayPanel.add("West", this.showBonds);
-        /* 27 */
         this.displayPanel.add("Center", this.displayMesg);
-        /* 28 */
         this.displayPanel.add("East", this.models);
-        /* 29 */
         setLayout(new BorderLayout());
-        /* 30 */
         add("North", this.displayPanel);
-
     }
 
 
+    @Override
     public boolean action(Event event, Object obj) {
         /* 35 */
         if (event.target == this.models) {
