@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>МОП полевой транзистор в триодном режиме и режиме насыщения</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #000000;
+        }
+
+        .title {
+            font-size: 2rem;
+            color: #0078d4; /* Blue color */
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .applet-container {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .applet-container applet {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        applet {
+            align-content: center;
+            width: 450px;
+            height: 420px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #0078d4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 700px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="title">
+    МОП полевой транзистор в триодном режиме и режиме насыщения<br>
+    <span style="font-size: 18px">
+        (Зависимость инверсионного канала от напряжения затвор-исток и
+        напряжения на переходе затвор-сток)
+    </span>
+</div>
+
+<hr style="height: 1px; color: #0078d4; background-color: #0078d4; border: none;">
+
+<section>
+    <applet archive="mos_1.jar" code="MosApplet_1.class" height="360" width="405"></applet>
+</section>
+
+
+<a class="back-button" href="index.html">Назад</a>
+
+<footer class="footer">
+    <p>РФиЭ БГУ, кафедра Физической Электроники</p>
+</footer>
+
+</body>
+</html>

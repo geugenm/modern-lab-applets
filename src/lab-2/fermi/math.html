@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Зависимость от концентрации и уровня легирования</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333333;
+        }
+
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        section {
+            width: 45%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+
+        td {
+            font-family: Segoe UI, Arial, sans-serif;
+            font-size: 10pt;
+        }
+
+        .title1 {
+            font-size: 17px;
+            font-weight: bolder;
+            color: #0078d4;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<header>Зависимость от концентрации и уровня легирования</header>
+
+<main>
+    <section>
+        <center class=title1>Математический анализ</CENTER>
+        <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Статистика Ферми связывает
+            концентрацию носителей (n и p) в энергетической
+            зоне с позицией Е<SUB>F</SUB> уровня Ферми. В общем случае (произвольный уровень
+            легирования или произвольная E<SUB>F</SUB>-позиция) &nbsp;
+            более точное выражение, к примеру: n = N<SUB>c</SUB> (2/<FONT
+                    FACE="symbol">p</FONT><SUP>1/2</SUP>)
+            F<SUB>1/2</SUB>(<FONT FACE="symbol">h</FONT>). <br><br>
+            Когда уровень легирования не слишком высок [или, E<SUB>F</SUB> точно в запрещённой
+            зоне], концентрация приблизительно будет такой: [Аппроксимация
+            Больцмана] </P>
+
+        <CENTER><P>n <FONT FACE="Symbol">&raquo; </FONT>n<SUB>i</SUB> exp( (E<SUB>F</SUB>
+            - E<SUB>i</SUB>)/kT ), &nbsp;if E<SUB>F</SUB> &lt; E<SUB>c</SUB> - 3kT
+            [или, N<SUB>d</SUB> &lt; 0.05 N<SUB>c</SUB>] ----- (1)</P></CENTER>
+
+        <CENTER><P>p <FONT FACE="Symbol">&raquo; </FONT>n<SUB>i</SUB> exp( -(E<SUB>F</SUB>
+            - E<SUB>i</SUB>)/kT ). &nbsp;if E<SUB>F</SUB> &gt; E<SUB>v</SUB> + 3kT
+            [или, N<SUB>a</SUB> &lt; 0.05 N<SUB>v</SUB>] </P></CENTER>
+
+        <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">где n<SUB>i</SUB> - это
+            концентрация собственных носителей и E<SUB>i</SUB>
+            - это собственный Уровень Ферми. (В чистом полупроводнике,свободном от каких-либо
+            примесей
+            или структурных дефектов, n = p = n<SUB>i </SUB>и E<SUB>F</SUB>
+            = E<SUB>i</SUB>). &nbsp;Для Si при комнатной температуре 300K, n<SUB>i </SUB>=
+            1.00E10 см<SUP>-3 </SUP>.
+            <br><bR>
+            Равенство(1) показывает ,что если E<SUB>F</SUB> проходит выше E<SUB>i</SUB> [n-тип],
+            электронная плотность n <I>увеличивается</I> экспоненциально, а плотность дырок p <I>уменьшается
+            </I>экспоненциально. А если E<SUB>F</SUB> проходит ниже E<SUB>i</SUB> [p-тип],
+            тогда n уменьшается, а p возрастает. Заметьте, что произведение
+            <I>np </I>постоянно, независимо от E<SUB>F</SUB>:</P>
+
+        <CENTER><P>np = n<SUB>i</SUB><SUP>2</SUP>. &nbsp;--------&nbsp;[закон активных
+            масс] (2)</P></CENTER>
+
+        <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Это называется <I>законом
+            активных
+            масс</I>.Произведение <I>np </I> не зависит от легирующей концентрации, как показано
+            ниже.
+            В процессе образования полупроводника, концентрация носителей контролируется ведением
+            легирующих примесей. Это в свою очередь устанавливает позицию E<SUB>F</SUB>
+            в запрещённую зону относительно к E<SUB>i</SUB>. В собственном полупроводнике n-типа
+            с уровнем легиорвания N<SUB>d</SUB> &gt;&gt; N<SUB>a</SUB>, </P>
+
+        <CENTER><P>n = N<SUB>d</SUB> - N<SUB>a</SUB>, ---- (3)</P></CENTER>
+
+        <CENTER><P>p = n<SUB>i</SUB><SUP>2 </SUP>/ n.</P></CENTER>
+
+        <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Чем выше уровень легирования,
+            тем ближе E<SUB>F</SUB> к границе зоны, Ec или Ev. Заметьте, что отношения (1)
+            справедливы, только если аппроксимация
+            Больцмана справедлива для f(E). Поэтому, если</P>
+
+        <CENTER><P>E<SUB>v</SUB> + 3kT &lt; E<SUB>F</SUB> &lt; E<SUB>c</SUB> -
+            3kT. &nbsp;&nbsp;(4)</P></CENTER>
+
+        <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Для каждого сильнолегированного
+            материала, где E<SUB>F</SUB> - внутри диапазона 3kT
+            от E<SUB>c</SUB> или E<SUB>v</SUB>, или даже внутри зоны (но не запрещённой зоны),
+            полная функция Ферми должна использоваться в отклонении n и p. &nbsp;Поэтому
+            простые экспоненциальные отношения (1) больше не справедливы. Такие сильнолегированные
+            полупроводники часто называются <I>вырожденно</I> легированными.
+            E<SUB>F</SUB> может заканчитваться внутри зоны: поэтому E<SUB>F </SUB>&gt; E<SUB>c</SUB>
+            или E<SUB>F</SUB> &lt; E<SUB>v</SUB>, где Ef - вырожденная в одном из состояний зоны.
+        </P>
+    </section>
+</main>
+
+<a class="back-button" href="../index.html">Назад</a>
+
+<footer class="footer">
+    <p>РФиЭ БГУ, кафедра Физической Электроники</p>
+</footer>
+</body>
+</html>
