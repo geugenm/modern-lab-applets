@@ -85,6 +85,11 @@
             max-width: 700px;
             text-align: center;
         }
+
+        .error-message {
+            color: #ff0000;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -93,7 +98,14 @@
 <hr style="height: 1px; color: #0078d4; background-color: #0078d4; border: none;">
 
 <section>
-    <applet archive="mos_0.jar" code="MosApplet_0.class" height="360" width="405"></applet>
+    <applet archive="mos_0.jar" code="MosApplet_0.class" height="360" width="405">
+        <p class="error-message">
+            Для просмотра этой страницы необходима поддержка апплетов в вашем браузере.
+            Если у вас нет необходимого плагина, рекомендуем установить <a
+                class="download-link" href="http://home.netscape.com/comprod/mirror/index.html">Cheerj плагин</a>.
+            Если плагин у вас установлен, пожалуйста, нажмите иконку плагина.
+        </p>
+    </applet>
 </section>
 
 
