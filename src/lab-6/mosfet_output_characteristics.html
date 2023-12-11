@@ -77,6 +77,23 @@
             font-size: 12px;
             color: #666666;
         }
+
+        applet {
+            align-content: center;
+            width: 450px;
+            height: 420px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #0078d4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 700px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -92,11 +109,10 @@
 
 <hr style="height: 1px; color: #0078d4; background-color: #0078d4; border: none;">
 
-<div class="container">
-    <div class="applet-container">
-        <applet archive="mos_2.jar" code="MosApplet_2.class" height="360" width="405"></applet>
-    </div>
-</div>
+<section>
+    <applet archive="mos_2.jar" code="MosApplet_2.class" height="360" width="405"></applet>
+</section>
+
 
 <a class="back-button" href="index.html">Назад</a>
 

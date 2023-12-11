@@ -1,67 +1,120 @@
-<HTML lang="">
-<HEAD>
-    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
-    <META CONTENT="Andrei A" NAME="TRANSLATOR">
-    <META CONTENT="Alla A" NAME="GENERATOR">
-    <TITLE>Эквивалентная схема биполярного транзистора Эберса-Молла</TITLE>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Эквивалентная схема биполярного транзистора Эберса-Молла</title>
     <style>
-        td {
-            font-family: verdana, arial, serif;
-            font-size: 12px
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #000000;
         }
 
-        .title {
-            font-size: 26px;
-            color: #0E9700
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
         }
 
-        a {
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
             text-decoration: none;
-            font-weight: bold
+            color: #ffffff;
+            background-color: #0078d4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 400px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0078d4;
+            display: block;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        ul li a:hover {
+            background-color: #f3f3f3;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        object {
+            align-content: center;
+            width: 450px;
+            height: 420px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #0078d4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
-</HEAD>
-<BODY aLink=#298F01 bgColor=#ffffff leftmargin=5 link=#298F01 marginheight=0 marginwidth=0 text=#000000 topmargin=5
-      vLink=#66AE36>
-<table border=0 cellpadding=2 cellspacing=4 width=100%>
-    <tr bgcolor=#FEF2DE>
-        <td>
-            <center class=title>Эквивалентная схема биполярного транзистора Эберса-Молла</center>
-        </td>
-    </tr>
-    <tr align=left bgcolor=#FEF9F0>
-        <td>
-            <br>
-            <center>
-                <object ALIGN="middle"
-                        HEIGHT="390" NAME="Applet" WIDTH="380" border=1
-                        classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
-                        codebase="http://java.sun.com/products/plugin/1.2/jinstall-12-win32.cab#Version=1,2,0,0">
-                    <PARAM NAME=CODE VALUE="BJTEquivalent.class">
-                    <PARAM NAME=CODEBASE VALUE=".">
-                    <PARAM NAME=ARCHIVE VALUE="bjtequi.jar">
-                    <PARAM NAME=NAME VALUE="was translated by Androoha of RPh&E labs and now successfully">
-                    <param name="type" value="application/x-java-applet;version=1.2">
-                </object>
-                <p>
-                <hr style="height: 1px; color: #0E9700" width=80%>
-                <br>
-            </center>
-            <p>
+</head>
+<body>
+<header>Эквивалентная схема биполярного транзистора Эберса-Молла</header>
 
-            <UL>
-                <LI>Назад, <a href="index.html"> к списку апплетов к лабораторной работе №2</a>.</LI>
-                <LI>Назад, <a href="../index.html"> к списку лабораторных работ</a>.</LI>
-            </UL>
-            <p>
-        </td>
-    </tr>
-    <tr bgcolor=#FEF2DE>
-        <td>
-            <center>РФиЭ БГУ, кафедра Физической Электроники</center>
-        </td>
-    </tr>
-</table>
-</BODY>
-</HTML>
+<section>
+    <object ALIGN="middle"
+            HEIGHT="390" NAME="Applet" WIDTH="380" border=1
+            classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+            codebase="http://java.sun.com/products/plugin/1.2/jinstall-12-win32.cab#Version=1,2,0,0">
+        <PARAM NAME=CODE VALUE="BJTEquivalent.class">
+        <PARAM NAME=CODEBASE VALUE=".">
+        <PARAM NAME=ARCHIVE VALUE="bjtequi.jar">
+        <PARAM NAME=NAME VALUE="was translated by Androoha of RPh&E labs and now successfully">
+        <param name="type" value="application/x-java-applet;version=1.2">
+    </object>
+</section>
 
+<section>
+    <a class="back-button" href="index.html">Назад</a>
+</section>
+
+<footer class="footer">
+    <p>РФиЭ БГУ, кафедра Физической Электроники</p>
+</footer>
+</body>
+</html>
