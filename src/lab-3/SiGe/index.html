@@ -1,73 +1,125 @@
-<HTML lang="ru">
-
-<HEAD>
-    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
-    <TITLE>SiGe. Зонная диаграмма и E-K диаграмма</TITLE>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>SiGe. Зонная диаграмма и E-K диаграмма</title>
     <style>
-        a {
-            text-decoration: none;
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #000000;
         }
+
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 400px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0078d4;
+            display: block;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        ul li a:hover {
+            background-color: #f3f3f3;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        applet {
+            width: 360px;
+            height: 350px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #0078d4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
     </style>
+</head>
+<body>
+<header>SiGe. Зонная диаграмма и E-K диаграмма</header>
 
-</HEAD>
+<section>
+    <APPLET code="sige.SiGeApplet.class" codebase=. height=450 width=500>Your
+        browser needs to be APPLET enabled in order for you to be able to see the
+        interesting program I provided here ...
+    </APPLET>
+    <ul>
+        <li><a href="QuickNote.html" target="text window">Короткое замечание</a></li>
+        <li><a href="intro.html" target="text window">Введение</a></li>
+        <li><a href="math.html" target="text window">Мат. анализ</a></li>
+        <li><a href="tutorial.html" target="text window">Работа с апплетом</a></li>
+        <li><a href="worksheet.html" target="text window">Упражнения</a></li>
+        <li><a href="quiz.html" target="text window">Тест</a></li>
+        <li><a href="SPICE.html" target="text window">SPICE/CAD</a></li>
+        <li><a href="ref.html" target="text window">Ссылки</a></li>
+        <li><a href="feedback.html" target="text window">Обратная связь</a></li>
+    </ul>
+</section>
 
-<BODY aLink=#298F01 bgColor=#ffffff leftmargin=5 link=#298F01
-      marginheight=0 marginwidth=0 style="font-family: tahoma, verdana, arial; font-size: medium;" text=#000000
-      topmargin=5 vLink=#66AE36>
-<table cellpadding="2" cellspacing="4" style="font-size: medium;" width="100%">
-    <tr bgcolor="#FEF2DE">
-        <td align="center" valign="middle">
-            <H3><a href="../index.html">Зонная диаграмма и E-K диаграмма.</a><br>SiGe.</H3>
-        </td>
-    </tr>
-    <tr bgcolor="#FEF9F0">
-        <td>
-            Используйте мышь, чтобы двигать <FONT COLOR="#FF00FF">пурпурную</FONT>
-            вертикальную линию, которая в начальном положении совпадает с осью ординат верхней диаграммы.
-            Это будет изменять состав SiGe и его сответствующие свойства.
-        </td>
-    </tr>
-    <tr bgcolor="#FEF9F0">
-        <td align="center">
-            <TABLE border="0" style="font-size: medium;">
-                <TR>
-                    <TD align=left>
-                        <APPLET code="sige.SiGeApplet.class" codebase=. height=380 width=400>Your
-                            browser needs to be APPLET enabled in order for you to be able to see the
-                            interesting program I provided here ...
-                        </APPLET>
-                    </TD>
-                    <TD align=left>
-                        <UL>
-                            <LI><A HREF="QuickNote.html" target="text window">Короткое замечание</A></LI>
-                            <LI><A HREF="intro.html" target="text window">Введение</A></LI>
-                            <LI><A HREF="math.html" target="text window">Мат. анализ</A></LI>
-                            <LI><A HREF="tutorial.html" target="text window">Работа с апплетом</A></LI>
-                            <LI><A HREF="worksheet.html" target="text window">Упражнения</A></LI>
-                            <LI><A HREF="quiz.html" target="text window">Тест</A></LI>
-                            <LI><A HREF="SPICE.html" target="text window">SPICE/CAD</A></LI>
-                            <LI><A HREF="ref.html" target="text window">Ссылки</A></LI>
-                            <LI><A HREF="feedback.html" target="text window">Обратная связь</A></LI>
-                        </UL>
-                    </TD>
-                </TR>
-            </TABLE>
-        </td>
-    </tr>
-    <tr bgcolor="#FEF9F0">
-        <td align="center">
-            <UL>
-                <LI>Назад, <a href="../index.html"> к списку апплетов к лабораторной работе</a>.<br></LI>
-                <LI>Назад, <a href="../../index.html"> к списку лабораторных работ</a>.
-            </UL>
-        </td>
-    </tr>
-    <tr bgcolor="#FEF2DE">
-        <td align="center">
-            РФиЭ БГУ, кафедра Физической Электроники<br>
-            Copyright (c) C.R.Wie, SUNY-Buffalo, 1999-2000
-        </td>
-    </tr>
-</table>
-</BODY>
-</HTML>
+<section>
+    <a class="back-button" href="../index.html">Назад</a>
+</section>
+
+<footer class="footer">
+    <p>РФиЭ БГУ, кафедра Физической Электроники</p>
+</footer>
+</body>
+</html>
