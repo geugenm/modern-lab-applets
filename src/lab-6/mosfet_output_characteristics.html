@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <META http-equiv=Content-Type content="text/html">
     <meta charset="UTF-8">
-    <META NAME="TRANSLATOR" CONTENT="Andrei A">
-    <META NAME="GENERATOR" CONTENT="Alla A">
-    <title>Электростатические свойства МОП полевого транзистора</title>
+    <title>Выходные характеристики МОП полевых транзисторов</title>
     <style>
         body {
             font-family: Segoe UI, Arial, sans-serif;
@@ -16,10 +13,21 @@
         }
 
         .title {
-            font-size: 2rem;
+            font-size: 26px;
             color: #0078d4;
             text-align: center;
-            margin: 20px 0;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0078d4;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #005a9e;
         }
 
         .container {
@@ -36,9 +44,10 @@
             text-align: center;
         }
 
-        .applet-container applet {
+        .applet-container object {
             display: block;
             margin: 0 auto;
+            border-radius: 5px;
         }
 
         .back-button {
@@ -52,13 +61,13 @@
             text-align: center;
             text-decoration: none;
             color: #ffffff;
-            background-color: #0078d4;
+            background-color: #0078d4; /* Blue background */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
         }
 
         .back-button:hover {
-            background-color: #005a9e;
+            background-color: #005a9e; /* Darker blue on hover */
         }
 
         .footer {
@@ -68,22 +77,44 @@
             font-size: 12px;
             color: #666666;
         }
+
+        applet {
+            align-content: center;
+            width: 450px;
+            height: 420px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #0078d4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 700px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-<div class="title">Электростатические свойства МОП полевого транзистора</div>
+<div class="title">
+    Выходные характеристики МОП полевых транзисторов
+    <br>
+    <font style="font-size: 18px">
+        Выходная характеристика: Iс от Vси.
+        <br>
+        Ток насыщения стока: Iсн от Vзи.
+    </font>
+</div>
 
 <hr style="height: 1px; color: #0078d4; background-color: #0078d4; border: none;">
 
-<div class="container">
-    <div class="applet-container">
-        <applet archive="mos_0.jar" code="MosApplet_0.class" height="360" width="405"></applet>
-    </div>
-</div>
+<section>
+    <applet archive="mos_2.jar" code="MosApplet_2.class" height="360" width="405"></applet>
+</section>
 
 
 <a class="back-button" href="index.html">Назад</a>
-
 
 <footer class="footer">
     <p>РФиЭ БГУ, кафедра Физической Электроники</p>
