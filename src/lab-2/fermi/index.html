@@ -34,11 +34,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .applet-error {
-            color: #ff0000;
-            margin-top: 10px;
-        }
-
         ul {
             list-style: none;
             padding: 0;
@@ -71,6 +66,11 @@
             font-size: 12px;
             color: #666666;
         }
+
+        .error-message {
+            color: #ff0000;
+            font-weight: bold;
+        }
     </style>
 
 </head>
@@ -80,18 +80,18 @@
 
 <section>
     <div class="applet-box">
-        <object align="middle"
-                border="1" classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+        <object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
                 codebase="http://java.sun.com/products/plugin/1.2/jinstall-12-win32.cab#Version=1,2,0,0" height="350"
                 name="Applet" width="600">
             <param name="code" value="FermiLevel.class">
             <param name="codebase" value=".">
             <param name="archive" value="fermiLevel.jar">
             <param name="type" value="application/x-java-applet;version=1.2">
-            <p class="applet-error">
+            <p class="error-message">
                 Для просмотра этой страницы необходима поддержка апплетов в вашем браузере.
                 Если у вас нет необходимого плагина, рекомендуем установить <a
                     class="download-link" href="http://home.netscape.com/comprod/mirror/index.html">Cheerj плагин</a>.
+                Если плагин у вас установлен, пожалуйста, нажмите иконку плагина.
             </p>
         </object>
     </div>
