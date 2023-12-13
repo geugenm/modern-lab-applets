@@ -12,7 +12,7 @@ EXCLUDE_DIRS = ['decompiled', 'logs']
 COMPILE_SCRIPT = 'compile_to_exe.py'
 SERVER_UI_SCRIPT = 'start_server_ui.py'
 WINDOWS_COMPILED_SCRIPT = 'start_server_ui.exe'
-CONFIG = 'release'
+CONFIG = 'debug'
 SPEC_FILE = 'start_server_ui.spec'
 
 
