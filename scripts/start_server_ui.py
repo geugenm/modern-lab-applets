@@ -1,148 +1,111 @@
 import argparse
-import http.client
 import http.server
-import logging
-import os
+import socket
 import socketserver
 import threading
 import tkinter as tk
 import webbrowser
-from datetime import datetime
-from tkinter import messagebox
 from tkinter import ttk
 
+# Constants
+DEFAULT_PORT: int = 8080
+DEFAULT_DIRECTORY: str = "."
+LOG_DIRECTORY: str = "logs/"
+HTTP_PREFIX: str = "http://"
+SERVER_ADDRESS: str = socket.gethostbyname(socket.gethostname())
 
-class ServerUI:
-    def __init__(self, root):
-        self.root = root
-        self.root.title("Java WebAssembly Translation Server")
 
-        self.style = ttk.Style()
-        self.style.theme_use('clam')  # Using a theme that resembles a modern style
+# Model
+class ServerModel:
+    TIMEOUT: int = 2
 
-        # Calculate the required width and height for the window
-        title_width = root.winfo_reqwidth()
-        title_height = root.winfo_reqheight()
-        button_width = root.winfo_rootx() - root.winfo_x()
-        button_height = root.winfo_rooty() - root.winfo_y()
-
-        # Calculate the size of the window including title and button space
-        window_width = title_width + 2 * button_width
-        window_height = title_height + button_height
-
-        # Set the window size and position it to ensure the title is fully displayed
-        screen_width = root.winfo_screenwidth()
-        screen_height = root.winfo_screenheight()
-        window_x = (screen_width // 2) - (window_width // 2)
-        window_y = (screen_height // 2) - (window_height // 2)
-
-        self.root.geometry(f"{window_width}x{window_height}+{window_x}+{window_y}")
-
-        self.directory = tk.StringVar(value="")  # Default directory
-        self.port = tk.StringVar(value="8080")  # Default port
-
-        self.status_label = ttk.Label(self.root, text="STATUS: OFF", foreground="red", font=("Arial", 12, "bold"))
-        self.status_label.pack(pady=10)
-
-        self.start_button = ttk.Button(self.root, text="Start", command=self.start_server)
-        self.start_button.pack(pady=5)
-
-        self.stop_button = ttk.Button(self.root, text="Stop", command=self.stop_server, state=tk.DISABLED)
-        self.stop_button.pack(pady=5)
-
-        self.open_button = ttk.Button(self.root, text="Open URL", command=self.open_url, state=tk.DISABLED)
-        self.open_button.pack(pady=5)
-
-        ttk.Label(self.root, text="Directory to open:").pack()
-        self.directory_entry = ttk.Entry(self.root, textvariable=self.directory)
-        self.directory_entry.pack(pady=5)
-
-        ttk.Label(self.root, text="Port:").pack()
-        self.port_entry = ttk.Entry(self.root, textvariable=self.port)
-        self.port_entry.pack(pady=5)
-
-        self.setup_logging()  # Setup logging
-
-    def setup_logging(self):
-        self.logger = logging.getLogger("PythonServer")
-        self.logger.setLevel(logging.INFO)
-
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-
-        # Log to file
-        log_directory = "logs"
-        if not os.path.exists(log_directory):
-            os.makedirs(log_directory)
-        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        self.log_file = os.path.join(log_directory, f"log_{timestamp}.txt")
-        file_handler = logging.FileHandler(self.log_file)
-        file_handler.setFormatter(formatter)
-        self.logger.addHandler(file_handler)
-
-        self.logger.info(f"Server started at {timestamp}")
+    def __init__(self, directory: str = DEFAULT_DIRECTORY, port: int = DEFAULT_PORT):
+        self.directory = directory
+        self.port = port
+        self.server = None
+        self.server_thread = None
 
     def start_server(self):
-        self.start_button.config(state=tk.DISABLED)
-        self.directory_entry.config(state=tk.DISABLED)
-        self.port_entry.config(state=tk.DISABLED)
-
-        directory = self.directory.get()
-        if not os.path.exists(directory):
-            self.logger.info(f"Directory '{directory}' does not exist.")
-            messagebox.showinfo("Error", f"Directory '{directory}' does not exist.")
-            self.start_button.config(state=tk.NORMAL)
-            self.directory_entry.config(state=tk.NORMAL)
-            self.port_entry.config(state=tk.NORMAL)
-            return
-
-        port = int(self.port.get())
-
-        self.server = socketserver.TCPServer(("localhost", port), http.server.SimpleHTTPRequestHandler)
+        self.server = socketserver.TCPServer((SERVER_ADDRESS, self.port), http.server.SimpleHTTPRequestHandler)
         self.server_thread = threading.Thread(target=self.server.serve_forever)
         self.server_thread.daemon = True
         self.server_thread.start()
 
-        self.stop_button.config(state=tk.NORMAL)
-        self.open_button.config(state=tk.NORMAL)
-        self.status_label.config(text="STATUS: ON", foreground="green")
-        self.logger.info(f"Server started at http://localhost:{port} serving directory {directory}")
+    def stop_server(self):
+        if self.server:
+            self.server.shutdown()
+            self.server_thread.join(timeout=self.TIMEOUT)
+            self.server.server_close()
+
+
+# View
+class ServerView:
+    WINDOW_TITLE: str = "Webassembly translation server"
+    START_BUTTON_TEXT: str = "Start"
+    STOP_BUTTON_TEXT: str = "Stop"
+    OPEN_URL_BUTTON_TEXT: str = "Open URL"
+    BUTTON_WIDTH: int = 12
+    BUTTON_FONT_SIZE: int = 15
+    WINDOW_HEIGHT: int = 100
+
+    def __init__(self, root: tk.Tk):
+        self.root = root
+        self.root.title(self.WINDOW_TITLE)
+
+        window_width = len(self.WINDOW_TITLE) * self.BUTTON_WIDTH
+        self.root.geometry(f"{window_width}x{self.WINDOW_HEIGHT}")
+
+        self.start_button = ttk.Button(self.root, text=self.START_BUTTON_TEXT, width=self.BUTTON_WIDTH)
+        self.stop_button = ttk.Button(self.root, text=self.STOP_BUTTON_TEXT, width=self.BUTTON_WIDTH)
+        self.open_button = ttk.Button(self.root, text=self.OPEN_URL_BUTTON_TEXT, width=self.BUTTON_WIDTH)
+
+        self.start_button.pack()
+        self.stop_button.pack()
+        self.open_button.pack()
+
+        self.status_label = ttk.Label(self.root)
+        self.status_label.pack()
+
+
+# Controller
+class ServerController:
+    STATUS_ON: str = "STATUS: ON"
+    STATUS_OFF: str = "STATUS: OFF"
+    GREEN: str = "green"
+    RED: str = "red"
+
+    def __init__(self, root, model: ServerModel):
+        self.model = model
+        self.view = ServerView(root)
+        self.view.start_button.config(command=self.start_server)
+        self.view.stop_button.config(command=self.stop_server)
+        self.view.open_button.config(command=self.open_url)
+
+    def start_server(self):
+        self.model.start_server()
+        self.view.status_label.config(text=self.STATUS_ON, foreground=self.GREEN)
+        self.view.start_button.config(state="disabled")
 
     def stop_server(self):
-        if hasattr(self, 'server'):
-            self.server.shutdown()
-            self.server_thread.join(timeout=2)  # Wait for server thread to complete for 2 seconds
-            self.server.server_close()  # Close the server socket
-            self.stop_button.config(state=tk.DISABLED)
-            self.open_button.config(state=tk.DISABLED)
-            self.status_label.config(text="STATUS: OFF", foreground="red")
-            self.directory_entry.config(state=tk.NORMAL)
-            self.port_entry.config(state=tk.NORMAL)
-            self.start_button.config(state=tk.NORMAL)
-            self.logger.info("Server stopped")
+        self.model.stop_server()
+        self.view.status_label.config(text=self.STATUS_OFF, foreground=self.RED)
+        self.view.start_button.config(state="normal")
 
     def open_url(self):
-        directory = self.directory.get()
-        port = int(self.port.get())
-        if not os.path.exists(directory):
-            messagebox.showinfo("Error", f"Directory '{directory}' does not exist.")
-            return
-        webbrowser.open_new_tab(f"http://localhost:{port}/{directory}")
+        webbrowser.open_new_tab(f"{HTTP_PREFIX}{SERVER_ADDRESS}:{self.model.port}/{self.model.directory}")
 
 
-def run_server(directory, port, log_file):
+def main():
+    parser = argparse.ArgumentParser(description='Start a server.')
+    parser.add_argument('-p', '--port', type=int, default=DEFAULT_PORT, help='The port to use.')
+    parser.add_argument('-s', '--source', default=DEFAULT_DIRECTORY, help='The source directory.')
+    args = parser.parse_args()
+
     root = tk.Tk()
-    server_ui = ServerUI(root)
-    server_ui.directory.set(directory)
-    server_ui.port.set(port)
-    server_ui.log_file = log_file
+    model = ServerModel(directory=args.source, port=args.port)
+    controller = ServerController(root, model)
     root.mainloop()
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Java WebAssembly Translation Server with UI")
-    parser.add_argument("-dir", "--directory", type=str, default="./", help="Directory to open")
-    parser.add_argument("-p", "--port", type=int, default=8080, help="Port to run the server on")
-    parser.add_argument("-log", "--logfile", type=str, default="log.txt", help="Log file name")
-    args = parser.parse_args()
-
-    run_server(args.directory, args.port, args.logfile)
+    main()
