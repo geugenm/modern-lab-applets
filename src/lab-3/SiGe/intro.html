@@ -1,32 +1,89 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
-    <TITLE>SiGe. Зонная диаграмма и E-K диаграмма. Введение.</TITLE>
+    <meta charset="UTF-8">
+    <title>Обратная связь</title>
     <style>
-        a {
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333333;
+        }
+
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .section-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .section-text {
+            flex: 1;
+            padding-right: 20px;
+            font-weight: bold;
+            color: #0078d4;
+            font-size: 1.2rem;
+        }
+
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
             text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
         }
     </style>
 </head>
-<body aLink="#298F01" bgColor="#ffffff" leftmargin=5 link="#298F01"
-      marginheight=0 marginwidth=0 style="font-family: tahoma, verdana, arial,serif; font-size: medium;" text=#000000 topmargin=5 vLink="#66AE36">
-<table cellpadding="2" cellspacing="4" style="font-size: medium;" width="100%">
-    <tr bgcolor="#FEF2DE">
-        <td align="center">
-            <a href="QuickNote.html">Замечания</a> | <a href="intro.html">Введение</a> | <a href="math.html">Математический
-            анализ</a> | <a href="tutorial.html">Работа с
-            апплетом</a> | <a href="worksheet.html">Упражнения к апплету</a> | <a href="quiz.html">Тест</a>
-            | <a href="SPICE.html">SPICE/CAD</a> | <a href="ref.html">Ссылки</a>
-            | <a href="feedback.html">Обратная связь</a><b><i><font size=+2></font></i></b>
-        </td>
-    </tr>
-    <tr bgcolor="#FEF2DE">
-        <td align="center">
-            <font color="#298F01"><h3>Введение</h3></font>
-        </td>
-    </tr>
-    <tr bgcolor="#FEF9F0">
-        <td>
+<body>
+<header>Введение</header>
+
+<hr style="height: 1px; color: #0078d4; background-color: #0078d4; border: none;">
+
+<div class="section-container">
+    <div class="section">
+        <div class="section-text">
             <p>Зонная структура Si<sub>x</sub>Ge<sub>1-x</sub> характеризуется переходом
                 на нижнем краю зоны проводимости от Ge-подобной [111]-симметрии к Si-подобной
                 симметрии при x ~ 0.15. Рисунок ниже показывает зависимость ширины запрещенной
@@ -76,13 +133,16 @@
             <br>E<sub><font face="symbol">G</font></sub> = a<sub>3</sub> + b<sub>3</sub>
             * x,&nbsp;&nbsp; где a<sub>3</sub> = 0.805 и b<sub>3</sub> = 2.615
             .
-        </td>
-    </tr>
-    <tr bgcolor="#FEF2DE">
-        <td align="center">
-            РФиЭ БГУ, кафедра Физической Электроники
-        </td>
-    </tr>
-</table>
+        </div>
+    </div>
+</div>
+
+<a class="back-button" href="index.html">Назад</a>
+
+<hr style="height: 1px; color: #0078d4; background-color: #0078d4; border: none;">
+
+<footer class="footer">
+    <p>РФиЭ БГУ, кафедра Физической Электроники</p>
+</footer>
 </body>
 </html>
