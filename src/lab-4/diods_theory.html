@@ -1,391 +1,417 @@
-<HTML>
-<HEAD>
-    <META content="text/html; charset=utf-8" http-equiv=Content-Type>
-    <TITLE>Изучение Электрических Свойств Электронно-Дырочных Переходов - теория</TITLE>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Зависимость от концентрации и уровня легирования</title>
     <style>
-        td {
-            font-family: verdana, arial, serif;
-            font-size: 10pt
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333333;
         }
 
-        .title {
-            font-size: 26px;
-            color: #0E9700
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        section {
+            width: 45%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+
+        td {
+            font-family: Segoe UI, Arial, sans-serif;
+            font-size: 10pt;
         }
 
         .title1 {
             font-size: 17px;
             font-weight: bolder;
-            color: #0E9700
-        }
-
-        .title2 {
-            font-size: 15px;
-            font-weight: bolder;
-            font-style: italic;
-            color: #0E9700
+            color: #0078d4;
         }
 
         a {
             text-decoration: none;
-            font-weight: bold
-        }
-
-        .formula {
-            font-family: 'Times New Roman', serif;
-            font-size: 13pt
+            font-weight: bold;
         }
     </style>
-</HEAD>
-<BODY aLink=#298f01 bgColor=#ffffff leftmargin=5 link=#298f01 marginheight="0" marginwidth="0" text=#000000 topmargin=5
-      vLink=#66ae36>
-<table border=0 cellpadding=2 cellspacing=4 width="100%">
-    <tr bgcolor=#fef2de>
+</head>
+<body>
+<header>Зависимость от концентрации и уровня легирования</header>
+
+<main>
+    <section>
         <td>
-            <center class=title>Лабораторная работа №1<br>
-                Изучение Электрических Свойств Электронно-Дырочных Переходов
-            </center>
-        </td>
-    </tr>
-    <tr bgcolor=#fef9f0>
-        <td>
+            <center class=title1>Краткое изложение теории p-n–переходa</center>
             <br>
+            <!-- 1.1 -->
+            <font class=title2>1.1. Область пространственного заряда.</font>
+            <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Электронно-дырочным
+                переходом или p-n переходом</b> называют переход между 2-я областями полупроводника,
+                одна из которых имеет электропроводимость n-типа, а другая — p-типа.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P-n переходы можно разделить
+                на <i>резкие</i> и <i>плавные</i>.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P-n переходы бывают <i>симметричные</i>
+                и <i>несимметричные</i>.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рассмотрим основные свойства
+                p-n переходов.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Предположим, в
+                полупроводнике p-типа есть N<sub>a</sub> акцепторов, а в полупроводнике n-типа есть
+                N<sub>d</sub> доноров. При контакте возникает диффузия электронов в p-области и дырок в
+                n -области. Движущая сила диффузии – градиент концентрации носителей. Уход дырок из
+                p-области создает <u>нескомпенсированный</u> заряд отрицательных атомных составов. Уход
+                электронов из n-области => положительный заряд. Поэтому вблизи p-n перехода появляется
+                область пространственного заряда (ОПЗ). Поскольку в этой области количество носителей
+                значительно (на несколько порядков) уменьшается, то эту область называют областью,
+                обедненную на носители заряда или просто <u>обедненной областью</u>. Переход электронов
+                и дырок (диффузия) происходит до тех пор, пока контактный потенциал (поле ОПЗ) не
+                уравновешивает поток носителей в обратном направлении. При этом работа выхода электронов
+                в полупроводниках n и p типов сравнивается, что выражается в выравнивании уровней Ферми.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Работа выхода</u> —
+                величина статистическая. Это средняя энергия, которая необходима для удаления электрона
+                из вещества в вакуум.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i><font color=#ff0000>Работу
+                выхода отсчитывают от уровня Ферми.</font></i><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Т. обр. Процессы перемещения
+                носителей зарядов прекращаются, когда E<sub>F</sub>выравниваются. При этом ток,
+                создаваемый электрическим полем (дрейфовый ток), возникающим в ОПЗ, полностью
+                компенсируется диффузионным током. Поэтому можно записать следующее выражение для общего
+                тока через p-n переход:<br>
+                <img align=middle border=0 src="images/diod_f_14.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.14)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>J<sub>D</sub>,
+                J<sub>E</sub></i> — соответственно диффузионный и дрейфовый токи через p-n переход,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>D<sub>n</sub>,
+                D<sub>p</sub></i> — коэффициентыn диффузии электронов (<i>n</i>) и дырок (<i>p</i>),<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>E</i> — напряженность
+                электрического поля в области ОПЗ,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class=formula>µ<SUB>n</SUB>, <FONT face='Times New Roman'>µ</font><sub>p</sub></i>-
+                подвижность электронов и дырок, q — заряд электрона.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рассмотрим распределение
+                потенциала в области p-n перехода: для этого нужно решить уравнение Пуассона:<br>
+                <img align=middle border=0 src="images/diod_f_15.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.15),<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;где <i>Q</i> &#151; объемная
+                плотность заряда, <i>&#949;</i> &#151; диэлектрическая проницаемость полупроводника.<br>
+            </p>
             <center>
-                <hr style="COLOR: #0e9700; HEIGHT: 1px" width="98%">
-                <br>
-                <table border=0 cellpadding=2 cellspacing=4 width="95%">
+                <img border=0 src="images/diod_t_1.gif"><br>
+                <img border=0 src="images/diod_t_2.gif"><br>
+                <img border=0 src="images/diod_t_3.gif"><br>
+                <img border=0 src="images/diod_t_4.gif"><br>
+            </center>
+            <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Предположим, распределение
+                объемной плотности заряда таково, как это представлено на рисунке (а), т.е. будем
+                считать, что область перехода полностью свободна от <b><i>подвижных</i></b> носителей
+                заряда.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Закон сохранения заряда
+                приводит к N<sub>A</sub>x<sub>p</sub> = N<sub>D</sub>x<sub>n</sub>. Тогда на отрезке (–x<sub>P</sub>,0)
+                &#151; уравнение Пуассона:<br>
+                <img align=middle border=0 src="images/diod_f_16.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.16).<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Проинтегрировав один раз,
+                получим:<br>
+                <img align=middle border=0 src="images/diod_f_16b.gif">,<br>
+                С &#151; постоянная интегрирования. Согласно нашей модели на границе области
+                пространственного заряда электрическое поле равно нулю; т.е. в (.) Х= -Х<sub>р</sub>, E
+                = 0, и, значит, С = Х<sub>р</sub> тогда:<br>
+                в p-области: <img align=middle border=0
+                                  src="images/diod_f_17.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.17)<br>
+                в n-области: <img align=middle border=0
+                                  src="images/diod_f_18.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.18)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;При х = 0 достигается
+                максимальное значение электрического поля:<br>
+                <img align=middle border=0 src="images/diod_f_19.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.19)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Изменение напряжения вблизи
+                RU'- n перехода найдём как:<br>
+                <img align=middle border=0
+                     src="images/diod_f_19b.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,<br>
+                тогда полная разность потенциалов:<br>
+                <img align=middle border=0 src="images/diod_f_20.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.20).<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Это так называемый
+                потенциальный барьер (контактная разность потенциалов) между n и p областями. Типичное
+                значение <i>V<sub>0</sub></i>=0.3 В.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Таким образом, в простой
+                модели <i>V</i> имеет квадратичную зависимость вблизи p-n перехода. В более сложных
+                моделях может быть другая зависимость, однако, во всех моделях <i>V</i> &#151;
+                монотонная функция.</b><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Используя выражение для <i>V<sub>0</sub></i>
+                и условие <i>N<sub>A</sub>x<sub>p</sub>=N<sub>D</sub>x<sub>n</sub></i> можно получить
+                выражение для толщины ОПЗ (обеднённой области):<br>
+                <img align=middle border=0 src="images/diod_f_21.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.21)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для резко несимметричного
+                p-n перехода (N<sub>A</sub> >> N<sub>D</sub>):<br>
+                <img align=middle border=0 src="images/diod_f_22.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.22)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Более точное выражение для
+                ширины ОПЗ получается, если кроме концентрации ионизированной примеси дополнительно
+                учесть основные носители, вклад которых особенно проявляется на хвостах распределения
+                носителей на границах ОПЗ. Каждый из хвостов вносит поправку <i>kT/q</i> . Поправка
+                представляет собой дипольный момент неточности в распределении, равной разности между
+                истинным распределением и распределением в резком переходе. С учетом этих замечаний,
+                ширину ОПЗ несимметричного резкого перехода при тепловом равновесии можно записать в
+                виде:<br>
+                <img align=middle border=0 src="images/diod_f_22a.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.22a),<br>
+                где <i class=formula>&#946;</i>=<i>q/kT</i> и <i>L<sub>D</sub></i> &#151; дебаевская
+                длина. Дебаевская длина является характеристическим параметром для полупроводников и
+                определяется выражением:<br>
+                <img align=middle border=0
+                     src="images/diod_f_22b.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<br>
+                Здесь <i>N<sub>B</sub>=N<sub>D</sub></i> или <i>N<sub>B</sub> = N<sub>А</sub></i> в
+                зависимости от того, выполняется условие <i>N<sub>А</sub>>>N<sub>D</sub></i> или
+                <i>N<sub>А</sub>&lt;&lt;N<sub>D</sub></i>. При тепловом равновесии ширина ОПЗ резкого
+                перехода составляет ~6<i>L<sub>D</sub></i> для Ge, ~ 8<i>L<sub>D</sub></i> для Si и
+                ~10<i>L<sub>D</sub></i> для GaAs. Для кремния, при N<sub>D</sub>~10<sup>15</sup>см<sup>-3</sup>
+                и <i>V<sub>0</sub></i>=0.3 В, <i>W</i>~0.18 <font face="Times New Roman">µ</font>m. Для
+                плавных переходов <i>W</i> около микрона.
+            </p><br>
+            <!-- 1.2 -->
+            <font class=title2>1.2. Барьерная емкость p-n перехода.</font>
+            <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Кроме высокого
+                электрического сопротивления, самое интересное свойство p-n перехода, включенного в
+                обратном направлении, состоит в том, что из-за наличия двух слоёв пространственного
+                заряда в обедненной области, такой переход ведёт себя подобно конденсатору. Можно
+                определить емкость p-n перехода (на единицу площади) следующим образом:<br>
+                <img align=middle border=0 src="images/diod_f_23.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.23).<br>
+                Для несимметричного перехода:<br>
+                <img align=middle border=0
+                     src="images/diod_f_23b.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<br>
+                т.е. зависимость 1/С<sup>2</sup> от <i>V</i> представляет собой прямую линию. Ее наклон
+                определяет концентрацию примеси в подложке, а точка пересечения с осью абсцисс (при
+                1/С<sup>2</sup>=0) дает величину <i>V<sub>0</sub>–2kT/q</i>.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Можно составить
+                эквивалентную схему диода и определить физический смысл всех входящих в него
+                элементов:<br>
+                <img align=left border=1 hspace=5 src="images/diod1.gif" vspace=1>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Резистор R<sub>1</sub>отображает
+                омическое сопротивление “нормального”, т.е. необедненного полупроводника. Резистор
+                R(V<sub>1</sub> ) описывает сопротивление перехода, которое очень мало в прямом
+                направлении (обычно 0.1-10 <span style='font-family: Symbol'>W</span>) и велико в
+                обратном направлении (как правило, 10<sup>6</sup>–10<sup>8</sup><span
+                    style='font-family: Symbol'>W</span>). Ёмкость конденсатора C(V<sub>1</sub>) зависит
+                от приложенного напряжения в соответствии с уравнением (1.23). При большом прямом
+                смещении это уравнение перестает работать, т.к. вся обедненная область заполнена
+                носителями. Это обстоятельство учитывается эквивалентной схемой, в которой
+                R(V<sub>1</sub>) становится очень малым при больших прямых смещениях, т.е. конденсатор
+                замкнут накоротко.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ёмкость p-n перехода легко
+                измерить при обратных смещениях. По этим измерениям (вольт-фарадные характеристики)
+                можно определить уровень легирования в диоде.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Кроме барьерной емкости,
+                переход обладает так называемой диффузионной емкостью, которая качественно будет
+                рассмотрена в последующих разделах.
+            </p><br>
+            <!-- 1.3 -->
+            <font class=title2>1.3. Токи через p-n переход. ВАХ диода.</font>
+            <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Приложим к p-n переходу
+                некоторое напряжение <i>V<sub>1</sub></i>. p-n переход можно рассматривать как
+                последовательно соединённые резисторы:<br>
+                <img align=left border=1 hspace=5 src="images/diod2.gif" vspace=1>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R<sub>1</sub>и R<sub>4</sub>
+                &#151; сопротивления p и n слоёв, вдали от p-n перехода, которые сильно легированы =>
+                имеют малое сопротивление.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R<sub>2</sub> и
+                R<sub>3</sub> &#151; сопротивления p и n слоёв вблизи p-n перехода (в области обеднённой
+                на носители) => высокое сопротивление.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Поэтому всё приложенное
+                напряжение падает на области ОПЗ p-n перехода. Если к p приложить положительный
+                потенциал, а к n &#151; отрицательный, то высота барьера уменьшится. Этот режим есть
+                прямое включение p-n перехода.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Если к р-области приложен
+                отрицательный потенциал, а к n -положительный, то высота барьера увеличится на
+                U<sub>1</sub> (т.е. диод включается обратно).<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рассмотрим токи через p-n
+                переход при прямом и обратном включении.<br>
+                <i><u>1.Обратное включение диода</u></i><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Существуют четыре типа тока:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>А.</b> <u>Диффузионные
+                токи электронов и дырок</u>, благодаря концентрационным профилям (n<sub>диф</sub> и
+                p<sub>диф</sub>). Количество электронов и дырок, способных преодолеть потенциальный
+                барьер и диффундировать в полупроводник другого типа проводимости составляет:<br>
+                <img align=middle border=0 src="images/diod_f_24.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.24),<br>
+                здесь <i>V<sub>0</sub></i> &#151; высота потенциального барьера в исходном p-n переходе
+                (без приложенного напряжения).<br>
+            <table border=0 cellpadding=5 cellspacing=5 width=100%>
+                <tr valign=middle>
+                    <td bgcolor=#FEF2DE width=20%>Схема обратно-смещенного диода и энергетических зон.
+                        Указаны изменения ширины (зарядов) ОПЗ и токи через p-n переход
+                    </td>
+                    <td align=center bgcolor=#FEF7E9><img border=0 src="images/diod3a.gif"> <img
+                            align=middle border=0 src="images/diod3b.gif"></td>
+                </tr>
+                <tr>
+                    <td bgcolor=#FEF2DE width=20%>Схема диода, смещенного в прямом направлении и схема
+                        энергетических зон. Указаны изменения зарядов в ОПЗ и токи через p-n переход
+                    </td>
+                    <td align=center bgcolor=#FEF7E9><img border=0 src="images/diod4a.gif"> <img
+                            align=middle border=0 src="images/diod4b.gif"></td>
+                </tr>
+            </table>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Б.</b> <u>Под действием поля
+            p-n перехода</u>. Возникают дрейфовые токи электронов и дырок. Однако в этом случае
+            источником носителей зарядов являются неосновные носителей зарядов, т.е. в p-области области
+            это электроны, а в области n-типа &#151; дырки. Их концентрация, очевидно, невелика и
+            зависит от температуры образца (генерация) и рекомбинации с основными носителями. Ток,
+            обусловленный генерацией неосновных носителей заряда, называют током насыщения.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Выражение для тока насыщения
+            напишем в виде:<br>
+            <img align=middle border=0 src="images/diod_f_24b.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, где
+            <img align=middle border=0 src="images/diod_f_24c.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+            <i>p<sub>n0</sub> и n<sub>p0</sub></i> &#151; равновесная концентрация дырок в n-области и
+            электронов в p-области.<br>
+            Или можно представить в виде: <i>I<sub>S</sub>~T<sup>(3+&#947;/2)</sup>exp(-E<sub>g</sub>/kT)</i>.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Измерив <i>I<sub>S</sub></i> в
+            зависимости от температуры и построив зависимость Аррениуса можно определить ширину
+            запрещенной зоны.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рассмотрим теперь увеличение
+            обратного напряжения, приложенного к p-n переходу. В этом случае величина барьера
+            увеличивается, соответственно резко (экспоненциально) уменьшается количество носителей
+            заряда, способных диффундировать, соответственно, резко уменьшается вклад диффузионных токов
+            в общий ток диода. В зтом случае ток диода стремится к току насыщения. Таким образом,
+            обратные ветви ВАХов есть экспоненциальное приближение к <i>I<sub>s</sub></i>. Величина <i>I<sub>s</sub></i>
+            определяется количеством неосновных носителей заряда и зависит от температуры.<br>
+            </p>
+            <center>
+                <table>
                     <tr>
-                        <td>
-                            <center class=title1>Краткое изложение теории p-n–переходa</center>
-                            <br>
-                            <!-- 1.1 -->
-                            <font class=title2>1.1. Область пространственного заряда.</font>
-                            <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Электронно-дырочным
-                                переходом или p-n переходом</b> называют переход между 2-я областями полупроводника,
-                                одна из которых имеет электропроводимость n-типа, а другая — p-типа.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P-n переходы можно разделить
-                                на <i>резкие</i> и <i>плавные</i>.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P-n переходы бывают <i>симметричные</i>
-                                и <i>несимметричные</i>.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рассмотрим основные свойства
-                                p-n переходов.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Предположим, в
-                                полупроводнике p-типа есть N<sub>a</sub> акцепторов, а в полупроводнике n-типа есть
-                                N<sub>d</sub> доноров. При контакте возникает диффузия электронов в p-области и дырок в
-                                n -области. Движущая сила диффузии – градиент концентрации носителей. Уход дырок из
-                                p-области создает <u>нескомпенсированный</u> заряд отрицательных атомных составов. Уход
-                                электронов из n-области => положительный заряд. Поэтому вблизи p-n перехода появляется
-                                область пространственного заряда (ОПЗ). Поскольку в этой области количество носителей
-                                значительно (на несколько порядков) уменьшается, то эту область называют областью,
-                                обедненную на носители заряда или просто <u>обедненной областью</u>. Переход электронов
-                                и дырок (диффузия) происходит до тех пор, пока контактный потенциал (поле ОПЗ) не
-                                уравновешивает поток носителей в обратном направлении. При этом работа выхода электронов
-                                в полупроводниках n и p типов сравнивается, что выражается в выравнивании уровней Ферми.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Работа выхода</u> —
-                                величина статистическая. Это средняя энергия, которая необходима для удаления электрона
-                                из вещества в вакуум.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i><font color=#ff0000>Работу
-                                выхода отсчитывают от уровня Ферми.</font></i><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Т. обр. Процессы перемещения
-                                носителей зарядов прекращаются, когда E<sub>F</sub>выравниваются. При этом ток,
-                                создаваемый электрическим полем (дрейфовый ток), возникающим в ОПЗ, полностью
-                                компенсируется диффузионным током. Поэтому можно записать следующее выражение для общего
-                                тока через p-n переход:<br>
-                                <img align=middle border=0 src="images/diod_f_14.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.14)<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>J<sub>D</sub>,
-                                J<sub>E</sub></i> — соответственно диффузионный и дрейфовый токи через p-n переход,<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>D<sub>n</sub>,
-                                D<sub>p</sub></i> — коэффициентыn диффузии электронов (<i>n</i>) и дырок (<i>p</i>),<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>E</i> — напряженность
-                                электрического поля в области ОПЗ,<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
-                                    class=formula>µ<SUB>n</SUB>, <FONT face='Times New Roman'>µ</font><sub>p</sub></i>-
-                                подвижность электронов и дырок, q — заряд электрона.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рассмотрим распределение
-                                потенциала в области p-n перехода: для этого нужно решить уравнение Пуассона:<br>
-                                <img align=middle border=0 src="images/diod_f_15.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.15),<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;где <i>Q</i> &#151; объемная
-                                плотность заряда, <i>&#949;</i> &#151; диэлектрическая проницаемость полупроводника.<br>
-                            </p>
-                            <center>
-                                <img border=0 src="images/diod_t_1.gif"><br>
-                                <img border=0 src="images/diod_t_2.gif"><br>
-                                <img border=0 src="images/diod_t_3.gif"><br>
-                                <img border=0 src="images/diod_t_4.gif"><br>
-                            </center>
-                            <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Предположим, распределение
-                                объемной плотности заряда таково, как это представлено на рисунке (а), т.е. будем
-                                считать, что область перехода полностью свободна от <b><i>подвижных</i></b> носителей
-                                заряда.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Закон сохранения заряда
-                                приводит к N<sub>A</sub>x<sub>p</sub> = N<sub>D</sub>x<sub>n</sub>. Тогда на отрезке (–x<sub>P</sub>,0)
-                                &#151; уравнение Пуассона:<br>
-                                <img align=middle border=0 src="images/diod_f_16.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.16).<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Проинтегрировав один раз,
-                                получим:<br>
-                                <img align=middle border=0 src="images/diod_f_16b.gif">,<br>
-                                С &#151; постоянная интегрирования. Согласно нашей модели на границе области
-                                пространственного заряда электрическое поле равно нулю; т.е. в (.) Х= -Х<sub>р</sub>, E
-                                = 0, и, значит, С = Х<sub>р</sub> тогда:<br>
-                                в p-области: <img align=middle border=0 src="images/diod_f_17.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.17)<br>
-                                в n-области: <img align=middle border=0 src="images/diod_f_18.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.18)<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;При х = 0 достигается
-                                максимальное значение электрического поля:<br>
-                                <img align=middle border=0 src="images/diod_f_19.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.19)<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Изменение напряжения вблизи
-                                RU'- n перехода найдём как:<br>
-                                <img align=middle border=0
-                                     src="images/diod_f_19b.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,<br>
-                                тогда полная разность потенциалов:<br>
-                                <img align=middle border=0 src="images/diod_f_20.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.20).<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Это так называемый
-                                потенциальный барьер (контактная разность потенциалов) между n и p областями. Типичное
-                                значение <i>V<sub>0</sub></i>=0.3 В.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Таким образом, в простой
-                                модели <i>V</i> имеет квадратичную зависимость вблизи p-n перехода. В более сложных
-                                моделях может быть другая зависимость, однако, во всех моделях <i>V</i> &#151;
-                                монотонная функция.</b><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Используя выражение для <i>V<sub>0</sub></i>
-                                и условие <i>N<sub>A</sub>x<sub>p</sub>=N<sub>D</sub>x<sub>n</sub></i> можно получить
-                                выражение для толщины ОПЗ (обеднённой области):<br>
-                                <img align=middle border=0 src="images/diod_f_21.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.21)<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для резко несимметричного
-                                p-n перехода (N<sub>A</sub> >> N<sub>D</sub>):<br>
-                                <img align=middle border=0 src="images/diod_f_22.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.22)<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Более точное выражение для
-                                ширины ОПЗ получается, если кроме концентрации ионизированной примеси дополнительно
-                                учесть основные носители, вклад которых особенно проявляется на хвостах распределения
-                                носителей на границах ОПЗ. Каждый из хвостов вносит поправку <i>kT/q</i> . Поправка
-                                представляет собой дипольный момент неточности в распределении, равной разности между
-                                истинным распределением и распределением в резком переходе. С учетом этих замечаний,
-                                ширину ОПЗ несимметричного резкого перехода при тепловом равновесии можно записать в
-                                виде:<br>
-                                <img align=middle border=0 src="images/diod_f_22a.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.22a),<br>
-                                где <i class=formula>&#946;</i>=<i>q/kT</i> и <i>L<sub>D</sub></i> &#151; дебаевская
-                                длина. Дебаевская длина является характеристическим параметром для полупроводников и
-                                определяется выражением:<br>
-                                <img align=middle border=0
-                                     src="images/diod_f_22b.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<br>
-                                Здесь <i>N<sub>B</sub>=N<sub>D</sub></i> или <i>N<sub>B</sub> = N<sub>А</sub></i> в
-                                зависимости от того, выполняется условие <i>N<sub>А</sub>>>N<sub>D</sub></i> или
-                                <i>N<sub>А</sub>&lt;&lt;N<sub>D</sub></i>. При тепловом равновесии ширина ОПЗ резкого
-                                перехода составляет ~6<i>L<sub>D</sub></i> для Ge, ~ 8<i>L<sub>D</sub></i> для Si и
-                                ~10<i>L<sub>D</sub></i> для GaAs. Для кремния, при N<sub>D</sub>~10<sup>15</sup>см<sup>-3</sup>
-                                и <i>V<sub>0</sub></i>=0.3 В, <i>W</i>~0.18 <font face="Times New Roman">µ</font>m. Для
-                                плавных переходов <i>W</i> около микрона.
-                            </p><br>
-                            <!-- 1.2 -->
-                            <font class=title2>1.2. Барьерная емкость p-n перехода.</font>
-                            <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Кроме высокого
-                                электрического сопротивления, самое интересное свойство p-n перехода, включенного в
-                                обратном направлении, состоит в том, что из-за наличия двух слоёв пространственного
-                                заряда в обедненной области, такой переход ведёт себя подобно конденсатору. Можно
-                                определить емкость p-n перехода (на единицу площади) следующим образом:<br>
-                                <img align=middle border=0 src="images/diod_f_23.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.23).<br>
-                                Для несимметричного перехода:<br>
-                                <img align=middle border=0
-                                     src="images/diod_f_23b.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<br>
-                                т.е. зависимость 1/С<sup>2</sup> от <i>V</i> представляет собой прямую линию. Ее наклон
-                                определяет концентрацию примеси в подложке, а точка пересечения с осью абсцисс (при
-                                1/С<sup>2</sup>=0) дает величину <i>V<sub>0</sub>–2kT/q</i>.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Можно составить
-                                эквивалентную схему диода и определить физический смысл всех входящих в него
-                                элементов:<br>
-                                <img align=left border=1 hspace=5 src="images/diod1.gif" vspace=1>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Резистор R<sub>1</sub>отображает
-                                омическое сопротивление “нормального”, т.е. необедненного полупроводника. Резистор
-                                R(V<sub>1</sub> ) описывает сопротивление перехода, которое очень мало в прямом
-                                направлении (обычно 0.1-10 <span style='font-family: Symbol'>W</span>) и велико в
-                                обратном направлении (как правило, 10<sup>6</sup>–10<sup>8</sup><span
-                                    style='font-family: Symbol'>W</span>). Ёмкость конденсатора C(V<sub>1</sub>) зависит
-                                от приложенного напряжения в соответствии с уравнением (1.23). При большом прямом
-                                смещении это уравнение перестает работать, т.к. вся обедненная область заполнена
-                                носителями. Это обстоятельство учитывается эквивалентной схемой, в которой
-                                R(V<sub>1</sub>) становится очень малым при больших прямых смещениях, т.е. конденсатор
-                                замкнут накоротко.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ёмкость p-n перехода легко
-                                измерить при обратных смещениях. По этим измерениям (вольт-фарадные характеристики)
-                                можно определить уровень легирования в диоде.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Кроме барьерной емкости,
-                                переход обладает так называемой диффузионной емкостью, которая качественно будет
-                                рассмотрена в последующих разделах.
-                            </p><br>
-                            <!-- 1.3 -->
-                            <font class=title2>1.3. Токи через p-n переход. ВАХ диода.</font>
-                            <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Приложим к p-n переходу
-                                некоторое напряжение <i>V<sub>1</sub></i>. p-n переход можно рассматривать как
-                                последовательно соединённые резисторы:<br>
-                                <img align=left border=1 hspace=5 src="images/diod2.gif" vspace=1>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R<sub>1</sub>и R<sub>4</sub>
-                                &#151; сопротивления p и n слоёв, вдали от p-n перехода, которые сильно легированы =>
-                                имеют малое сопротивление.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R<sub>2</sub> и
-                                R<sub>3</sub> &#151; сопротивления p и n слоёв вблизи p-n перехода (в области обеднённой
-                                на носители) => высокое сопротивление.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Поэтому всё приложенное
-                                напряжение падает на области ОПЗ p-n перехода. Если к p приложить положительный
-                                потенциал, а к n &#151; отрицательный, то высота барьера уменьшится. Этот режим есть
-                                прямое включение p-n перехода.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Если к р-области приложен
-                                отрицательный потенциал, а к n -положительный, то высота барьера увеличится на
-                                U<sub>1</sub> (т.е. диод включается обратно).<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рассмотрим токи через p-n
-                                переход при прямом и обратном включении.<br>
-                                <i><u>1.Обратное включение диода</u></i><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Существуют четыре типа тока:<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>А.</b> <u>Диффузионные
-                                токи электронов и дырок</u>, благодаря концентрационным профилям (n<sub>диф</sub> и
-                                p<sub>диф</sub>). Количество электронов и дырок, способных преодолеть потенциальный
-                                барьер и диффундировать в полупроводник другого типа проводимости составляет:<br>
-                                <img align=middle border=0 src="images/diod_f_24.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.24),<br>
-                                здесь <i>V<sub>0</sub></i> &#151; высота потенциального барьера в исходном p-n переходе
-                                (без приложенного напряжения).<br>
-                            <table border=0 cellpadding=5 cellspacing=5 width=100%>
-                                <tr valign=middle>
-                                    <td bgcolor=#FEF2DE width=20%>Схема обратно-смещенного диода и энергетических зон.
-                                        Указаны изменения ширины (зарядов) ОПЗ и токи через p-n переход
-                                    </td>
-                                    <td align=center bgcolor=#FEF7E9><img border=0 src="images/diod3a.gif"> <img
-                                            align=middle border=0 src="images/diod3b.gif"></td>
-                                </tr>
-                                <tr>
-                                    <td bgcolor=#FEF2DE width=20%>Схема диода, смещенного в прямом направлении и схема
-                                        энергетических зон. Указаны изменения зарядов в ОПЗ и токи через p-n переход
-                                    </td>
-                                    <td align=center bgcolor=#FEF7E9><img border=0 src="images/diod4a.gif"> <img
-                                            align=middle border=0 src="images/diod4b.gif"></td>
-                                </tr>
-                            </table>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Б.</b> <u>Под действием поля
-                            p-n перехода</u>. Возникают дрейфовые токи электронов и дырок. Однако в этом случае
-                            источником носителей зарядов являются неосновные носителей зарядов, т.е. в p-области области
-                            это электроны, а в области n-типа &#151; дырки. Их концентрация, очевидно, невелика и
-                            зависит от температуры образца (генерация) и рекомбинации с основными носителями. Ток,
-                            обусловленный генерацией неосновных носителей заряда, называют током насыщения.<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Выражение для тока насыщения
-                            напишем в виде:<br>
-                            <img align=middle border=0 src="images/diod_f_24b.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, где
-                            <img align=middle border=0 src="images/diod_f_24c.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                            <i>p<sub>n0</sub> и n<sub>p0</sub></i> &#151; равновесная концентрация дырок в n-области и
-                            электронов в p-области.<br>
-                            Или можно представить в виде: <i>I<sub>S</sub>~T<sup>(3+&#947;/2)</sup>exp(-E<sub>g</sub>/kT)</i>.<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Измерив <i>I<sub>S</sub></i> в
-                            зависимости от температуры и построив зависимость Аррениуса можно определить ширину
-                            запрещенной зоны.<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рассмотрим теперь увеличение
-                            обратного напряжения, приложенного к p-n переходу. В этом случае величина барьера
-                            увеличивается, соответственно резко (экспоненциально) уменьшается количество носителей
-                            заряда, способных диффундировать, соответственно, резко уменьшается вклад диффузионных токов
-                            в общий ток диода. В зтом случае ток диода стремится к току насыщения. Таким образом,
-                            обратные ветви ВАХов есть экспоненциальное приближение к <i>I<sub>s</sub></i>. Величина <i>I<sub>s</sub></i>
-                            определяется количеством неосновных носителей заряда и зависит от температуры.<br>
-                            </p>
-                            <center>
-                                <table>
-                                    <tr>
-                                        <td>Кстати, для Si:</td>
-                                        <td>T, K</td>
-                                        <td>300</td>
-                                        <td>500</td>
-                                        <td>1000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>&nbsp;</td>
-                                        <td>n<sub>i</sub>, p<sub>i</sub>, cm<sup>-3</sup></td>
-                                        <td>10<sup>10</sup></td>
-                                        <td>4x10<sup>14</sup></td>
-                                        <td>10<sup>18</sup></td>
-                                    </tr>
-                                </table>
-                            </center>
-                            <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Поскольку <i>I<sub>s</sub>~exp(-E<sub>g</sub>/kT),</i>
-                                то можно определить ширину запрещённой зоны.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Полный обратный ток диода
-                                можно записать в следующем виде:<br>
-                                <img align=middle border=0 src="images/diod_f_26.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.26)<br>
-                                <i><u>2.Рассмотрим прямое включение диода</u></i><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Существуют те же четыре
-                                потока носителей заряда.<br>
-                                <img align=middle border=0 src="images/diod_f_25.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>А.</b> <u>Диффузионные
-                                токи электронов и дырок</u> (n<sub>диф</sub>, p<sub>диф</sub>)<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Увеличиваются с ростом
-                                приложенного напряжения, поскольку <u>величина барьера уменьшается</u> и поэтому
-                                количество электронов и дырок, способных диффундировать увеличивается.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Б.</b> <u>Дрейфовые токи
-                                (под действием поля p-n перехода)</u><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Лимитируются
-                                (ограничиваются) количеством <u>неосновных</u> носителей заряда (эл-ов в р-типе, дырок в
-                                n–типе полупроводника). Поэтому они определяются в основном температурой и
-                                приблизительно равны току насыщения диода I<sub>s</sub>.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;При увеличении приложенного
-                                прямого смещения <u>уменьшается</u> потенциальный барьер и соответственно <u>растёт</u>
-                                диффузионный ток. При этом обратный ток (ток насыщения или дрейфовый ток) практически не
-                                изменяется. Поэтому с ростом <i>V<sub>1</sub></i> ток диода возрастает
-                                экспоненциально:<br>
-                                <img align=middle border=0 src="images/diod_f_26a.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.26a)<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;При больших прямых
-                                напряжениях (<i>V<sub>1</sub></i>=1-2V):<br>
-                                <img align=middle border=0 src="images/diod_f_26b.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.26b)<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Зависимость тока от величины
-                                приложенного напряжения (к p-n переходу) называют <u>вольт-амперной</u> характеристикой
-                                p-n перехода. Таким образом, в условиях прямого смещения p-n перехода, число электронов,
-                                движущихся от n к р-типа полупроводнику возрастает пропорционально <i>exp(qV<sub>1</sub>/kT</i>
-                                ), При комнатной температуре и <i>V<sub>1</sub></i>=0.1 В этот множитель ~55. Это
-                                означает, что число электронов, переходящих в р-область в 55 раз больше, чем равновесная
-                                концентрация электронов в этом месте. <font color=#ff0000><u>Это процесс инжекции
-                                неосновных носителей заряда</u></font>. Однако <u>основные носители</u> в р-области
-                                &#151; дырки. Поэтому многие электроны рекомбинируют с дырками. Интенсивность
-                                рекомбинации зависит от уровня легирования. Для такого процесса вводят понятие времени
-                                жизни неосновных носителей заряда <i style="font-family:'Times new roman'">&#964;</i>
-                                или диффузионной длины <i>L</i>.<br>
-                                <img align=middle border=0 src="images/diod_f_27.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><i><u>Важное отличие
-                                проводимости в куске металла и p-n переходе!!</u></i></b><br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Если приложить напряжение к
-                                куску металла, то содержащиеся в нем электроны просто начнут упорядоченно передвигаться.
-                                Если же приложить прямое смещение к p-n переходу, то будет наблюдаться <u>инжекция
-                                неосновных носителей заряда в обе области</u>. Концентрация этих неосновных носителей
-                                заряда не были первоначально столь высоки, а возникли как следствие приложенного
-                                напряжения.<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Указанное отличие между
-                                обычной электропроводностью и процессом инжекции неосновных носителей является
-                                принципиально важным для понимания работы полупроводниковых приборов.
-                            </p>
-                            <br>
-                            <center class=title1>Рекомендуемая литература</center>
-                            <ol type=1>
-                                <li>Зи С. Физика полупроводниковых приборов.в 2-х т., М., Мир, 1984.
-                                <li>Пасынков В.В., Чиркин Л.К. Полупроводниковые приборы М. Энергоатомиздат.
-                                <li>Тугов Н.М., Глебов Б.А., Чарыков Н.А. Полупроводниковые приборы. Энергоатомиздат.
-                                <li>Шалимова К.В. Физика полупроводников. М. Энергоатомиздат. М. МЭИ(ТУ). 1997.
-                            </ol>
-                            </font>
-                        </td>
+                        <td>Кстати, для Si:</td>
+                        <td>T, K</td>
+                        <td>300</td>
+                        <td>500</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>n<sub>i</sub>, p<sub>i</sub>, cm<sup>-3</sup></td>
+                        <td>10<sup>10</sup></td>
+                        <td>4x10<sup>14</sup></td>
+                        <td>10<sup>18</sup></td>
                     </tr>
                 </table>
-                <hr style="height: 1px; color: #0E9700" width=98%>
-                <br></center>
-            <p>
-            <UL>
-                <LI>Назад, <a href="index.html"> к списку апплетов к лабораторной работе №1</a>.
-                <LI>Назад, <a href="../index.html"> к списку лабораторных работ</a>.
-            </UL>
-            <p>
+            </center>
+            <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Поскольку
+                <i>I<sub>s</sub>~exp(-E<sub>g</sub>/kT),</i>
+                то можно определить ширину запрещённой зоны.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Полный обратный ток диода
+                можно записать в следующем виде:<br>
+                <img align=middle border=0 src="images/diod_f_26.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.26)<br>
+                <i><u>2.Рассмотрим прямое включение диода</u></i><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Существуют те же четыре
+                потока носителей заряда.<br>
+                <img align=middle border=0 src="images/diod_f_25.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>А.</b> <u>Диффузионные
+                токи электронов и дырок</u> (n<sub>диф</sub>, p<sub>диф</sub>)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Увеличиваются с ростом
+                приложенного напряжения, поскольку <u>величина барьера уменьшается</u> и поэтому
+                количество электронов и дырок, способных диффундировать увеличивается.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Б.</b> <u>Дрейфовые токи
+                (под действием поля p-n перехода)</u><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Лимитируются
+                (ограничиваются) количеством <u>неосновных</u> носителей заряда (эл-ов в р-типе, дырок в
+                n–типе полупроводника). Поэтому они определяются в основном температурой и
+                приблизительно равны току насыщения диода I<sub>s</sub>.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;При увеличении приложенного
+                прямого смещения <u>уменьшается</u> потенциальный барьер и соответственно <u>растёт</u>
+                диффузионный ток. При этом обратный ток (ток насыщения или дрейфовый ток) практически не
+                изменяется. Поэтому с ростом <i>V<sub>1</sub></i> ток диода возрастает
+                экспоненциально:<br>
+                <img align=middle border=0 src="images/diod_f_26a.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.26a)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;При больших прямых
+                напряжениях (<i>V<sub>1</sub></i>=1-2V):<br>
+                <img align=middle border=0 src="images/diod_f_26b.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1.26b)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Зависимость тока от величины
+                приложенного напряжения (к p-n переходу) называют <u>вольт-амперной</u> характеристикой
+                p-n перехода. Таким образом, в условиях прямого смещения p-n перехода, число электронов,
+                движущихся от n к р-типа полупроводнику возрастает пропорционально <i>exp(qV<sub>1</sub>/kT</i>
+                ), При комнатной температуре и <i>V<sub>1</sub></i>=0.1 В этот множитель ~55. Это
+                означает, что число электронов, переходящих в р-область в 55 раз больше, чем равновесная
+                концентрация электронов в этом месте. <font color=#ff0000><u>Это процесс инжекции
+                неосновных носителей заряда</u></font>. Однако <u>основные носители</u> в р-области
+                &#151; дырки. Поэтому многие электроны рекомбинируют с дырками. Интенсивность
+                рекомбинации зависит от уровня легирования. Для такого процесса вводят понятие времени
+                жизни неосновных носителей заряда <i style="font-family:'Times new roman'">&#964;</i>
+                или диффузионной длины <i>L</i>.<br>
+                <img align=middle border=0 src="images/diod_f_27.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><i><u>Важное отличие
+                проводимости в куске металла и p-n переходе!!</u></i></b><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Если приложить напряжение к
+                куску металла, то содержащиеся в нем электроны просто начнут упорядоченно передвигаться.
+                Если же приложить прямое смещение к p-n переходу, то будет наблюдаться <u>инжекция
+                неосновных носителей заряда в обе области</u>. Концентрация этих неосновных носителей
+                заряда не были первоначально столь высоки, а возникли как следствие приложенного
+                напряжения.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Указанное отличие между
+                обычной электропроводностью и процессом инжекции неосновных носителей является
+                принципиально важным для понимания работы полупроводниковых приборов.
+            </p>
+            <br>
+            <center class=title1>Рекомендуемая литература</center>
+            <ol type=1>
+                <li>Зи С. Физика полупроводниковых приборов.в 2-х т., М., Мир, 1984.
+                <li>Пасынков В.В., Чиркин Л.К. Полупроводниковые приборы М. Энергоатомиздат.
+                <li>Тугов Н.М., Глебов Б.А., Чарыков Н.А. Полупроводниковые приборы. Энергоатомиздат.
+                <li>Шалимова К.В. Физика полупроводников. М. Энергоатомиздат. М. МЭИ(ТУ). 1997.
+            </ol>
+            </font>
         </td>
-    </tr>
-    <tr bgcolor=#FEF2DE>
-        <td>
-            <center>РФиЭ БГУ, кафедра Физической Электроники</center>
-        </td>
-    </tr>
-</table>
-</BODY>
-</HTML>
+    </section>
+</main>
+
+<a class="back-button" href="index.html">Назад</a>
+
+<footer class="footer">
+    <p>РФиКТ БГУ, кафедра Физической Электроники</p>
+</footer>
 </body>
+</html>
