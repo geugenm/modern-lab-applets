@@ -12,7 +12,7 @@
     <a href="https://github.com/rfapplets/modern-lab-comp-applets/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://www.acsu.buffalo.edu/~wie/applet/diffusion/diffusion.html">View Demo</a>
+    <a href="https://rfapplets.github.io">View Demo</a>
     ·
     <a href="https://github.com/rfapplets/modern-lab-comp-applets/issues">Report Bug</a>
     ·

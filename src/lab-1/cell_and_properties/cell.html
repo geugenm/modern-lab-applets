@@ -44,6 +44,27 @@
             color: #0078d4;
             font-weight: bold;
         }
+
+        .back-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
     </style>
 
 </head>
@@ -57,8 +78,22 @@
         <p class="error-message">
             Для просмотра этой страницы необходима поддержка апплетов в вашем браузере.
             Если у вас нет необходимого плагина, рекомендуем установить <a
-                class="download-link" href="https://chromewebstore.google.com/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein">Cheerj плагин</a>.
+                class="download-link"
+                href="https://chromewebstore.google.com/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein">Cheerj
+            плагин</a>.
             Если плагин у вас установлен, пожалуйста, нажмите иконку плагина.
+            <script src="https://cjrtnc.leaningtech.com/3.0rc2/cj3loader.js"></script>
+            <script>
+                function initAndChangeText() {
+                    cheerpjInit();
+                    var button = document.getElementById('initButton');
+                    button.innerText = "Пожалуйста, подождите...";
+                    button.disabled = true;
+                }
+            </script>
+            <button class="back-button" id="initButton" onclick="initAndChangeText();">[BETA] Попробовать запустить без
+                расширения (нужен интернет и возможны баги)
+            </button>
         </p>
     </applet>
     <p>
