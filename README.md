@@ -30,7 +30,7 @@ Before using this script, install the CheerpJ plugin by visiting
 the [CheerpJ Applet Runner](https://chromewebstore.google.com/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein)
 link in your browser(Must support Chrome Extensions).
 
-### Usage
+### Local usage
 
 #### Average user
 
@@ -38,7 +38,7 @@ See the documentation in docs tutorial.
 
 #### Advanced user
 
-You will need python3. Run the following command in your terminal:
+You will need python3 (tested on 3.12). Run the following command in your terminal:
 
 ```bash
 python3 scripts/start_server_ui.py -dir=src/
@@ -46,10 +46,10 @@ python3 scripts/start_server_ui.py -dir=src/
 
 Start the server and press open url button, now you can browse through applets!
 
-### Functionality
+### Local script functionality
 
 - Opens the Wikipedia link in your default browser.
-- Finds an available port starting from 8000 and starts an HTTP server on it.
+- Finds an available port starting from 8080 and starts an HTTP server on it.
 - Logs the server's progress using Python's built-in logging module (logging level set to DEBUG).
 - Provides a server URL in the format `http://<ip_address>:<port>` for browsing the server.
 
