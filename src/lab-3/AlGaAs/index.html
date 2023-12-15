@@ -120,8 +120,22 @@
         <p class="error-message">
             Для просмотра этой страницы необходима поддержка апплетов в вашем браузере.
             Если у вас нет необходимого плагина, рекомендуем установить <a
-                class="download-link" href="https://chromewebstore.google.com/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein">Cheerj плагин</a>.
+                class="download-link"
+                href="https://chromewebstore.google.com/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein">Cheerj
+            плагин</a>.
             Если плагин у вас установлен, пожалуйста, нажмите иконку плагина.
+            <script src="https://cjrtnc.leaningtech.com/3.0rc2/cj3loader.js"></script>
+            <script>
+                function initAndChangeText() {
+                    cheerpjInit();
+                    var button = document.getElementById('initButton');
+                    button.innerText = "Пожалуйста, подождите...";
+                    button.disabled = true;
+                }
+            </script>
+            <button class="back-button" id="initButton" onclick="initAndChangeText();">[BETA] Попробовать запустить без
+                расширения (нужен интернет и возможны баги)
+            </button>
         </p>
     </applet>
     <ul>
