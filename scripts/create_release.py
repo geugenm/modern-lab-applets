@@ -17,6 +17,9 @@ SPEC_FILE = 'start_server_ui.spec'
 
 
 def setup_logger():
+    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+    with open(LOG_FILE, 'a') as _:
+        pass
     logging.basicConfig(filename=LOG_FILE, level=LOG_LEVEL, format=LOG_FORMAT)
 
 
