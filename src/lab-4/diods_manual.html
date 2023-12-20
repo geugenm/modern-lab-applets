@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Зависимость от концентрации и уровня легирования</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333333;
+        }
+
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        section {
+            width: 45%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+
+        td {
+            font-family: Segoe UI, Arial, sans-serif;
+            font-size: 10pt;
+        }
+
+        .title1 {
+            font-size: 17px;
+            font-weight: bolder;
+            color: #0078d4;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<header>Зависимость от концентрации и уровня легирования</header>
+
+<main>
+    <section>
+        <table border=0 cellpadding=2 cellspacing=4 width="95%">
+            <tr>
+                <td>
+                    <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+                    <center class=title1>Введение в практическую часть</center>
+                    <br>
+                    <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;К работе прилагаются
+                        апплеты, моделирующие токи через p-n переход (инжекционные токи, токи утечки,
+                        рекомбинационные токи) а также изменение зонной диаграммы при изменении приложенного
+                        смещения. Апплеты моделируют только идеальные характеристики диода (т.е. не
+                        учитываются процессы генерации и рекомбинации в обедненной области (области
+                        пространственного заряда — ОПЗ), и эффекты высокого уровня инжекции, когда
+                        концентрация инжектированных носителей заряда становится сравнимой с концентрацией
+                        основных носителей заряда и т.д. Диффузия инжектированных носителей в нейтральных
+                        областях не показаны).<br>
+                        <font class=title2>Описание апплетов</font><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В настоящей работе
+                        используются два апплета моделирования: с помощью первого моделируются токи через
+                        p-n переход, ВАХ, с помощью второго исследуется ОПЗ (ширина ОПЗ, поле ОПЗ,
+                        заряды).<br>
+                    <ul style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Переключение установок (сверху)
+                        соответствует следующим основным компонентам токов:
+                        <li>ток утечки электронов (часть обратного тока насыщения);
+                        <li>ток инжекции электронов: инжектированные электроны (<font color=#ff0000>в
+                            р–обрасть, красная</font>), электроны перемещаются <b>диффузионно </b>(благодаря
+                            градиенту концентрации носителей в <font color=#ff0000>p–области</font>),
+                            возникает так называемый диффузионный ток;
+                        <li>рекомбинация электронов
+                        <li>Такие же три тока для дырок.
+                    </ul>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В работе представлено
+                    схематическое изображение p-n перехода и соответствующая зонная диаграмма. Справа от неё
+                    — бегунок для изменения приложенного напряжения (смещения). Зонная диаграмма показывает
+                    как основные (<font color=#0000ff>электроны — голубые</font>, <font color=#ff0000>дырки
+                    — красные</font>) носители заряда, так и ННЗ. Высота цветных прямоугольников в зоне
+                    проводимости (валентной) соответственно в областях n(p) пропорциональна логарифму
+                    концентрации основных носителей заряда (ОНЗ). Высота цветных прямоугольников в зоне
+                    проводимости (валентной) соответственно в областях р(n) пропорциональна логарифму
+                    концентрации ННЗ. Обратите внимание, что величина концентрации ННЗ изменяется в
+                    зависимости от расстояния от p-n перехода. Когда <i>x=x<sub>p</sub></i>
+                    (<i>x<sub>n</sub></i>), высота соответствует log плотности ННЗ выше зоны проводимости
+                    (валентной) соответственно в области n(p). Затем плотность зарядов уменьшается с
+                    расстоянием от p-n перехода и достигает значенияlog плотности ННЗ при нулевом смещении и
+                    далее (глубже) остается постоянной. Длина, на которой плотность ННЗ достигает
+                    постоянного значения, соответствует ширине области рекомбинации. Диффузионная длина есть
+                    среднее расстояние диффузии ННЗ до их рекомбинации с ОНЗ (типично от нескольких мкм до
+                    нескольких мм).<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Токи утечки можно видеть при
+                    всех приложенных смещениях. Инжекционные токи возрастают при прямых смещениях,
+                    рекомбинационные токи наблюдаются только при прямых смещениях.<br>
+                    </p>
+                    <ul>
+                        <li>Электроны: дрейфовые токи (токи утечки)
+                            <ul style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" type=1>
+                                <li>Выключите все пункты за исключением <i>утечка</i> и <i>электроны</i>.
+                                <li>Наблюдайте поток <font color=#0000ff>голубых точек</font>. Это токи утечки
+                                    электронов.
+                            </ul>
+                        <li>Дырки: дрейфовые токи (токи утечки)
+                            <ul style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" type=1>
+                                <li>Повторите указанное для <i>утечка</i> и <i>дырки</i>.
+                                <li>Наблюдайте поток <font color=#ff0000>красных точек</font>. Это токи утечки
+                                    дырок.
+                            </ul>
+                        <li>Электроны: инжекционные (диффузионные) токи
+                            <ul style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" type=1>
+                                <li>Установите <i>инжекция</i> и <i>электроны</i>.
+                                <li>Наблюдайте поток <font color=#0000ff>голубых точек</font>, двигающихся
+                                    горизонтально от <font color=#0000ff>n-</font> к <font
+                                            color=#ff0000>p–</font> типу. Это токи инжектированных электронов.
+                            </ul>
+                        <li>Дырки: инжекционные (диффузионные) токи
+                            <ul style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" type=1>
+                                <li>Установите <i>инжекция</i> и <i>дырка</i>.
+                                <li>Наблюдайте поток <font color=#ff0000>красных точек</font>, двигающихся
+                                    горизонтально от <font color=#ff0000>p-</font> к <font
+                                            color=#0000ff>n-</font> типу. Это токи инжектированных дырок.
+                            </ul>
+                        <li>Электроны: рекомбинационные токи
+                            <ul style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" type=1>
+                                <li>Установите <i>рекомбинация</i> и <i>электроны</i>.
+                                <li>Наблюдайте поток <font color=#0000ff>голубых точек</font>, двигающихся
+                                    вертикально из зоны проводимости в валентную зону.
+                                <li>Измените уровень легирования <i>N</i><sub>A</sub>, заметьте, что
+                                    происходит изменение начальной высоты (концентрации) неосновных носителей
+                                    заряда, диффузионной длины и расстояния, на котором происходит рекомбинация
+                                    неосновных носителей заряда. Диффузионная длина и длина рекомбинации
+                                    уменьшается с увеличением уровня легирования.
+                            </ul>
+                        <li>Дырки: рекомбинационные токи.
+                            <ul style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" type=1>
+                                <li>Установите <i>рекомбинация</i> и <i>дырки</i>.
+                                <li>Наблюдайте поток <font color=#ff0000>красных точек</font>, двигающихся
+                                    вертикально из валентной зоны в зону проводимости.
+                                <li>Измените уровень легирования <i>N</i><sub>D</sub>, заметьте, что
+                                    происходит изменение начальной высоты (концентрации) неосновных носителей
+                                    заряда, диффузионной длины и расстояния, на котором происходит рекомбинация
+                                    неосновных носителей заряда. Диффузионная длина и длина рекомбинации
+                                    уменьшается с увеличением уровня легирования.
+                            </ul>
+                        <li>При нулевом смещении (кликните <i>сброс</i> внизу), величины таковы, что:
+                            <ul style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px" type=1>
+                                <li>инжекционные токи электронов (дырок) равны токам утечки электронов (дырок).
+                                <li>Так как потоки носителей равны по интенсивности и противоположно направлены
+                                    — общий ток равен нулю.
+                            </ul>
+                    </ul>
+                    <p align=justify style="MARGIN-TOP: 0px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Важное примечание:</b> В
+                        зонной диаграмме энергия электронов возрастает вверх, а энергия дырок — вниз! Поэтому
+                        токи утечки, как электронов, так и дырок, происходят в направлении <b><i>уменьшения</i></b>
+                        энергии.</p>
+                    <center class=title1>Задания к лабораторной работе</center>
+                    <br>
+                    <!-- 1 -->
+                    <font class=title2>1. Предварительная работа</font>
+                    <p align=justify style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>а) Уровень Ферми и
+                        концентрация доноров</b><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для кремния n–типа,
+                        легированного донорами до <i>N<sub>D</sub></i>=10<sup>16</sup>см<sup>-3</sup> при
+                        комнатной температуре, определите положение уровня Ферми <i>E<sub>F</sub></i> по
+                        отношению к уровню Ферми <i>E<sub>Fi</sub></i> в собственном полупроводнике.
+                        Схематически изобразите зонную диаграмму, на которой покажите <i>E<sub>C</sub>,
+                        E<sub>V</sub>, E<sub>F</sub>, E<sub>Fi</sub></i>. Укажите приблизительные значения
+                        энергетических расстояний между этими уровнями.<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>n<sub>0</sub>=n<sub>i</sub>exp[-(E<sub>c</sub>-E<sub>i</sub>)/kT]</i>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>p<sub>0</sub>=n<sub>i</sub><sup>2</sup>/n<sub>0</sub></i>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>n<sub>i</sub></i>=10<sup>10</sup>см<sup>-3</sup>
+                        для <i>Si</i> при 300K;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>E<sub>g</sub></i>=1.12эВ
+                        для <i>Si</i> при 300K;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>kT</i>=25.9мэВ при
+                        300K.<br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>б)PN переход при нулевом
+                        смещении.</b><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Изобразите схематически
+                        энергетическую зонную диаграмму p-n перехода для
+                        <i>N<sub>A</sub></i>=10<sup>15</sup>см<sup>-3</sup> и
+                        <i>N<sub>D</sub></i>=10<sup>15</sup>см<sup>-3</sup>; для
+                        <i>N<sub>A</sub></i>=10<sup>15</sup>см<sup>-3</sup> и
+                        <i>N<sub>D</sub></i>=10<sup>16</sup>см<sup>-3</sup>. Обратите внимание на положение
+                        уровня Ферми <i>E<sub>F</sub></i> относительно <i>E<sub>C</sub></i> и
+                        <i>E<sub>V</sub></i> с каждой стороны, изгиб зон в ОПЗ и приблизительную ширину
+                        обедненной области с каждой стороны перехода.<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>в) Энергия носителей
+                        заряда и зонная структура</b><br>
+                        <img align=left border=1 hspace=5 src="images\diod5.gif" vspace=1>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i><br>
+                        Предположим, что мы разбили все электроны в n–области на две группы: (a) и (b), выше и
+                        ниже штриховой линии. Какая из них ответственна за инжекцию носителей?<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Заметим, что в распределении
+                        электронов по энергиям в n-полупроводнике (верхний правый прямоугольник) шкала энергий
+                        дана в различных единицах. Потенциальный барьер, <i>V<sub>0</sub>–V</i>, в Вольтах,
+                        тогда как логарифмы <i>N<sub>n</sub></i> и <i>N<sub>d</sub></i> безразмерны.
+                        Соответствующая конверсия единиц будет получена при умножении <i>q/kT</i> на потенциал.
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i> <br>
+                        Пользуясь рисунком, проверьте следующие соотношения для электронов и дырок
+                        <i>ln(N<sub>n</sub>)+(q/kT)(V<sub></sub>–V)=ln(N<sub>d</sub>)</i> и <i>ln(N<sub>p</sub>)+(q/kT)(V<sub>0</sub>–V)=ln(N<sub>a</sub>)</i>.
+                        Объясните, что эти соотношения означают.<br>
+                        <!-- 2 -->
+                        <font class=title2>2. Качественное описание ВАХ p-n перехода.</font><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>а) Компоненты
+                        тока</b><bR>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Используйте значения по
+                        умолчанию (смещение=0 В, <i>N<sub>A</sub></i>=10<sup>16</sup>см<sup>-3</sup> и <i>N<sub>D</sub></i>=10<sup>16</sup>см<sup>-3</sup>).
+                        Пронаблюдайте моделирование процесса инжекции электронов. Физический поток
+                        инжектированных электронов происходит из n– области в p- <i>P <- N</i> электрический ток
+                        направлен из p- в n- область: <i> P -> N</i>. Заполните таблицу для всех токовых
+                        компонент. В последней колонке покажите, возрастают, убывают или остаются неизменными
+                        токовые компоненты с возрастанием внешнего смещения на переходе.<br>
+                    <table border=0 cellpadding=5 cellspacing=5 width=100%>
+                        <tr align=center bgcolor=#FEF2DE>
+                            <td>&nbsp;</td>
+                            <td><i>Направление потока носителей заряда</i></td>
+                            <td><i>Направление тока</i></td>
+                            <td><i>При увеличении смещения</i></td>
+                        </tr>
+                        <tr align=center>
+                            <td bgcolor=#FEF2DE><i>Инжекция электронов</i></td>
+                            <td bgcolor=#FEF7E9>P <- N</td>
+                            <td bgcolor=#FEF7E9>P -> N</td>
+                            <td bgcolor=#FEF7E9>возрастает</td>
+                        </tr>
+                        <tr align=center>
+                            <td bgcolor=#FEF2DE><i>Утечка электронов</i></td>
+                            <td bgcolor=#FEF7E9>P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N</td>
+                            <td bgcolor=#FEF7E9>P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N</td>
+                            <td bgcolor=#FEF7E9>&nbsp;</td>
+                        </tr>
+                        <tr align=center>
+                            <td bgcolor=#FEF2DE><i>Инжекция дырок</i></td>
+                            <td bgcolor=#FEF7E9>P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N</td>
+                            <td bgcolor=#FEF7E9>P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N</td>
+                            <td bgcolor=#FEF7E9>&nbsp;</td>
+                        </tr>
+                        <tr align=center>
+                            <td bgcolor=#FEF2DE><i>Утечка дырок</i></td>
+                            <td bgcolor=#FEF7E9>P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N</td>
+                            <td bgcolor=#FEF7E9>P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N</td>
+                            <td bgcolor=#FEF7E9>&nbsp;</td>
+
+                        </tr>
+                    </table>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>б) Процессы переноса
+                    зарядов</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Установите смещение 0.5 В. Для
+                    упрощения анализа оставьте только инжекцию и рекомбинацию электронов, а все остальные опции
+                    выключите. Программа производит моделирование инжекции электронов через переход и
+                    рекомбинацию инжектированных <i>неосновных носителей заряда (электронов)</i> с <i>основными
+                    носителями заряда (дырками)</i> внутри области, определяемой диффузионной длиной и границей
+                    обедненной области на стороне полупроводника p–типа. Рассмотрим «физически» непрерывный
+                    поток зарядов внутри диода: <i>начинается на металлическом (омическом) контакте на p–стороне
+                    и оканчивается на омическом контакте на n–стороне p-n перехода</i>.<br>
+                    <ul style="MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px">Составьте правильную последовательность
+                        процессов (см. ниже):
+                        <li>инжекция электронов (термоэмиссия через потенциальный барьер);
+                        <li>диффузия ННЗ;
+                        <li>дрейф ОНЗ (электронов);
+                        <li>рекомбинация ОНЗ (дырок) - ННЗ (электронов);
+                        <li>дрейф ОНЗ (дырок).
+                    </ul>
+                    <img align=left border=1 hspace=5 src="images\diod6.gif" vspace=1>
+                    <table border=0 cellpadding=2 cellspacing=5>
+                        <tr bgcolor=#FEF7E9>
+                            <td>(1): __________________________</td>
+                        </tr>
+                        <tr bgcolor=#FEF7E9>
+                            <td>(2): __________________________</td>
+                        </tr>
+                        <tr bgcolor=#FEF7E9>
+                            <td>(3): __________________________</td>
+                        </tr>
+                        <tr bgcolor=#FEF7E9>
+                            <td>(4): __________________________</td>
+                        </tr>
+                        <tr bgcolor=#FEF7E9>
+                            <td>(5): __________________________</td>
+                        </tr>
+                    </table>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i><br>
+                    Что вы можете сказать о физическом процессе переноса зарядов через весь диод? Изменяется ли
+                    на каком-либо участке величина тока, когда вы путешествуете через диод между двумя
+                    электродами? Если да, то где и почему?<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>в) Зависимость ширины ОПЗ от
+                    приложенного смещения</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Установите <i>N<sub>A</sub></i>=10<sup>16</sup>см<sup>-3</sup>
+                    и <i>N<sub>D</sub></i>=10<sup>16</sup>см<sup>-3</sup>. Зафиксируйте значение ширины
+                    обедненной области как с p–стороны (<i>x<sub>p</sub></i>), так и с n–стороны
+                    (<i>x<sub>n</sub></i>), при смещениях 0.35, 0, -0.6 В.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Повторите эксперимент для
+                    <i>N<sub>A</sub></i>=10<sup>17</sup>см<sup>-3</sup>.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i> <br>
+                    Что вы можете сказать о симметричности обедненных областей p– и с n–сторон? Проверьте
+                    является ли равенство <i>qN<sub>a</sub>x<sub>p</sub></i>=<i>qN<sub>d</sub>x<sub>n</sub></i>
+                    справедливым для вышеуказанных случаев.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i> <br>
+                    Что может сказать это уравнение о распределении пространственного заряда в переходе?
+                    Отметьте ваши наблюдения о поведении области ОПЗ в зависимости от приложенного внешнего
+                    напряжения и уровня легирования.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>г) Обратное смещение</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Установите <i>N<sub>A</sub></i>=10<sup>17</sup>см<sup>-3</sup>
+                    и <i>N<sub>D</sub></i>=10<sup>15</sup>см<sup>-3</sup>, включите все опции. Приложите
+                    смещение -0.3 В. Наблюдайте потоки через переход. Измените смещение до -0.5 В и наблюдайте,
+                    изменения. Измените уровни легирования и все повторите. Опишите наблюдаемое.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i><br>
+                    Изменяется ли ток при изменении величины обратного смещения? Почему да или почему нет? Как
+                    вам кажется, что ограничивает обратный ток?<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>д) Прямое смещение</b><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(a) Установите
+                    <i>N<sub>A</sub></i>=10<sup>16</sup>см<sup>-3</sup>
+                    и <i>N<sub>D</sub></i>=10<sup>16</sup>см<sup>-3</sup>. Выключите утечку и рекомбинацию.
+                    Приложите прямое смешение порядка 0.5 В. Количество электронов, которые могут преодолеть
+                    потенциальный барьер <i>V<sub>0</sub>-V</i> , и таким образом могут быть инжектированы из n–
+                    в p–область составляет величину <i>N<sub>n</sub></i>.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i>
+                    Выразите <i>N<sub>n</sub></i> через <i>V<sub>0</sub>-V</i> и <i>N<sub>D</sub></i>, используя
+                    конверсионный коэффициент <i>q/kT</i> для потенциала <i>V<sub>0</sub>-V</i>.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(b) Включите утечку. Установите
+                    смещение 0 В.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i><br>
+                    Выразите плотность ННЗ (электронов) в р–области (<i>n<sub>p</sub></i>) через
+                    <i>V<sub>0</sub>-V</i> и <i>N<sub>D</sub></i>, учитывая, что при отсутствии смещения ток
+                    инжектированных электронов равен току утечки.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(c) Суммарный (чистый) ток
+                    электронов пропорционален <i>N<sub>n</sub>-n<sub>p</sub></i>.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i> <br>
+                    Определите зависимость <i>n<sub>p</sub></i> от <i>V<sub>0</sub>-V</i> и <i>N<sub>D</sub></i>.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(d) Выключите утечку и
+                    рекомбинацию. Приложите прямое смещение порядка 0.5 В. <i>N<sub>p</sub></i> — количество
+                    дырок, которые могут преодолеть потенциальный барьер <i>V<sub>0</sub>-V</i>.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i><br>
+                    Выразите <i>N<sub>p</sub></i> в зависимости от высоты потенциального барьера
+                    <i>V<sub>0</sub>-V</i> и уровня легирования акцепторами <i>N<sub>A</sub></i>, аналогично
+                    пункту (а).<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(e)Суммарный ток электронов.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i><br>
+                    Покажите,
+                    что<i>J<sub>n</sub>=C(N<sub>n</sub>-n<sub>p</sub>)=J<sub>n0</sub>[exp(-q(V<sub>0</sub>-V)/kT)-1]</i>,<br>
+                    где C — некоторый коэффициент пропорциональности.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(f) Включите утечку. Установите
+                    нулевое смещение.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i><br>
+                    Выразите зависимость плотности <i>p<sub>n</sub></i> неосновных носителей в n–области (дырок)
+                    от <i>V<sub>0</sub></i> и <i>N<sub>A</sub></i>.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(g) Суммарный ток дырок
+                    пропорционален <i>N<sub>p</sub>-p<sub>n</sub></i>.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i><br>
+                    Выразите <i>p<sub>n</sub></i> как функцию <i>V<sub>0</sub></i> и <i>N<sub>A</sub></i>.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(h) Суммарный ток дырок.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i> <br>
+                    Покажите, что <i>J<sub>p</sub>=B(N<sub>p</sub>p<sub>n</sub>)=J<sub>p</sub><sub>0</sub>[exp(-q(V<sub>0</sub>-V)/kT)-1]</i>,<br>
+                    где B — некоторый коэффициент пропорциональности.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(i) Суммарный ток через p-n
+                    переход есть сумма тока электронов и тока дырок, которые пропорциональны
+                    <i>(N<sub>n</sub>-n<sub>p</sub>)+(N<sub>p</sub>-p<sub>n</sub>)</i>
+                    .<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Вопрос:</i><br>
+                    Выразите уравнение для ВАХ диода подстановкой в <i>I=A(J<sub>n</sub>+J<sub>p</sub>)</i>, где
+                    <i>A</i> — поперечное сечение диода.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Постройте и объясните
+                    вольтамперную характеристику диода.<br><br>
+                    <!-- 3 -->
+                    <font class=title2>3. Зависимость параметров ОПЗ от концентрации легирующей примеси и
+                        смещения</font><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Изменяя уровень легирования
+                    областей при нулевом смещении, а также внешнее смещение для уровня легирования областей
+                    <i>N<sub>A</sub>=N<sub>D</sub></i>=10<sup>16</sup>
+                    см<sup>-3</sup> измерить ширину ОПЗ (<i>w=x<sub>n</sub>+x<sub>p</sub></i>), величину
+                    электрического поля ОПЗ (<i>Е<sub>max</sub></i>), суммарное количество зарядов в ОПЗ
+                    <i>(N<sub>A</sub>*x<sub>p</sub>, N<sub>D</sub>*x<sub>n</sub>)</i>. Результаты представить в
+                    графическом виде. Определить тип зависимости.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Постройте графически и
+                    проанализируйте зависимость длины пробега ННЗ от концентрации, изучив следующие данные:<br>
+                    С увеличением расстояния от p-n перехода, концентрация неосновных носителей заряда (ННЗ)
+                    убывает, в конечном итоге достигая значения, характерного для случая нулевого смещения.<br>
+                    Зависимость концентрации ННЗ от расстояния можно выразить:<br>
+                    <i>n(x)=n<sub>0</sub>exp[qV/kT]exp[-x/L]</i>,<br>
+                    где <i>n<sub>0</sub></i> конц. носителей при <i>x</i>=0 и при нулевом смещении. При
+                    ненулевом смещении:<br>
+                    <i>n(x,V<sub>0</sub>)=n<sub>0</sub>exp[qV<sub>0</sub>/kT]exp[-x/L]=n<sub>0</sub><sup>'</sup>exp[-x/L]</i><br>
+                    <i>n<sub>0</sub><sup>'</sup></i> есть постоянная при данном смещении. Заметим также:<br>
+                    <img border=0 src="images\diod_f_28.gif"><br>
+                    L — диффузионная длина (типично — от нескольких мкм до нескольких мм.)<br>
+                    <i>L=sqrt[kT<font class=formula>&#956;&#964;</font>/q],</i><br>
+                    где <i>&#956;</i> — подвижность носителей, <i class=formula>&#964;</i> — время жизни
+                    ННЗ.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В литературе (и жизни) сделано
+                    множество измерений времени жизни, подвижности и диффузионной длины ННЗ. Для концентрации
+                    легирующей примеси более 10<sup>19</sup>см<sup>-3</sup>, эксперименты крайне затруднительны,
+                    поскольку концентрация ННЗ очень мала, и, в результате, существует весьма немного надежных
+                    экспериментальных данных. Для моделирования приборов обычно используют следующие
+                    эмпирические уравнения для ННЗ:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>&#956<sub>n</sub>=232+1180/(1+(N<sub>A</sub>/(8*10<sup>16</sup>))<sup>0.9</sup>)</i><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>&#956;<sub>p</sub>=130+370/(1+(N<sub>D</sub>/(8*10<sup>17</sup>))<sup>1.25</sup>)</i><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>1/<font
+                        class=formula>&#964;</font><sub>n</sub>=3.45*10<sup>-12</sup>*N<sub>A</sub>+0.95*10<sup>-31</sup>*N<sub>A</sub><sup>2</sup></i><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>1/<font
+                        class=formula>&#964;</font><sub>p</sub>=7.8*10<sup>-13</sup>*N<sub>D</sub>+1.8*10<sup>-31</sup>*N<sub>D</sub><sup>2</sup></i><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В программе используются эти
+                    уравнения. Ниже приведена таблица значений диффузионной длины ННЗ для электронов и дырок,
+                    вычисленных на основе уравнений.<br>
+                    </p>
+                    <table border=0 cellpadding=5 cellspacing=5 width="100%">
+                        <tr align=center bgcolor=#FEF2DE>
+                            <td width=30%>Акцепторов, p–область</td>
+                            <td><i>L<sub>n</sub>, µм</i></td>
+                            <td width=30%>Доноров, n–область</td>
+                            <td><i>L<sub>p</sub>, µм</i></td>
+                        </tr>
+                        <tr align=center bgcolor=#FEF7E9>
+                            <td width=30%><i>N<sub>A</sub></i>=10<sup>15</sup> см<sup>-3</sup></td>
+                            <td>1023</td>
+                            <td width=30%><i>N<<sub>D</sub></i>=10<sup>15</sup> см<sup>-3</sup></td>
+                            <td>1290</td>
+                        </tr>
+                        <tr align=center bgcolor=#FEF7E9>
+                            <td width=30%><i>N<sub>A</sub></i>=10<sup>16</sup> см<sup>-3</sup></td>
+                            <td>307</td>
+                            <td width=30%><i>N<sub>D</sub></i>=10<sup>16</sup> см<sup>-3</sup></td>
+                            <td>407</td>
+                        </tr>
+                        <tr align=center bgcolor=#FEF7E9>
+                            <td width=30%><i>N<sub>A</sub></i>=10<sup>17</sup> см<sup>-3</sup></td>
+                            <td>76</td>
+                            <td width=30%><i>N<sub>D</sub></i>=10<sup>17</sup> см<sup>-3</sup></td>
+                            <td>124</td>
+                        </tr>
+                        <tr align=center bgcolor=#FEF7E9>
+                            <td width=30%><i>N<sub>A</sub></i>=10<sup>18</sup> см<sup>-3</sup></td>
+                            <td>16</td>
+                            <td width=30%><i>N<sub>D</sub></i>=10<sup>18</sup> см<sup>-3</sup></td>
+                            <td>28</td>
+                        </tr>
+                        <tr align=center bgcolor=#FEF7E9>
+                            <td width=30%><i>N<sub> A</sub></i>=10<sup>19</sup> см<sup>-3</sup></td>
+                            <td>3.8183</td>
+                            <td width=30%><i>N<sub>D</sub></i>=10<sup>19</sup> см<sup>-3</sup></td>
+                            <td>3.8210</td>
+                        </tr>
+                    </table>
+                    </font>
+                </td>
+            </tr>
+        </table>
+    </section>
+</main>
+
+<a class="back-button" href="index.html">Назад</a>
+
+<footer class="footer">
+    <p>РФиКТ БГУ, кафедра Физической Электроники</p>
+</footer>
+</body>
+</html>

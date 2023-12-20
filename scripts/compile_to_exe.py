@@ -4,32 +4,37 @@ import shutil
 import subprocess
 import sys
 
+BUILD_DIR = ".build"
+DIST_DIR = "dist"
+PYINSTALLER = "pyinstaller"
+ONEFILE_FLAG = "--onefile"
+NOCONSOLE_FLAG = "--noconsole"
+EXE_EXT = ".exe"
 
-def compile_exe(script_file, config):
-    output_directory = os.path.join(".build", config)
+
+def compile_exe(script_file: str, config: str) -> None:
+    output_directory = os.path.join(BUILD_DIR, config)
     os.makedirs(output_directory, exist_ok=True)
 
     # PyInstaller flags
-    pyinstaller_flags = ["--onefile", "--noconsole"]
+    pyinstaller_flags = [ONEFILE_FLAG]
 
-    if config == "debug":
-        pyinstaller_flags.remove("--noconsole")
-        # Add debug flags specific to your project if needed
-        # Example: pyinstaller_flags.extend(["--debug"])
+    if config == "release":
+        pyinstaller_flags.append(NOCONSOLE_FLAG)
 
     try:
-        subprocess.run(["pyinstaller", *pyinstaller_flags, script_file])
+        subprocess.run([PYINSTALLER, *pyinstaller_flags, script_file])
     except FileNotFoundError:
-        print("PyInstaller not found. Please install PyInstaller to proceed.")
+        print(f"{PYINSTALLER} not found. Please install {PYINSTALLER} to proceed.")
         sys.exit(1)
 
     # Move the compiled executable to the output directory
     script_name = os.path.splitext(os.path.basename(script_file))[0]
-    exe_name = f"{script_name}.exe"
-    shutil.move(os.path.join("dist", exe_name), os.path.join(output_directory, exe_name))
+    exe_name = f"{script_name}{EXE_EXT}"
+    shutil.move(os.path.join(DIST_DIR, exe_name), os.path.join(output_directory, exe_name))
 
 
-if __name__ == "__main__":
+def main() -> None:
     parser = argparse.ArgumentParser(description="Compile and move executable based on configuration")
     parser.add_argument("script_file", help="Python script file to compile")
     parser.add_argument("--config", choices=["release", "debug"], default="debug",
@@ -37,3 +42,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     compile_exe(args.script_file, args.config)
+
+
+if __name__ == "__main__":
+    main()

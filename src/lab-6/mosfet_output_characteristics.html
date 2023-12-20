@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Выходные характеристики МОП полевых транзисторов</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #000000;
+        }
+
+        .title {
+            font-size: 26px;
+            color: #0078d4;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0078d4;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #005a9e;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .applet-container {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .applet-container object {
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4; /* Blue background */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e; /* Darker blue on hover */
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        applet {
+            align-content: center;
+            width: 450px;
+            height: 420px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #0078d4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="title">
+    Выходные характеристики МОП полевых транзисторов
+    <br>
+    <font style="font-size: 18px">
+        Выходная характеристика: Iс от Vси.
+        <br>
+        Ток насыщения стока: Iсн от Vзи.
+    </font>
+</div>
+
+<hr style="height: 1px; color: #0078d4; background-color: #0078d4; border: none;">
+
+<section>
+    <applet archive="mos_2.jar" code="MosApplet_2.class" height="360" width="405">
+        <p class="error-message">
+            Для просмотра этой страницы необходима поддержка апплетов в вашем браузере.
+            Если у вас нет необходимого плагина, рекомендуем установить <a
+                class="download-link"
+                href="https://chromewebstore.google.com/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein">Cheerj
+            плагин</a>.
+            Если плагин у вас установлен, пожалуйста, нажмите иконку плагина.
+            <script src="https://cjrtnc.leaningtech.com/3.0rc2/cj3loader.js"></script>
+            <script>
+                function initAndChangeText() {
+                    cheerpjInit();
+                    var button = document.getElementById('initButton');
+                    button.innerText = "Пожалуйста, подождите...";
+                    button.disabled = true;
+                }
+            </script>
+            <button class="back-button" id="initButton" onclick="initAndChangeText();">[BETA] Попробовать запустить без
+                расширения (нужен интернет и возможны баги)
+            </button>
+        </p>
+    </applet>
+</section>
+
+
+<a class="back-button" href="index.html">Назад</a>
+
+<footer class="footer">
+    <p>РФиКТ БГУ, кафедра Физической Электроники</p>
+</footer>
+</body>
+</html>

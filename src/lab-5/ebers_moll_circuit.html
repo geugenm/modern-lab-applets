@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Эквивалентная схема биполярного транзистора Эберса-Молла</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #000000;
+        }
+
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 400px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0078d4;
+            display: block;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        ul li a:hover {
+            background-color: #f3f3f3;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        object {
+            align-content: center;
+            width: 450px;
+            height: 420px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #0078d4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<header>Эквивалентная схема биполярного транзистора Эберса-Молла</header>
+
+<section>
+    <object ALIGN="middle"
+            HEIGHT="390" NAME="Applet" WIDTH="380" border=1
+            classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+            codebase="http://java.sun.com/products/plugin/1.2/jinstall-12-win32.cab#Version=1,2,0,0">
+        <PARAM NAME=CODE VALUE="BJTEquivalent.class">
+        <PARAM NAME=CODEBASE VALUE=".">
+        <PARAM NAME=ARCHIVE VALUE="bjtequi.jar">
+        <PARAM NAME=NAME VALUE="was translated by Androoha of RPh&E labs and now successfully">
+        <param name="type" value="application/x-java-applet;version=1.2">
+        <p class="error-message">
+            Для просмотра этой страницы необходима поддержка апплетов в вашем браузере.
+            Если у вас нет необходимого плагина, рекомендуем установить <a
+                class="download-link"
+                href="https://chromewebstore.google.com/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein">Cheerj
+            плагин</a>.
+            Если плагин у вас установлен, пожалуйста, нажмите иконку плагина.
+            <script src="https://cjrtnc.leaningtech.com/3.0rc2/cj3loader.js"></script>
+            <script>
+                function initAndChangeText() {
+                    cheerpjInit();
+                    var button = document.getElementById('initButton');
+                    button.innerText = "Пожалуйста, подождите...";
+                    button.disabled = true;
+                }
+            </script>
+            <button class="back-button" id="initButton" onclick="initAndChangeText();">[BETA] Попробовать запустить без
+                расширения (нужен интернет и возможны баги)
+            </button>
+        </p>
+    </object>
+</section>
+
+<section>
+    <a class="back-button" href="index.html">Назад</a>
+</section>
+
+<footer class="footer">
+    <p>РФиКТ БГУ, кафедра Физической Электроники</p>
+</footer>
+</body>
+</html>

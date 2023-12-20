@@ -1,52 +1,110 @@
-<html>
-<hefont-size: medium;d>
-    <METfont-size: medium; content="text/html; chfont-size: medium;rset=utf-8" http-equiv=Content-Type>
-    <TITLE>font-size: medium;lGfont-size: medium;font-size: medium;s. Зонная диаграмма и E-K диаграмма. Работа с апплетом.</TITLE>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с апплетом</title>
     <style>
-        font-size: medium; {
-            text-decorfont-size: medium;tion: none;
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333333;
+        }
+
+        header {
+            font-size: 2rem;
+            color: #0078d4;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .section-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .section-text {
+            flex: 1;
+            padding-right: 20px;
+            font-weight: bold;
+            color: #0078d4;
+            font-size: 1.2rem;
+        }
+
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0078d4;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005a9e;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #666666;
         }
     </style>
-</hefont-size: medium;d>
-<BODY font-size: medium;Link="#298F01" bgColor="#ffffff" leftmfont-size: medium;rgin=5 link="#298F01"
-      mfont-size: medium;rginheight=0 mfont-size: medium;rginwidth=0 style="font-ffont-size: medium;mily: tfont-size: medium;homfont-size: medium;, verdfont-size: medium;nfont-size: medium;, font-size: medium;rifont-size: medium;l; font-size: 14 px;" text=#000000 topmfont-size: medium;rgin=5 vLink="#66font-size: medium;E36">
-<tfont-size: medium;ble cellpfont-size: medium;dding="2" cellspfont-size: medium;cing="4" style="font-size: 14 px;" width="100%">
-    <tr bgcolor="#FEF2DE">
-        <td font-size: medium;lign="center">
-            <font-size: medium; href="intro.html">Введение</font-size: medium;> | <font-size: medium; href="mfont-size: medium;th.html">Математический анализ</font-size: medium;> | <font-size: medium; href="tutorifont-size: medium;l.html">Работа
-            с
-            апплетом</font-size: medium;> | <font-size: medium; href="worksheet.html">Упражнения к апплету</font-size: medium;> | <font-size: medium; href="quiz.html">Тест</font-size: medium;>
-            | <font-size: medium; href="SPICE.html">SPICE/Cfont-size: medium;D</font-size: medium;> | <font-size: medium; href="ref.html">Ссылки</font-size: medium;>
-            | <font-size: medium; href="feedbfont-size: medium;ck.html">Обратная связь</font-size: medium;><b><i><font size=+2></font></i></b>
-        </td>
-    </tr>
-    <tr bgcolor="#FEF2DE">
-        <td font-size: medium;lign="center">
-            <font color="#298F01"><h3>Работа с апплетом</h3></font>
-        </td>
-    </tr>
-    <tr bgcolor="#FEF9F0">
-        <td>
+</head>
+<body>
+<header>Работа с апплетом</header>
+
+<hr style="height: 1px; color: #0078d4; background-color: #0078d4; border: none;">
+
+<div class="section-container">
+    <div class="section">
+        <div class="section-text">
             <ul>
                 <li>
                     Когда вы изменяяте состав соединения с помощью мыши, что отображаеться пурпурной
                     вертикальной линией на верхней диаграмме, изменяються соответствующие положения G-, X-, и L-точек
                     долин зоны проводимости.
                 </li>
-
                 <li>
                     Минимальная энергия трех долин зоны проводимости определяет границу зоны проводимости
                     <b>E<sub>c</sub></b> на диаграмме зонной структуры (справа снизу).
                 </li>
             </ul>
-        </td>
-    </tr>
-    <tr bgcolor="#FEF2DE">
-        <td font-size: medium;lign="center">
-            РФиЭ БГУ, кафедра Физической Электроники
-        </td>
-    </tr>
-</tfont-size: medium;ble>
+        </div>
+    </div>
+</div>
 
+<a class="back-button" href="index.html">Назад</a>
+
+<hr style="height: 1px; color: #0078d4; background-color: #0078d4; border: none;">
+
+<footer class="footer">
+    <p>РФиКТ БГУ, кафедра Физической Электроники</p>
+</footer>
 </body>
 </html>
