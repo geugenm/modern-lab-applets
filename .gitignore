@@ -31,4 +31,5 @@ bin/
 
 ### Other ###
 logs/
-.build
+.build/
+node_modules/

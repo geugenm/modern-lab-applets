@@ -1,0 +1,25 @@
+{
+  "name": "modern-lab-comp-applets",
+  "version": "1.0.0",
+  "description": "Modernized applets for modern usage",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfapplets/rfapplets.github.io.git"
+  },
+  "author": "geugenm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rfapplets/rfapplets.github.io/issues"
+  },
+  "homepage": "https://github.com/rfapplets/rfapplets.github.io#readme",
+  "devDependencies": {
+    "electron": "^28.1.0"
+  }
+}
