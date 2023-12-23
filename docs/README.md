@@ -27,10 +27,17 @@
   ![image](https://github.com/rfapplets/modern-lab-comp-applets/assets/60469435/d5cba673-c801-4b6b-a8a5-e4191e4a4b2f)
   
   7. Перейдите на вкладку с апплетом и, увидев красный текст, нажмите на иконку расширения cheerpj.
+
+  7.1. Перейти к расширениям.
+  ![image](https://github.com/rfapplets/rfapplets.github.io/assets/60469435/e36ea88b-c319-4cb7-ae52-fa338cc3bfa3)
+
+  7.2. Нажать на исконку CheerpJ Applet Runner.
+  ![image](https://github.com/rfapplets/rfapplets.github.io/assets/60469435/902c3fbe-f74b-4537-9c3a-f1896dbc4fee)
+
+  7.3. Убедиться в том, что началась загрузка апплета.
+  ![image](https://github.com/rfapplets/rfapplets.github.io/assets/60469435/98ff24f8-b383-404e-a12e-7bc028422d4e)
   
-  ![image](https://github.com/leaningtech/cheerpj-appletrunner/blob/master/media/cheerpj_applet_demo1.gif?raw=true)
-  
-  8. По завершении работы нажмите кнопку `Stop`.
+  8. По завершении работы нажмите кнопку `Stop` или просто закройте программу.
   
   ![image](https://github.com/rfapplets/modern-lab-comp-applets/assets/60469435/cd863678-a52b-4153-950b-21112a8e9292)
 </details>
@@ -41,7 +48,7 @@
   перезапустите сервер. Если ничего не помогло, то нужно смотреть в консоль разработчика браузера (обычно F12) и гуглить
   ошибку.
 
-## Могу ли я все делать на *linux/macos/freebsd*?
+## Могу ли я все делать на linux/macos/freebsd?
 
 - Да, достаточно склонировать [этот](https://github.com/rfapplets/modern-lab-comp-applets/tree/master) репозиторий и
   запустить python скрипт, как в инструкции readme.md.
@@ -50,11 +57,19 @@
 
 # Для хакеров
 
+
 ## Где я могу больше узнать о расширении?
 
 - Само решение проприетарное, но есть в открытом
   доступе [документация, где можно найти решение проблем в разделе issues](https://github.com/leaningtech/cheerpj-appletrunner).
 
+## Кто эти апплеты делал? Где исходники?
+
+- Апплеты были взяты студентами в 2000е с сайта университета [Buffalo](https://www.buffalo.edu/), я их лишь
+  прорефакторил. На момент декабря 2023
+  уцелело [зеркало](https://www.acsu.buffalo.edu/~wie/applet/applet.old). [Оригинал](http://jas.eng.buffalo.edu/)
+  скрыли, на WebArchive смог найти только скомпилированные `.jar` и `.class` файлы.
+
 ## Как скомпилировать питон скрипт?
 
-- Используйте модуль `pyinstaller` или вспомогательный скрипт `compile_to_exe.py` в папке `scripts`, чтобы скомпилировать `start_server_ui.py`.
+- Используйте модуль `pyinstaller` или вспомогательный скрипт `compile_to_exe.py` в папке `scripts`.

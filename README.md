@@ -1,7 +1,7 @@
 ## Modernized computer applets for semiconductors course.
 
 <div align="center">
-  <a href="https://github.com/rfapplets/modern-lab-comp-applets">
+  <a href="https://github.com/geugenm/modern-lab-applets">
     <img src=".github/img/logo.png" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">Applets REMASTERED</h3>
@@ -9,14 +9,14 @@
   <p align="center">
     This repository has been established with the primary objective of enhancing the functionality of applets in 2023, ensuring seamless execution for all users, thereby facilitating a smooth and trouble-free experience. 
     <br />
-    <a href="https://github.com/rfapplets/modern-lab-comp-applets/tree/master/docs"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/geugenm/modern-lab-applets/tree/master/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://rfapplets.github.io/src">Browse applets online</a>
+    <a href="https://www.acsu.buffalo.edu/~wie/applet/diffusion/diffusion.html">Test CheerpJ</a>
     ·
-    <a href="https://github.com/rfapplets/modern-lab-comp-applets/issues">Report Bug</a>
+    <a href="https://github.com/geugenm/modern-lab-applets/issues">Report Bug</a>
     ·
-    <a href="https://github.com/rfapplets/modern-lab-comp-applets/issues">Request Feature</a>
+    <a href="https://github.com/geugenm/modern-lab-applets/issues">Request Feature</a>
   </p>
 </div>
 
