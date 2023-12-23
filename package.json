@@ -2,7 +2,7 @@
   "name": "modern-lab-comp-applets",
   "version": "1.0.0",
   "description": "Modernized applets for modern usage",
-  "main": "index.js",
+  "main": "main.js",
   "directories": {
     "doc": "docs"
   },

@@ -1,0 +1,9 @@
+p.buttons > input
+{
+width: 147px;
+}
+p.buttons > span
+{
+width: 6px;
+display: inline-block;
+}

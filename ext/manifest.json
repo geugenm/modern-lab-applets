@@ -1,0 +1,30 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+  "name": "CheerpJ Applet Runner",
+  "description": "Run Java applets without installing Java",
+  "version": "10.6",
+  "icons": { "128":"cheerpj.png" },
+  "action" : {
+    "default_icon": "cheerpj.png",
+    "default_popup": "popup.html",
+    "default_title": "Click to run applets"
+  },
+  "background": {
+    "service_worker": "bg.js"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "cheerpj/*", "spoof.js", "settings.html", "attach_simple.js" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
+}
