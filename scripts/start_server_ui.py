@@ -40,10 +40,10 @@ class ServerModel:
 
 # View
 class ServerView:
-    WINDOW_TITLE: str = "Webassembly translation server"
-    START_BUTTON_TEXT: str = "Start"
-    STOP_BUTTON_TEXT: str = "Stop"
-    OPEN_URL_BUTTON_TEXT: str = "Open URL"
+    WINDOW_TITLE: str = "Сервер для лабораторных работ по ФПП"
+    START_BUTTON_TEXT: str = "Старт"
+    STOP_BUTTON_TEXT: str = "Стоп"
+    OPEN_URL_BUTTON_TEXT: str = "Открыть в браузере"
     BUTTON_WIDTH: int = 12
     BUTTON_FONT_SIZE: int = 15
     WINDOW_HEIGHT: int = 100
@@ -69,8 +69,8 @@ class ServerView:
 
 # Controller
 class ServerController:
-    STATUS_ON: str = "STATUS: ON"
-    STATUS_OFF: str = "STATUS: OFF"
+    STATUS_ON: str = "СТАТУС: ВКЛ"
+    STATUS_OFF: str = "СТАТУС: ВЫКЛ"
     GREEN: str = "green"
     RED: str = "red"
 
