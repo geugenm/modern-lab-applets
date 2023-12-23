@@ -8,7 +8,7 @@ import webbrowser
 from tkinter import ttk
 
 # Constants
-DEFAULT_PORT: int = 8080
+DEFAULT_PORT: int = 25355
 DEFAULT_DIRECTORY: str = "."
 LOG_DIRECTORY: str = "logs/"
 HTTP_PREFIX: str = "http://"
