@@ -20,9 +20,9 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
-LicenseFile=C:\Users\Evgeniy\Downloads\LICENSE
-InfoBeforeFile=C:\Users\Evgeniy\Downloads\README [MConverter.eu].rtf
-InfoAfterFile=C:\Users\Evgeniy\Downloads\README [MConverter.eu].rtf
+LicenseFile=C:\Users\Evgeniy\source\repos\modern-lab-comp-applets\LICENSE
+InfoBeforeFile=C:\Users\Evgeniy\source\repos\modern-lab-comp-applets\docs\README.rtf
+InfoAfterFile=C:\Users\Evgeniy\source\repos\modern-lab-comp-applets\docs\README.rtf
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
 OutputDir=C:\Users\Evgeniy\Downloads\123
