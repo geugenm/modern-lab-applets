@@ -43,7 +43,6 @@ class ServerView:
     WINDOW_TITLE: str = "Сервер для лабораторных работ по ФПП"
     START_BUTTON_TEXT: str = "Старт"
     STOP_BUTTON_TEXT: str = "Стоп"
-    OPEN_URL_BUTTON_TEXT: str = "Открыть в браузере"
     BUTTON_WIDTH: int = 12
     BUTTON_FONT_SIZE: int = 15
     WINDOW_HEIGHT: int = 100
@@ -57,11 +56,9 @@ class ServerView:
 
         self.start_button = ttk.Button(self.root, text=self.START_BUTTON_TEXT, width=self.BUTTON_WIDTH)
         self.stop_button = ttk.Button(self.root, text=self.STOP_BUTTON_TEXT, width=self.BUTTON_WIDTH)
-        self.open_button = ttk.Button(self.root, text=self.OPEN_URL_BUTTON_TEXT, width=self.BUTTON_WIDTH)
 
         self.start_button.pack()
         self.stop_button.pack()
-        self.open_button.pack()
 
         self.status_label = ttk.Label(self.root)
         self.status_label.pack()
@@ -79,20 +76,17 @@ class ServerController:
         self.view = ServerView(root)
         self.view.start_button.config(command=self.start_server)
         self.view.stop_button.config(command=self.stop_server)
-        self.view.open_button.config(command=self.open_url)
 
     def start_server(self):
         self.model.start_server()
         self.view.status_label.config(text=self.STATUS_ON, foreground=self.GREEN)
         self.view.start_button.config(state="disabled")
+        webbrowser.open_new_tab(f"{HTTP_PREFIX}{SERVER_ADDRESS}:{self.model.port}/{self.model.directory}")
 
     def stop_server(self):
         self.model.stop_server()
         self.view.status_label.config(text=self.STATUS_OFF, foreground=self.RED)
         self.view.start_button.config(state="normal")
-
-    def open_url(self):
-        webbrowser.open_new_tab(f"{HTTP_PREFIX}{SERVER_ADDRESS}:{self.model.port}/{self.model.directory}")
 
 
 def main():
