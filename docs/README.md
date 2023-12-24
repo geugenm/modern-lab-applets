@@ -4,7 +4,8 @@
 
 <details>
   <summary>Руководство по использованию локально на Windows</summary>
-  1. Установите <a href = "https://chromewebstore.google.com/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein">Cheerj плагин</a>
+  
+  1. Установите <a href = "https://chromewebstore.google.com/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein">CheerpJ плагин</a>
   
   ![msedge_P5HepHXSzr](https://github.com/rfapplets/modern-lab-comp-applets/assets/60469435/b2f387b8-5ac3-45e8-91f2-4ea885dc257c)
   
@@ -31,7 +32,7 @@
   7.1. Перейти к расширениям.
   ![image](https://github.com/rfapplets/rfapplets.github.io/assets/60469435/e36ea88b-c319-4cb7-ae52-fa338cc3bfa3)
 
-  7.2. Нажать на исконку CheerpJ Applet Runner.
+  7.2. Нажать на иконку CheerpJ Applet Runner.
   ![image](https://github.com/rfapplets/rfapplets.github.io/assets/60469435/902c3fbe-f74b-4537-9c3a-f1896dbc4fee)
 
   7.3. Убедиться в том, что началась загрузка апплета.
@@ -62,13 +63,6 @@
 
 - Само решение проприетарное, но есть в открытом
   доступе [документация, где можно найти решение проблем в разделе issues](https://github.com/leaningtech/cheerpj-appletrunner).
-
-## Кто эти апплеты делал? Где исходники?
-
-- Апплеты были взяты студентами в 2000е с сайта университета [Buffalo](https://www.buffalo.edu/), я их лишь
-  прорефакторил. На момент декабря 2023
-  уцелело [зеркало](https://www.acsu.buffalo.edu/~wie/applet/applet.old). [Оригинал](http://jas.eng.buffalo.edu/)
-  скрыли, на WebArchive смог найти только скомпилированные `.jar` и `.class` файлы.
 
 ## Как скомпилировать питон скрипт?
 
