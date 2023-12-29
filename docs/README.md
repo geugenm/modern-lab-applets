@@ -47,8 +47,7 @@
 
 ## Могу ли я все делать на linux/macos/freebsd?
 
-- Да, достаточно склонировать [этот](https://github.com/rfapplets/modern-lab-comp-applets/tree/master) репозиторий и
-  запустить python скрипт, как в инструкции readme.md.
+- Да, достаточно в вашей os установить python и выполнить в терминале из директории апплетов команду `python scripts/start_server.py`
 
 ## Ошибка 404
 
